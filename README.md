@@ -1,2 +1,0 @@
-# Licensing
-Microsoft Licensing diagrams
