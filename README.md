@@ -6,4 +6,9 @@ Featured File Download Links:
 
 You will find PDF, PNG, and Visio source files for most of the diagrams, some are more current than others so please do check the commit date and let me know if you need an updated version of any of these.
 
-Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](https://www.linkedin.com/in/aarondinnage/) if you'd like to discuss or provide feedback or request.  All feedback is greatly appreciated!
+Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](https://www.linkedin.com/in/aarondinnage/) if you'd like to discuss or provide feedback or request changes or updates.
+
+All feedback is greatly appreciated!
+
+Cheers,
+ - Aaron.
