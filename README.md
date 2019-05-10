@@ -6,7 +6,7 @@ Featured File Download Links:
 
 You will find PDF, PNG, and Visio source files for most of the diagrams, some are more current than others so please do check the commit date and let me know if you need an updated version of any of these.
 
-The PDF files have links on every tile so you can click through to more information!
+The PDF files and the PowerPoint presentation have links on every tile so you can click through to more information!
 
 Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](https://www.linkedin.com/in/aarondinnage/) if you'd like to discuss, provide feedback, or request changes / updates.
 
