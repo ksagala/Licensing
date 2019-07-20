@@ -8,7 +8,7 @@ You will find PDF, PNG, and Visio source files for most of the diagrams, some ar
 
 The PDF files and the PowerPoint presentation have links on every tile so you can click through to more information!
 
-See [Change Log](https://github.com/AaronDinnage/Licensing/Change%20Log.md) for update details.
+See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/Change%20Log.md) for update details.
 
 Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](https://www.linkedin.com/in/aarondinnage/) if you'd like to discuss, provide feedback, or request changes / updates.
 
