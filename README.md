@@ -10,6 +10,8 @@ The PDF files and the PowerPoint presentation have links on every tile so you ca
 
 See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/Change%20Log.md) for update details.
 
+To be clear, whilst I am a Microsoft employee, these are not official Microsoft published diagrams. They are a visual representation of the product licensing derived from the official online and partner-facing resources. I have carefully balanced the level of detail to ensure all the notable feature and license items are accounted for, but it is certainly the case that not all features are present in these diagrams. There are just too many to include! So my offer to you is that if you see something missing and believe it should be included please reach out and I will do my best to build it in to a subsequent release.
+
 Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](https://www.linkedin.com/in/aarondinnage/) if you'd like to discuss, provide feedback, or request changes / updates.
 
 All feedback is greatly appreciated!
