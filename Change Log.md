@@ -5,6 +5,7 @@ Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](h
 All feedback is greatly appreciated!
 
 Cheers,
+
  \- Aaron.
 
 
@@ -55,6 +56,7 @@ https://docs.microsoft.com/office365/servicedescriptions/mya-service-description
 * Added "Records Management" to "Office 365 Advanced Compliance" / "Office 365 E5" offerings.
 * Collapsed separate PDF files down to a single file per license map type for simplicity and speed to publish.
 * All PNG files are now exported directly from Visio at 300 DPI.
+
 
 
 2019 / July:
