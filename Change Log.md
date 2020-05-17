@@ -9,6 +9,35 @@ Cheers,
  \- Aaron.
 
 
+2020 / May:
+* Repackaged "Microsoft 365 E5 Compliance" offerings to add "Insider Risk Management", "Information Protection & Governance", and "Discover & Respond" suites. Note that there is functionality that only resides in the suite SKUs and not inside the individual Office 365, EMS, or Windows 10 SKUs. These are known as "suite only" features. Customers that previously bought Microsoft 365 E5 licenses may need a zero-cost add-on to get suite only features.
+* Renamed all F1 license types to F3 and added new "Microsoft 365 F1". Note: there is no Office 365 F1, only F3 now.
+* Added "Information Barriers": https://docs.microsoft.com/microsoft-365/compliance/information-barriers
+* Expanded "Office 365 ATP Plan 1" to show inclusion of "Safe Links", "Safe Attachments", and "Anti-Phishing".
+* Added "Safe Documents" to "Microsoft E5 Security" as it is a feature of having both "Office 365 ATP" and "Microsoft Defender ATP".
+* Removed "Office 365 Advanced Compliance" as this SKU is now retired.
+* Changed "Supervision Policies" to superset "Comms Compliance".
+* Changed "Data Loss Prevention for Teams" to "Teams Data Loss Prevention" for clarity, also known as "Communications DLP".
+* Changed "Advanced Data Governance" to "Information Governance".
+* Replaced "1 Year Audit Log Retention" with "Advanced Auditing".
+* Changed "Azure Information Protection Plan 1" to "Information Protection".
+* Changed "Azure Information Protection Plan 2" to "Rules-Based Classification (AIP client & scanner)".
+* Changed "Azure Information Protection - Office 365" to "Information Protection (Office 365)".
+* Renamed "Office 365 ProPlus" to "Microsoft 365 Apps for Enterprise" / "Microsoft 365 Apps for Business": https://docs.microsoft.com/deployoffice/name-change
+* Added "Defender ATP for Windows Server" to "Additional Licensing".
+* Replaced "Meeting Broadcast" with "Live Events".
+* Added "retiring" to "Kaizala Pro" as the capabilities are being merged into Teams over time, leading to the eventual retirement of Kaizala.
+* "Microsoft Cloud App Security" is now a feature of both "Microsoft 365 E5 Security" and "Microsoft 365 E5 Compliance" via "Microsoft 365 E5 Information Protection and Governance".
+* Renamed "Microsoft 365 Business" to "Microsoft 365 Business Premium": https://www.microsoft.com/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/
+* Replaced "Conditional Access with MFA" and "Self Service Password Reset" in "Microsoft 365 Business Premium" with full "Azure Active Directory Premium Plan 1": https://techcommunity.microsoft.com/t5/small-and-medium-business-blog/azure-active-directory-premium-p1-is-coming-to-microsoft-365/ba-p/1275496
+* Renamed "Office Mobile" to "Office Mobile Apps" and "Office Online" to "Office for the Web". Where this is compressed to one tile for space, the wording "Office Web & Mobile Apps" is used.
+* Removed "Slices" and "Simple" tabs from Visio file to reduce ongoing workload in updating the diagrams.
+* Various Alternate Text inclusions, improvements, and corrections.
+* Various broken links fixed.
+* Published separate PDF files again due to popular demand.
+
+
+
 2020 / February:
 * Moved Planner to F1 and above: https://techcommunity.microsoft.com/t5/Planner-Blog/Planner-is-coming-to-all-F1-commercial-plans-and-government/ba-p/835468
 * Microsoft Flow renamed to Power Automate, link updated: https://aka.ms/flow-now-pa
