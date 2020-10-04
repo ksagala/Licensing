@@ -9,6 +9,54 @@ Cheers,
  \- Aaron.
 
 
+2020 / October:
+* Made the note in the readme that these diagrams only cover publicly confirmed license types and do not include retired or off-list license plans. Some customers will have retired SKUs in their Enterprise Agreement and won't find them on these diagrams, they should work with their Microsoft team to understand the differences.
+* Removed "on a Page" from file names to shorten them for easier navigation on GitHub.
+* Updated Defender product names in line with Ignite 2020 announcements: https://www.microsoft.com/security/blog/?p=91813
+* Reorganised diagrams to order all boxes alphabetically left-to-right, top-to-bottom, per English language labels. This is intended to help make it easier to locate a feature as they now have a logical order.
+* Added "Advanced Comms" (Advanced Communications) to "Additional Licensing": https://docs.microsoft.com/microsoftteams/teams-add-on-licensing/advanced-communications
+* Added "Power BI Premium" to "Additional Licensing": https://powerbi.microsoft.com/power-bi-premium/
+* Added "SharePoint Syntex" to "Additional Licensing": https://techcommunity.microsoft.com/t5/project-cortex-blog/announcing-sharepoint-syntex/ba-p/1681139
+* Added "Teams Rooms" to "Additional Licensing": https://rooms.microsoft.com/
+* Added "Web Content Filtering" to "Microsoft Defender for Endpoint": https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-content-filtering
+* Added "Endpoint DLP" (preview) to "Microsoft 365 E5 Information Protection & Governance": https://techcommunity.microsoft.com/t5/microsoft-security-and/announcing-public-preview-of-microsoft-endpoint-data-loss/ba-p/1534085
+* Corrected "Advanced Audit" placement back into "Office 365 E5" and out of "Microsoft 365 E5 eDiscovery & Audit": https://docs.microsoft.com/microsoft-365/compliance/advanced-audit
+* Added "Microsoft 365 Business Basic" and "Microsoft 365 Business Standard" diagrams and comparison to "Microsoft 365 Business on a Page".
+* Stopped referring to Windows in "Microsoft 365 Business Premium" as "Windows 10 Pro", as there are some small additions and one large additional benefit, namely "Windows Virtual Desktop".
+* Added "Power Virtual Agents" to additional licensing: https://powervirtualagents.microsoft.com/
+* Added "AI Builder Capacity" to additional licensing: https://docs.microsoft.com/ai-builder/overview
+* Added "Campaign Views" to "Microsoft Defender for Office 365 Plan 2": https://docs.microsoft.com/microsoft-365/security/office-365-security/campaigns
+* Added "Compromised User Detection" to "Microsoft Defender for Office 365 Plan 2": https://docs.microsoft.com/microsoft-365/security/office-365-security/address-compromised-users-quickly
+* "Safe Documents" is now Generally Available (GA): https://techcommunity.microsoft.com/t5/microsoft-365-blog/safe-documents-is-generally-available/ba-p/1480401
+* Removed "Group-Based Access Management" in "Azure AD Premium Plan 1" from the diagram as it is a low value feature and the space in the diagram is better used for a higher value feature.
+* Added "Azure AD Password Protection" to "Azure AD Premium Plan 1": https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad
+* Updated "Advanced eDiscovery" link: https://docs.microsoft.com/microsoft-365/compliance/manage-legal-investigations
+* Removed "Next Gen Protection" from "Microsoft Defender for Endpoint" as this was confusing and vague
+* Added "Evaluation Lab" to "Microsoft Defender for Endpoint": https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/evaluation-lab
+* Added "MIP Integration" to "Microsoft Defender for Endpoint": https://www.microsoft.com/security/blog/2019/01/17/windows-defender-atp-integrates-with-microsoft-information-protection-to-discover-protect-and-monitor-sensitive-data-on-windows-devices/
+* Added "Cloud App Security Integration" to "Microsoft Defender for Endpoint": https://docs.microsoft.com/cloud-app-security/wdatp-integration
+* Added "Double Key Encryption" to "Information Protection & Governance": https://techcommunity.microsoft.com/t5/microsoft-security-and/announcing-public-preview-of-double-key-encryption-for-microsoft/ba-p/1534451
+* Replaced "Microsoft Forms Pro" in the "Additional Licensing" section as this has been replaced with a Dynamics 365 product "Dynamics 365 Customer Voice": https://dynamics.microsoft.com/customer-voice-transition/
+* Added "Project Oakdale" to Office 365 plans: https://docs.microsoft.com/powerapps/teams/overview-data-platform
+* Added "Common Data Service" to the "Additional Licensing" section: https://powerplatform.microsoft.com/common-data-service/
+* Added "Microsoft Teams Rooms" to the "Additional Licensing" section: https://rooms.microsoft.com/
+* Added "Universal Print" to "Windows E3", "Microsoft 365 Business Premium", and "Microsoft 365 F3": https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-the-public-preview-of-universal-print/ba-p/1534891
+* Corrected "Direct Access" to "DirectAccess"
+* Added "Always On VPN" to "Windows E3": https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/
+* Replaced "Windows Analytics" with "Desktop Analytics": https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview
+* Updated the "Information Barriers" link: https://docs.microsoft.com/microsoftteams/information-barriers-in-teams
+* Added "Microsoft Lists" to all plans that include "SharePoint Online": https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-lists-begins-general-availability-roll-out-to/ba-p/1524768
+* Added "Bookings" to "Office 365 E3": https://support.microsoft.com/office/5382dc07-aaa5-45c9-8767-502333b214ce
+* Added "InfoPath App" to "Office 365 E3": https://www.microsoft.com/download/details.aspx?id=48734
+* Added "Endpoint Analytics" to "EMS E3": https://docs.microsoft.com/mem/analytics/overview
+* Updated the "Privileged Identity Management" link to remove US-English forcing component: https://docs.microsoft.com/azure/active-directory/active-directory-privileged-identity-management-configure
+* Updated link for "Phone System" to: https://docs.microsoft.com/MicrosoftTeams/what-is-phone-system-in-office-365
+* Updated link for "Microsoft 365 E5 Compliance" to: https://www.microsoft.com/microsoft-365/business/e5-compliance
+* Updated link for "ML-Based Classification in Office 365 (preview)" to: https://docs.microsoft.com/microsoft-365/compliance/classifier-learn-about
+
+
+====================================
+
 2020 / May:
 * Repackaged "Microsoft 365 E5 Compliance" offerings to add "Insider Risk Management", "Information Protection & Governance", and "Discover & Respond" suites. Note that there is functionality that only resides in the suite SKUs and not inside the individual Office 365, EMS, or Windows 10 SKUs. These are known as "suite only" features. Customers that previously bought Microsoft 365 E5 licenses may need a zero-cost add-on to get suite only features.
 * Renamed all F1 license types to F3 and added new "Microsoft 365 F1". Note: there is no Office 365 F1, only F3 now.
@@ -35,7 +83,6 @@ Cheers,
 * Various Alternate Text inclusions, improvements, and corrections.
 * Various broken links fixed.
 * Published separate PDF files again due to popular demand.
-
 
 
 2020 / February:
@@ -85,7 +132,6 @@ https://docs.microsoft.com/office365/servicedescriptions/mya-service-description
 * Added "Records Management" to "Office 365 Advanced Compliance" / "Office 365 E5" offerings.
 * Collapsed separate PDF files down to a single file per license map type for simplicity and speed to publish.
 * All PNG files are now exported directly from Visio at 300 DPI.
-
 
 
 2019 / July:
