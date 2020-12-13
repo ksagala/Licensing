@@ -4,7 +4,7 @@ You will find PDF and PNG versions of the diagrams along with Visio source files
 
 The PDF files have links on every tile so you can click through for more information!
 
-See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/Change%20Log.md) for update details.
+See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/ChangeLog.md) for update details.
 
 Last updated: December, 2020.
 
