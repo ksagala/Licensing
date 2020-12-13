@@ -9,11 +9,11 @@ See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/ChangeLog
 Last updated: December, 2020.
 
 Collections:
-* [Microsoft 365 Licensing - PDF Pack](https://github.com/AaronDinnage/Licensing/files/4650341/Microsoft.365.Licensing.-.PDF.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - PNG Pack](https://github.com/AaronDinnage/Licensing/files/4650334/Microsoft.365.Licensing.-.PNG.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - PowerPoint Pack](https://github.com/AaronDinnage/Licensing/files/4650338/Microsoft.365.Licensing.-.PowerPoint.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - Visio Pack](https://github.com/AaronDinnage/Licensing/files/4650340/Microsoft.365.Licensing.-.Visio.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - All-in-One Pack](https://github.com/AaronDinnage/Licensing/archive/v2020.12.zip)
+* [Microsoft 365 Licensing - PDF Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.PDF.Pack.-.v2020.12.zip)
+* [Microsoft 365 Licensing - PNG Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.PNG.Pack.-.v2020.12.zip)
+* [Microsoft 365 Licensing - PowerPoint Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.PowerPoint.Pack.-.v2020.12.zip)
+* [Microsoft 365 Licensing - Visio Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.Visio.Pack.-.v2020.12.zip)
+* [Microsoft 365 Licensing - All-in-One Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/v2020.12.zip)
 
 Featured File Download Links:
 * [Microsoft 365 Enterprise on a Page](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise.pdf) (PDF)
