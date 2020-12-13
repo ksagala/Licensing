@@ -17,7 +17,7 @@ Collections:
 
 Featured File Download Links:
 * [Microsoft 365 Enterprise](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise.pdf) (PDF)
-* [Microsoft 365 Enterprise PowerPoint](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise%20License%20Map.pptx) (PowerPoint)
+* [Microsoft 365 Enterprise Presentation](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise%20License%20Map.pptx) (PowerPoint)
 * [Microsoft 365 Enterprise with F1 and F3](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise%20-%20With%20F1%20and%20F3.pdf) (PDF)
 * [Microsoft 365 Education](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Education.pdf) (PDF)
 * [Microsoft 365 Business](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Business.pdf) (PDF)
