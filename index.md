@@ -1,14 +1,24 @@
-#### Work in Progress!
+**Work in Progress!**
+
 **Last updated: December, 2020.**
 
 This is my collection of **Microsoft 365 Licensing Diagrams**, updated as product names, feature inclusions, and licensing changes.
 
-This web page provides online versions of my diagrams directly in your browser. Each tile in the diagrams is clickable for more information on any given feature or suite.
+This web page provides the latest online versions of each diagram directly in your browser. Every feature tile is clickable for more information.
 
 #### View individual diagram:
-* Microsoft 365 Enterprise:  [Simple](https://aarondinnage.github.io/Licensing/ViewSVG.htm?file=Microsoft%20365%20Enterprise)
+<table>
+ <tr><td>Enterprise Mobility + Security (EMS)</td><td><a href="ViewSVG.htm?file=EMS Enterprise">Full</a> - <a href="ViewSVG.htm?file=EMS Enterprise - Simple">Simple</a></td></tr>
+ <tr><td>Microsoft 365 Business</td><td><a href="ViewSVG.htm?file=Microsoft 365 Business">All</a> - <a href="ViewSVG.htm?file=Microsoft 365 Business Basic">Basic</a> - <a href="ViewSVG.htm?file=Microsoft 365 Business Standard">Standard</a> - <a href="ViewSVG.htm?file=Microsoft 365 Business Premium">Premium</a></td></tr>
+ <tr><td>Microsoft 365 Education</td><td><a href="ViewSVG.htm?file=Microsoft 365 Education">Education</a></td></tr>
+ <tr><td>Microsoft 365 Education Student Use Benefit</td><td><a href="ViewSVG.htm?file=Microsoft 365 Education Student Use Benefits - Simple">Simple</a> - <a href="ViewSVG.htm?file=Microsoft 365 Education Student Use Benefits">Venn</a></td></tr>
+ <tr><td>Microsoft 365 Enterprise</td><td><a href="ViewSVG.htm?file=Microsoft 365 Enterprise">Simple</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - Venn">Venn</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - Landscape">Landscape</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - Firstline">Firstline</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - E3">E3</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - E5">E5</a></td></tr>
+ <tr><td>Office 365 Education</td><td><a href="ViewSVG.htm?file=Office 365 Education">Full</a> - <a href="ViewSVG.htm?file=Office 365 Education - Simple">Simple</a></td></tr>
+ <tr><td>Office 365 Enterprise</td><td><a href="ViewSVG.htm?file=Office 365 Enterprise">Full</a> - <a href="ViewSVG.htm?file=Office 365 Enterprise - Simple">Simple</a> - <a href="ViewSVG.htm?file=Office 365 Enterprise - E1">E1</a> - <a href="ViewSVG.htm?file=Office 365 Enterprise - F3">F3</a></td></tr>
+ <tr><td>Windows 10</td><td><a href="ViewSVG.htm?file=Windows 10 - Enterprise">Enterprise</a> - <a href="ViewSVG.htm?file=Windows 10 - Pro">Pro</a> - <a href="ViewSVG.htm?file=Windows 10 - VL">VL</a></td></tr>
+</table>
 
-You will find PDF and PNG versions of the diagrams along with the Visio source files on [GitHub](https://github.com/AaronDinnage/Licensing/).
+You will find the PDF, PNG, and SVG versions of the diagrams along with the Visio source files on [GitHub](https://github.com/AaronDinnage/Licensing/).
 
 Refer to the [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/ChangeLog.md) for update details.
 
