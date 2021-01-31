@@ -1,11 +1,9 @@
-## Microsoft 365 Licensing Diagrams
-## Work in Progress
-### By Aaron Dinnage
+#### Work in Progress!
 **Last updated: December, 2020.**
 
-This is my collection of Microsoft 365 Licensing Diagrams, updated as product names, feature inclusions, and licensing changes.
+This is my collection of **Microsoft 365 Licensing Diagrams**, updated as product names, feature inclusions, and licensing changes.
 
-This web page provides online versions of my diagrams directly in your browser, with clickable links from every tile that lead to more information on any given feature or suite.
+This web page provides online versions of my diagrams directly in your browser. Each tile in the diagrams is clickable for more information on any given feature or suite.
 
 #### View individual diagram:
 * Microsoft 365 Enterprise:  [Simple](https://aarondinnage.github.io/Licensing/ViewSVG.htm?file=Microsoft%20365%20Enterprise)
