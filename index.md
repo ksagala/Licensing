@@ -26,6 +26,8 @@ Please contact me on [Twitter](https://twitter.com/AaronDinnage) or [LinkedIn](h
 
 All feedback is greatly appreciated!
 
+I first started publishing these diagams for free on Twitter back in 2017. All along the way people have asked about how they could pay me for the work I've done on them. I've certainly put countless hours of my own time into maintaining and developing this collection. In response to that regular request I've finally set up a page on PayPal where [you can donate](https://paypal.me/pools/c/8ww03FCFcP) any amount you please. If I get a cup of coffee out of it I'll be happy :) So if you've found these diagrams useful and you'd like to give something back then you are welcome to make a donation, but please understand that you're not paying me for future work. I can't promise I'll always be able to keep these up to date, though I will try!
+
 Cheers,
 
  \- Aaron.
