@@ -1,6 +1,4 @@
-**Work in Progress!**
-
-**Last updated: December, 2020.**
+**Last updated: [December, 2020](https://github.com/AaronDinnage/Licensing/releases/tag/v2020.12)**
 
 This is my collection of **Microsoft 365 Licensing Diagrams**, updated as product names, feature inclusions, and licensing changes.
 
@@ -10,7 +8,7 @@ This web page provides the latest online versions of each diagram directly in yo
 <table>
  <tr><td>Enterprise Mobility + Security (EMS)</td><td><a href="ViewSVG.htm?file=EMS Enterprise">Full</a> - <a href="ViewSVG.htm?file=EMS Enterprise - Simple">Simple</a></td></tr>
  <tr><td>Microsoft 365 Business</td><td><a href="ViewSVG.htm?file=Microsoft 365 Business">All</a> - <a href="ViewSVG.htm?file=Microsoft 365 Business Basic">Basic</a> - <a href="ViewSVG.htm?file=Microsoft 365 Business Standard">Standard</a> - <a href="ViewSVG.htm?file=Microsoft 365 Business Premium">Premium</a></td></tr>
- <tr><td>Microsoft 365 Education</td><td><a href="ViewSVG.htm?file=Microsoft 365 Education">Education</a></td></tr>
+ <tr><td>Microsoft 365 Education</td><td><a href="ViewSVG.htm?file=Microsoft 365 Education">Full</a></td></tr>
  <tr><td>Microsoft 365 Education Student Use Benefit</td><td><a href="ViewSVG.htm?file=Microsoft 365 Education Student Use Benefits - Simple">Simple</a> - <a href="ViewSVG.htm?file=Microsoft 365 Education Student Use Benefits">Venn</a></td></tr>
  <tr><td>Microsoft 365 Enterprise</td><td><a href="ViewSVG.htm?file=Microsoft 365 Enterprise">Simple</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - Venn">Venn</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - Landscape">Landscape</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - Firstline">Firstline</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - E3">E3</a> - <a href="ViewSVG.htm?file=Microsoft 365 Enterprise - E5">E5</a></td></tr>
  <tr><td>Office 365 Education</td><td><a href="ViewSVG.htm?file=Office 365 Education">Full</a> - <a href="ViewSVG.htm?file=Office 365 Education - Simple">Simple</a></td></tr>
