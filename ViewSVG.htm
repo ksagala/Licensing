@@ -15,7 +15,7 @@
 		window.onload = function() {
 			var svg = document.getElementsByTagName('object')[0];
 			svg.style = "width:" + document.body.offsetWidth + "px;";
-			svg.data = getParameterByName('file');
+			svg.data = "./" + getParameterByName('file') + ".svg";
 		};
 	//]]></script>
 </head>
