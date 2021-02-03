@@ -6,34 +6,34 @@
 
 	<style type="text/css">
 	<![CDATA[
-		.st1 {fill:#a5a5a5;fill-opacity:0.2;stroke:#a465d1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st2 {fill:#a465d1;stroke:#a465d1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st3 {fill:#ffffff;font-family:Segoe UI;font-size:1.5em;font-weight:bold}
-		.st4 {fill:#a5a5a5;fill-opacity:0.2;stroke:#c00000;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st5 {fill:#c00000;stroke:#c00000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st6 {fill:#a5a5a5;fill-opacity:0.2;stroke:#267226;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st7 {fill:#267226;stroke:#267226;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st8 {fill:#a5a5a5;fill-opacity:0.2;stroke:#00b0f0;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st9 {fill:#00b0f0;stroke:#00b0f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st1 {fill:#a5a5a5;fill-opacity:0.2;stroke:#a058c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st2 {fill:#a058c0;stroke:#a058c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st3 {fill:#ffffff;font-family:Arial;font-size:1.5em;font-weight:bold}
+		.st4 {fill:#a5a5a5;fill-opacity:0.2;stroke:#a41500;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st5 {fill:#a41500;stroke:#a41500;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st6 {fill:#a5a5a5;fill-opacity:0.2;stroke:#006600;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st7 {fill:#006600;stroke:#006600;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st8 {fill:#a5a5a5;fill-opacity:0.2;stroke:#2080a0;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st9 {fill:#2080a0;stroke:#2080a0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
 		.st10 {font-size:1em}
 		.st11 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st12 {fill:#000000;font-family:Segoe UI;font-size:1.99999em;font-style:italic;font-weight:bold}
+		.st12 {fill:#000000;font-family:Arial;font-size:1.99999em;font-style:italic;font-weight:bold}
 		.st13 {font-size:1em;font-style:normal;font-weight:normal}
 		.st14 {font-size:1em;font-weight:normal}
-		.st15 {fill:#000000;font-family:Segoe UI;font-size:1.99999em}
+		.st15 {fill:#000000;font-family:Arial;font-size:1.99999em}
 		.st16 {font-family:Symbol;font-size:0.750003em}
 		.st17 {font-size:0.750003em}
-		.st18 {fill:#d8d8d8;fill-opacity:0.5;stroke:#0070c0;stroke-dasharray:2.25,4.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st19 {fill:#000000;font-family:Segoe UI;font-size:1.00001em;font-weight:bold}
-		.st20 {fill:#00b0f0;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st21 {fill:#ffffff;font-family:Segoe UI;font-size:1.00001em;font-weight:bold}
-		.st22 {font-size:0.83333em;font-weight:normal}
+		.st18 {fill:#d8d8d8;fill-opacity:0.5;stroke:#0070f7;stroke-dasharray:2.25,4.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st19 {fill:#000000;font-family:Arial;font-size:1.00001em;font-weight:bold}
+		.st20 {fill:#0070f7;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st21 {fill:#ffffff;font-family:Arial;font-size:1.00001em;font-weight:bold}
+		.st22 {font-size:0.749994em;font-weight:normal}
 		.st23 {baseline-shift:32.4941%;font-size:0.649882em}
-		.st24 {fill:#1478a9;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st25 {fill:#c00000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st26 {fill:#000000;font-family:Segoe UI;font-size:4.00001em;font-weight:bold}
-		.st27 {fill:#000000;font-family:Segoe UI;font-size:1.99999em;font-weight:bold}
-		.st28 {fill:#0070c0;font-family:Segoe UI;font-size:1.16666em;font-weight:bold}
+		.st24 {fill:#2080a0;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st25 {fill:#a41500;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st26 {fill:#000000;font-family:Arial;font-size:4.00001em;font-weight:bold}
+		.st27 {fill:#000000;font-family:Arial;font-size:1.99999em;font-weight:bold}
+		.st28 {fill:#0070c0;font-family:Arial;font-size:1.16666em;font-weight:bold}
 		.st29 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
 	</style>
@@ -47,16 +47,16 @@
 		<a xlink:href="https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans" xlink:show="new" target="_blank" xlink:title="Microsoft 365 Plans">
 			<g id="shape1001-3" transform="translate(-892.913,864.567) rotate(-90)">
 				<title>Microsoft 365 Plans</title>
-				
+				<desc>Microsoft 365 F1</desc>
 				<rect x="0" y="921.26" width="609.449" height="56.6929" rx="8.50394" ry="8.50394" class="st2" />
-				<text x="233.38" y="955.01" class="st3">Microsoft 365 F1</text>			</g>
+				<text x="233.7" y="955.01" class="st3">Microsoft 365 F1</text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans" xlink:show="new" target="_blank" xlink:title="Microsoft 365 Plans">
 			<g id="shape1002-6" transform="translate(595.276,864.567) rotate(-90)">
 				<title>Microsoft 365 Plans</title>
-				
+				<desc>Microsoft 365 F1</desc>
 				<rect x="0" y="921.26" width="609.449" height="56.6929" rx="8.50394" ry="8.50394" class="st2" />
-				<text x="233.38" y="955.01" class="st3">Microsoft 365 F1</text>			</g>
+				<text x="233.7" y="955.01" class="st3">Microsoft 365 F1</text>			</g>
 		</a>
 		<g id="shape1003-9" transform="translate(113.386,-28.3465)">
 			
@@ -65,9 +65,9 @@
 		<a xlink:href="https://docs.microsoft.com/office365/enterprise/" xlink:show="new" target="_blank" xlink:title="Office 365 Enterprise">
 			<g id="shape1004-11" transform="translate(113.386,-751.181)">
 				<title>Office 365 Enterprise</title>
-				
+				<desc>Office 365 for Microsoft 365 F1</desc>
 				<rect x="0" y="921.26" width="439.37" height="56.6929" rx="8.50394" ry="8.50394" class="st5" />
-				<text x="87.36" y="955.01" class="st3">Office 365 for Microsoft 365 F1</text>			</g>
+				<text x="88.64" y="955.01" class="st3">Office 365 for Microsoft 365 F1</text>			</g>
 		</a>
 		<g id="shape1005-14" transform="translate(1048.82,-28.3465)">
 			
@@ -76,23 +76,23 @@
 		<a xlink:href="https://www.microsoft.com/windowsforbusiness" xlink:show="new" target="_blank" xlink:title="Windows 10">
 			<g id="shape1006-16" transform="translate(1048.82,-751.181)">
 				<title>Windows 10</title>
-				
+				<desc>Windows</desc>
 				<rect x="0" y="921.26" width="439.37" height="56.6929" rx="8.50394" ry="8.50394" class="st7" />
-				<text x="180.43" y="955.01" class="st3">Windows</text>			</g>
+				<text x="180.19" y="955.01" class="st3">Windows</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/office365/enterprise/" xlink:show="new" target="_blank" xlink:title="Office 365 Enterprise">
 			<g id="shape1086-19" transform="translate(113.386,-28.3465)">
 				<title>Office 365 Enterprise</title>
-				
+				<desc>Office 365 for Microsoft 365 F1</desc>
 				<rect x="0" y="921.26" width="439.37" height="56.6929" rx="8.50394" ry="8.50394" class="st5" />
-				<text x="87.36" y="955.01" class="st3">Office 365 for Microsoft 365 F1</text>			</g>
+				<text x="88.64" y="955.01" class="st3">Office 365 for Microsoft 365 F1</text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/windowsforbusiness" xlink:show="new" target="_blank" xlink:title="Windows 10">
 			<g id="shape1087-22" transform="translate(1048.82,-28.3465)">
 				<title>Windows 10</title>
-				
+				<desc>Windows</desc>
 				<rect x="0" y="921.26" width="439.37" height="56.6929" rx="8.50394" ry="8.50394" class="st7" />
-				<text x="180.43" y="955.01" class="st3">Windows</text>			</g>
+				<text x="180.19" y="955.01" class="st3">Windows</text>			</g>
 		</a>
 		<g id="shape1117-25" transform="translate(581.102,-28.3465)">
 			
@@ -101,22 +101,22 @@
 		<a xlink:href="https://www.microsoft.com/cloud-platform/enterprise-mobility-security" xlink:show="new" target="_blank" xlink:title="Enterprise Mobility + Security">
 			<g id="shape1118-27" transform="translate(581.102,-751.181)">
 				<title>Enterprise Mobility + Security</title>
-				
+				<desc>Enterprise Mobility + Security E3 (EMS E3)</desc>
 				<rect x="0" y="921.26" width="439.37" height="56.6929" rx="8.50394" ry="8.50394" class="st9" />
-				<text x="80.81" y="944.21" class="st3">Enterprise Mobility + Security E3<tspan x="182.14" dy="1.2em" class="st10">(EMS E3)</tspan></text>			</g>
+				<text x="79.39" y="944.21" class="st3">Enterprise Mobility + Security E3<tspan x="180.68" dy="1.2em" class="st10">(EMS E3)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/cloud-platform/enterprise-mobility-security" xlink:show="new" target="_blank" xlink:title="Enterprise Mobility + Security">
 			<g id="shape1119-31" transform="translate(581.102,-28.3465)">
 				<title>Enterprise Mobility + Security</title>
-				
+				<desc>Enterprise Mobility + Security E3 (EMS E3)</desc>
 				<rect x="0" y="921.26" width="439.37" height="56.6929" rx="8.50394" ry="8.50394" class="st9" />
-				<text x="80.81" y="944.21" class="st3">Enterprise Mobility + Security E3<tspan x="182.14" dy="1.2em" class="st10">(EMS E3)</tspan></text>			</g>
+				<text x="79.39" y="944.21" class="st3">Enterprise Mobility + Security E3<tspan x="180.68" dy="1.2em" class="st10">(EMS E3)</tspan></text>			</g>
 		</a>
 		<g id="shape1146-35" transform="translate(1077.17,-141.732)">
 			
 			<desc>Microsoft 365 F1 does not include Windows.</desc>
 			<rect x="0" y="425.197" width="382.677" height="552.756" class="st11" />
-			<text x="4" y="690.77" class="st12">Microsoft 365 F1 <tspan class="st13">does </tspan><tspan class="st14">not</tspan><tspan class="st13"> </tspan><tspan class="st13">include </tspan><tspan x="4" dy="1.425em" class="st10">Windows</tspan><tspan class="st13">.</tspan></text>		</g>
+			<text x="4" y="690.79" class="st12">Microsoft 365 F1 <tspan class="st13">does </tspan><tspan class="st14">not</tspan><tspan class="st13"> </tspan><tspan class="st13">include </tspan><tspan x="4" dy="1.426em" class="st10">Windows</tspan><tspan class="st13">.</tspan></text>		</g>
 		<g id="shape1147-44" transform="translate(141.732,-141.732)">
 			
 			<desc>Limitations: Users cannot be administrators. No Skype desktop...</desc>
@@ -129,266 +129,266 @@
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/" xlink:show="new" target="_blank" xlink:title="Azure Active Directory Premium Plan 1">
 			<g id="shape1149-61" transform="translate(595.276,-141.732)">
 				<title>Azure Active Directory Premium Plan 1</title>
-				
+				<desc>Azure AD Premium Plan 1</desc>
 				<rect x="0" y="935.433" width="411.024" height="42.5196" class="st11" />
-				<text x="132.54" y="960.29" class="st19">Azure AD Premium Plan 1</text>			</g>
+				<text x="131.82" y="960.29" class="st19">Azure AD Premium Plan 1</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/reports-monitoring/" xlink:show="new" target="_blank" xlink:title="Azure AD Reports">
 			<g id="shape1150-64" transform="translate(609.449,-439.808)">
 				<title>Azure AD Reports</title>
-				
+				<desc>Advanced Security Reports &amp; Alerts</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="14.63" y="924.52" class="st21">Advanced <tspan x="19.74" dy="1.2em" class="st10">Security </tspan><tspan x="13.85" dy="1.2em" class="st10">Reports &amp; </tspan><tspan x="25.99" dy="1.2em" class="st10">Alerts</tspan></text>			</g>
+				<text x="13.84" y="924.52" class="st21">Advanced <tspan x="18.84" dy="1.2em" class="st10">Security </tspan><tspan x="13.85" dy="1.2em" class="st10">Reports &amp; </tspan><tspan x="25.51" dy="1.2em" class="st10">Alerts</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso" xlink:show="new" target="_blank" xlink:title="Azure AD SSO">
 			<g id="shape1151-70" transform="translate(708.661,-184.252)">
 				<title>Azure AD SSO</title>
-				
+				<desc>Single-Sign-On to other SaaS</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="7.89" y="931.72" class="st21">Single-Sign-<tspan x="9.78" dy="1.2em" class="st10">On to other </tspan><tspan x="29.34" dy="1.2em" class="st10">SaaS</tspan></text>			</g>
+				<text x="7.52" y="931.72" class="st21">Single-Sign-<tspan x="10.19" dy="1.2em" class="st10">On to other </tspan><tspan x="27.84" dy="1.2em" class="st10">SaaS</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy" xlink:show="new" target="_blank" xlink:title="Application Proxy">
 			<g id="shape1152-75" transform="translate(708.661,-439.808)">
 				<title>Application Proxy</title>
-				
+				<desc>App Proxy, including PingAccess</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="11.29" y="931.72" class="st21">App Proxy, <tspan x="16.21" dy="1.2em" class="st10">including </tspan><tspan x="11.28" dy="1.2em" class="st10">PingAccess</tspan></text>			</g>
+				<text x="10.85" y="931.72" class="st21">App Proxy, <tspan x="15.86" dy="1.2em" class="st10">including </tspan><tspan x="8.5" dy="1.2em" class="st10">PingAccess</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks" xlink:show="new" target="_blank" xlink:title="Azure Multi-Factor Authentication">
 			<g id="shape1153-80" transform="translate(708.661,-269.291)">
 				<title>Azure Multi-Factor Authentication</title>
-				
+				<desc>Multi-Factor Auth (MFA)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="7.36" y="938.92" class="st21">Multi-Factor <tspan x="9.56" dy="1.2em" class="st10">Auth (MFA)</tspan></text>			</g>
+				<text x="8.19" y="938.92" class="st21">Multi-Factor <tspan x="10.2" dy="1.2em" class="st10">Auth (MFA)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/hybrid/whatis-azure-ad-connect#what-is-azure-ad-connect-health" xlink:show="new" target="_blank" xlink:title="Azure AD Connect Health">
 			<g id="shape1154-84" transform="translate(907.087,-439.808)">
 				<title>Azure AD Connect Health</title>
-				
+				<desc>Azure AD Connect Health</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="15.87" y="931.72" class="st21">Azure AD <tspan x="19.39" dy="1.2em" class="st10">Connect </tspan><tspan x="23.8" dy="1.2em" class="st10">Health</tspan></text>			</g>
+				<text x="15.52" y="931.72" class="st21">Azure AD <tspan x="18.52" dy="1.2em" class="st10">Connect </tspan><tspan x="24.18" dy="1.2em" class="st10">Health</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/cloud-app-security/set-up-cloud-discovery" xlink:show="new" target="_blank" xlink:title="Cloud App Discovery">
 			<g id="shape1155-89" transform="translate(708.661,-354.331)">
 				<title>Cloud App Discovery</title>
-				
+				<desc>Cloud App Discovery</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="12.74" y="938.92" class="st21">Cloud App <tspan x="15.09" dy="1.2em" class="st10">Discovery</tspan></text>			</g>
+				<text x="12.19" y="938.92" class="st21">Cloud App <tspan x="13.83" dy="1.2em" class="st10">Discovery</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/users-groups-roles/users-sharing-accounts" xlink:show="new" target="_blank" xlink:title="Shared Accounts in Azure AD">
 			<g id="shape1156-93" transform="translate(609.449,-184.252)">
 				<title>Shared Accounts in Azure AD</title>
-				
+				<desc>Shared Account Password Roll-Over</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="22.97" y="924.52" class="st21">Shared <tspan x="19.28" dy="1.2em" class="st10">Account </tspan><tspan x="15.77" dy="1.2em" class="st10">Password </tspan><tspan x="15.66" dy="1.2em" class="st10">Roll</tspan>-Over</text>			</g>
+				<text x="22.18" y="924.52" class="st21">Shared <tspan x="18.52" dy="1.2em" class="st10">Account </tspan><tspan x="14.17" dy="1.2em" class="st10">Password </tspan><tspan x="15.51" dy="1.2em" class="st10">Roll</tspan>-Over</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks" xlink:show="new" target="_blank" xlink:title="SSPR">
 			<g id="shape1157-99" transform="translate(807.874,-269.291)">
 				<title>SSPR</title>
-				
+				<desc>Self-Service Password Reset in AD</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="9.4" y="931.72" class="st21">Self-Service <tspan x="15.77" dy="1.2em" class="st10">Password </tspan><tspan x="9.85" dy="1.2em" class="st10">Reset in AD</tspan></text>			</g>
+				<text x="8.17" y="931.72" class="st21">Self-Service <tspan x="14.17" dy="1.2em" class="st10">Password </tspan><tspan x="8.85" dy="1.2em" class="st10">Reset in AD</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-self-service-management" xlink:show="new" target="_blank" xlink:title="Self-Service Group Management">
 			<g id="shape1158-104" transform="translate(907.087,-269.291)">
 				<title>Self-Service Group Management</title>
-				
+				<desc>Self-Service Group Management</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="9.4" y="931.72" class="st21">Self-Service <tspan x="24.85" dy="1.2em" class="st10">Group </tspan><tspan x="5.02" dy="1.2em" class="st10">Management</tspan></text>			</g>
+				<text x="8.17" y="931.72" class="st21">Self-Service <tspan x="24.52" dy="1.2em" class="st10">Group </tspan><tspan x="5.85" dy="1.2em" class="st10">Management</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/cloud-platform/conditional-access" xlink:show="new" target="_blank" xlink:title="Conditional Access">
 			<g id="shape1159-109" transform="translate(807.874,-354.331)">
 				<title>Conditional Access</title>
-				
+				<desc>Conditional Access</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="9.79" y="938.92" class="st21">Conditional <tspan x="24.02" dy="1.2em" class="st10">Access</tspan></text>			</g>
+				<text x="9.53" y="938.92" class="st21">Conditional <tspan x="21.5" dy="1.2em" class="st10">Access</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/b2b/" xlink:show="new" target="_blank" xlink:title="Azure AD B2B">
 			<g id="shape1160-113" transform="translate(807.874,-439.808)">
 				<title>Azure AD B2B</title>
-				
+				<desc>Azure AD B2B 5 guests per user</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="15.87" y="931.72" class="st21">Azure AD <tspan x="31.38" dy="1.2em" class="st10">B2B</tspan><tspan x="4.79" dy="1.44em" class="st22">5 guests per user</tspan></text>			</g>
+				<text x="15.52" y="931.72" class="st21">Azure AD <tspan x="30.52" dy="1.2em" class="st10">B2B</tspan><tspan x="7.75" dy="1.6em" class="st22">5 guests per user</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview" xlink:show="new" target="_blank" xlink:title="Enterprise Staet Roaming">
 			<g id="shape1161-118" transform="translate(907.087,-354.331)">
 				<title>Enterprise Staet Roaming</title>
-				
+				<desc>Enterprise State Roaming</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="14.03" y="931.72" class="st21">Enterprise <tspan x="28.01" dy="1.2em" class="st10">State </tspan><tspan x="17.16" dy="1.2em" class="st10">Roaming</tspan></text>			</g>
+				<text x="12.84" y="931.72" class="st21">Enterprise <tspan x="27.85" dy="1.2em" class="st10">State </tspan><tspan x="16.85" dy="1.2em" class="st10">Roaming</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou" xlink:show="new" target="_blank" xlink:title="Terms of Use">
 			<g id="shape1162-123" transform="translate(807.874,-184.252)">
 				<title>Terms of Use</title>
-				
+				<desc>Terms of Use</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="5.73" y="946.12" class="st21">Terms of Use</text>			</g>
+				<text x="4.51" y="946.12" class="st21">Terms of Use</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad" xlink:show="new" target="_blank" xlink:title="Azure AD Password Protection">
 			<g id="shape1163-126" transform="translate(609.449,-354.331)">
 				<title>Azure AD Password Protection</title>
-				
+				<desc>Azure AD Password Protection</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="15.87" y="931.72" class="st21">Azure AD <tspan x="15.77" dy="1.2em" class="st10">Password </tspan><tspan x="12.98" dy="1.2em" class="st10">Protection</tspan></text>			</g>
+				<text x="15.52" y="931.72" class="st21">Azure AD <tspan x="14.17" dy="1.2em" class="st10">Password </tspan><tspan x="12.85" dy="1.2em" class="st10">Protection</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/microsoft-identity-manager/" xlink:show="new" target="_blank" xlink:title="Microsoft Identity Manager">
 			<g id="shape1164-131" transform="translate(609.449,-269.291)">
 				<title>Microsoft Identity Manager</title>
-				
+				<desc>Microsoft Identity Manager</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="15.19" y="931.72" class="st21">Microsoft <tspan x="20.42" dy="1.2em" class="st10">Identity </tspan><tspan x="17.34" dy="1.2em" class="st10">Manager</tspan></text>			</g>
+				<text x="15.52" y="931.72" class="st21">Microsoft <tspan x="21.19" dy="1.2em" class="st10">Identity </tspan><tspan x="17.85" dy="1.2em" class="st10">Manager</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview" xlink:show="new" target="_blank" xlink:title="3rd Party MFA Integration">
 			<g id="shape1165-136" transform="translate(907.087,-184.252)">
 				<title>3rd Party MFA Integration</title>
-				
+				<desc>3rd Party MFA Integration</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st20" />
-				<text x="18.58" y="931.72" class="st21">3<tspan dy="-0.235em" class="st23">rd</tspan><tspan dy="0.153em" class="st10"> </tspan>Party  <tspan x="29.44" dy="1.2em" class="st10">MFA </tspan><tspan x="10.74" dy="1.2em" class="st10">Integration</tspan></text>			</g>
+				<text x="18.61" y="931.72" class="st21">3<tspan dy="-0.235em" class="st23">rd</tspan><tspan dy="0.153em" class="st10"> </tspan>Party  <tspan x="29.52" dy="1.2em" class="st10">MFA </tspan><tspan x="11.52" dy="1.2em" class="st10">Integration</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/cloud-platform/microsoft-intune" xlink:show="new" target="_blank" xlink:title="Intune Device Management &amp; Application Management">
 			<g id="shape1167-143" transform="translate(609.449,-538.583)">
 				<title>Intune Device Management &amp; Application Management</title>
-				
+				<desc>Intune MDM &amp; MAM</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="6.58" y="938.92" class="st21">Intune MDM <tspan x="20.06" dy="1.2em" class="st10">&amp; MAM</tspan></text>			</g>
+				<text x="8.53" y="938.92" class="st21">Intune MDM <tspan x="22.19" dy="1.2em" class="st10">&amp; MAM</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://azure.microsoft.com/pricing/details/information-protection/" xlink:show="new" target="_blank" xlink:title="Information Protection">
 			<g id="shape1168-147" transform="translate(907.087,-623.622)">
 				<title>Information Protection</title>
-				
+				<desc>Information Protection</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="8.57" y="938.92" class="st21">Information <tspan x="12.98" dy="1.2em" class="st10">Protection</tspan></text>			</g>
+				<text x="9.52" y="938.92" class="st21">Information <tspan x="12.85" dy="1.2em" class="st10">Protection</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license" xlink:show="new" target="_blank" xlink:title="CALs">
 			<g id="shape1169-151" transform="translate(907.087,-538.583)">
 				<title>CALs</title>
-				
+				<desc>Windows Server CAL Rights</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="16.35" y="931.72" class="st21">Windows <tspan x="11.95" dy="1.2em" class="st10">Server CAL </tspan><tspan x="24.6" dy="1.2em" class="st10">Rights</tspan></text>			</g>
+				<text x="16.19" y="931.72" class="st21">Windows <tspan x="9.84" dy="1.2em" class="st10">Server CAL </tspan><tspan x="23.85" dy="1.2em" class="st10">Rights</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/configmgr/core/understand/introduction" xlink:show="new" target="_blank" xlink:title="Microsoft Endpoint Configuration Manager">
 			<g id="shape1170-156" transform="translate(708.661,-538.583)">
 				<title>Microsoft Endpoint Configuration Manager</title>
-				
+				<desc>Microsoft Endpoint Config Manager</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="15.19" y="924.52" class="st21">Microsoft <tspan x="16.92" dy="1.2em" class="st10">Endpoint </tspan><tspan x="23.76" dy="1.2em" class="st10">Config </tspan><tspan x="17.34" dy="1.2em" class="st10">Manager</tspan></text>			</g>
+				<text x="15.52" y="924.52" class="st21">Microsoft <tspan x="16.53" dy="1.2em" class="st10">Endpoint </tspan><tspan x="23.53" dy="1.2em" class="st10">Config </tspan><tspan x="17.85" dy="1.2em" class="st10">Manager</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/sccm/protect/deploy-use/endpoint-protection" xlink:show="new" target="_blank" xlink:title="SCEP">
 			<g id="shape1171-162" transform="translate(807.874,-538.583)">
 				<title>SCEP</title>
-				
+				<desc>System Center Endpoint Protection</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="22.21" y="924.52" class="st21">System <tspan x="23.93" dy="1.2em" class="st10">Center </tspan><tspan x="16.92" dy="1.2em" class="st10">Endpoint </tspan><tspan x="12.98" dy="1.2em" class="st10">Protection</tspan></text>			</g>
+				<text x="21.17" y="924.52" class="st21">System <tspan x="23.51" dy="1.2em" class="st10">Center </tspan><tspan x="16.53" dy="1.2em" class="st10">Endpoint </tspan><tspan x="12.85" dy="1.2em" class="st10">Protection</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/azure/information-protection/what-is-azure-rms" xlink:show="new" target="_blank" xlink:title="Azure RMS">
 			<g id="shape1172-168" transform="translate(609.449,-623.622)">
 				<title>Azure RMS</title>
-				
+				<desc>Active Directory &amp; Azure AD RMS</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="24.88" y="924.52" class="st21">Active <tspan x="9.5" dy="1.2em" class="st10">Directory &amp; </tspan><tspan x="15.87" dy="1.2em" class="st10">Azure AD </tspan><tspan x="29.5" dy="1.2em" class="st10">RMS</tspan></text>			</g>
+				<text x="24.51" y="924.52" class="st21">Active <tspan x="10.18" dy="1.2em" class="st10">Directory &amp; </tspan><tspan x="15.52" dy="1.2em" class="st10">Azure AD </tspan><tspan x="29.19" dy="1.2em" class="st10">RMS</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/mem/analytics/overview" xlink:show="new" target="_blank" xlink:title="Endpoint Analytics">
 			<g id="shape1173-174" transform="translate(807.874,-623.622)">
 				<title>Endpoint Analytics</title>
-				
+				<desc>Endpoint Analytics</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="16.92" y="938.92" class="st21">Endpoint <tspan x="16.95" dy="1.2em" class="st10">Analytics</tspan></text>			</g>
+				<text x="16.53" y="938.92" class="st21">Endpoint <tspan x="15.84" dy="1.2em" class="st10">Analytics</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/microsoft-teams/" xlink:show="new" target="_blank" xlink:title="Microsoft Teams">
 			<g id="shape1174-178" transform="translate(240.945,-623.622)">
 				<title>Microsoft Teams</title>
-				
+				<desc>Microsoft Teams</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="15.19" y="938.92" class="st21">Microsoft <tspan x="24.39" dy="1.2em" class="st10">Teams</tspan></text>			</g>
+				<text x="15.52" y="938.92" class="st21">Microsoft <tspan x="23.51" dy="1.2em" class="st10">Teams</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/yammer/yammer-overview" xlink:show="new" target="_blank" xlink:title="Yammer">
 			<g id="shape1175-182" transform="translate(240.945,-453.543)">
 				<title>Yammer</title>
-				
+				<desc>Yammer Enterprise</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="19.02" y="938.92" class="st21">Yammer <tspan x="14.03" dy="1.2em" class="st10">Enterprise</tspan></text>			</g>
+				<text x="18.84" y="938.92" class="st21">Yammer <tspan x="12.84" dy="1.2em" class="st10">Enterprise</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/sharepoint/introduction" xlink:show="new" target="_blank" xlink:title="SharePoint Online">
 			<g id="shape1176-186" transform="translate(240.945,-538.583)">
 				<title>SharePoint Online</title>
-				
+				<desc>SharePoint Online Kiosk</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="11.66" y="938.92" class="st21">SharePoint <tspan x="7.14" dy="1.2em" class="st10">Online Kiosk</tspan></text>			</g>
+				<text x="10.85" y="938.92" class="st21">SharePoint <tspan x="5.85" dy="1.2em" class="st10">Online Kiosk</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/stream/" xlink:show="new" target="_blank" xlink:title="Stream">
 			<g id="shape1177-190" transform="translate(439.37,-538.583)">
 				<title>Stream</title>
-				
+				<desc>Stream (Consume)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="22.46" y="938.92" class="st21">Stream <tspan x="12.04" dy="1.2em" class="st10">(Consume)</tspan></text>			</g>
+				<text x="22.18" y="938.92" class="st21">Stream <tspan x="11.19" dy="1.2em" class="st10">(Consume)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/business/task-management-software" xlink:show="new" target="_blank" xlink:title="Planner">
 			<g id="shape1178-194" transform="translate(141.732,-538.583)">
 				<title>Planner</title>
-				
+				<desc>Planner</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="21.01" y="946.12" class="st21">Planner</text>			</g>
+				<text x="20.51" y="946.12" class="st21">Planner</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/office365/servicedescriptions/skype-for-business-online-service-description/skype-for-business-online-service-description" xlink:show="new" target="_blank" xlink:title="Skype for Business Online">
 			<g id="shape1179-197" transform="translate(340.157,-538.583)">
 				<title>Skype for Business Online</title>
-				
+				<desc>Skype for Business Plan 1 (retiring)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="15.6" y="924.52" class="st21">Skype for <tspan x="18.54" dy="1.2em" class="st10">Business</tspan><tspan x="25.16" dy="1.2em" class="st10">Plan 1 </tspan><tspan x="16.98" dy="1.2em" class="st10">(retiring)</tspan></text>			</g>
+				<text x="15.18" y="924.52" class="st21">Skype for <tspan x="15.84" dy="1.2em" class="st10">Business</tspan><tspan x="24.84" dy="1.2em" class="st10">Plan 1 </tspan><tspan x="17.85" dy="1.2em" class="st10">(retiring)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://support.office.com/sway" xlink:show="new" target="_blank" xlink:title="Sway">
 			<g id="shape1180-203" transform="translate(141.732,-453.543)">
 				<title>Sway</title>
-				
+				<desc>Sway</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="27.91" y="946.12" class="st21">Sway</text>			</g>
+				<text x="27.18" y="946.12" class="st21">Sway</text>			</g>
 		</a>
 		<a xlink:href="https://support.office.com/forms" xlink:show="new" target="_blank" xlink:title="Microsoft Forms">
 			<g id="shape1181-206" transform="translate(141.732,-623.622)">
 				<title>Microsoft Forms</title>
-				
+				<desc>Microsoft Forms (Consume)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="15.19" y="931.72" class="st21">Microsoft <tspan x="25.21" dy="1.2em" class="st10">Forms </tspan><tspan x="12.04" dy="1.2em" class="st10">(Consume)</tspan></text>			</g>
+				<text x="15.52" y="931.72" class="st21">Microsoft <tspan x="24.18" dy="1.2em" class="st10">Forms </tspan><tspan x="11.19" dy="1.2em" class="st10">(Consume)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/mobile/office" xlink:show="new" target="_blank" xlink:title="Office Mobile">
 			<g id="shape1182-211" transform="translate(439.37,-623.622)">
 				<title>Office Mobile</title>
-				
+				<desc>Office Mobile Apps (read-only)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="25.54" y="931.72" class="st21">Office<tspan x="6.78" dy="1.2em" class="st10">Mobile Apps </tspan><tspan x="10.86" dy="1.2em" class="st10">(read</tspan>-only)</text>			</g>
+				<text x="25.52" y="931.72" class="st21">Office<tspan x="6.85" dy="1.2em" class="st10">Mobile Apps </tspan><tspan x="11.52" dy="1.2em" class="st10">(read</tspan>-only)</text>			</g>
 		</a>
 		<a xlink:href="https://support.office.com/article/5622C7C9-721D-4B3D-8CB9-A7276C2470E5" xlink:show="new" target="_blank" xlink:title="Office Online">
 			<g id="shape1183-216" transform="translate(340.157,-623.622)">
 				<title>Office Online</title>
-				
+				<desc>Office for the Web (read-only)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st25" />
-				<text x="25.54" y="931.72" class="st21">Office<tspan x="8.66" dy="1.2em" class="st10">for the Web </tspan><tspan x="10.86" dy="1.2em" class="st10">(read</tspan>-only)</text>			</g>
+				<text x="25.52" y="931.72" class="st21">Office<tspan x="9.52" dy="1.2em" class="st10">for the Web </tspan><tspan x="11.52" dy="1.2em" class="st10">(read</tspan>-only)</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/advanced-threat-analytics/" xlink:show="new" target="_blank" xlink:title="Advanced Threat Analytics">
 			<g id="shape1184-221" transform="translate(708.661,-623.622)">
 				<title>Advanced Threat Analytics</title>
-				
+				<desc>Advanced Threat Analytics (retiring)</desc>
 				<rect x="0" y="907.087" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st24" />
-				<text x="14.63" y="924.52" class="st21">Advanced <tspan x="24.19" dy="1.2em" class="st10">Threat </tspan><tspan x="16.95" dy="1.2em" class="st10">Analytics </tspan><tspan x="16.98" dy="1.2em" class="st10">(retiring)</tspan></text>			</g>
+				<text x="13.84" y="924.52" class="st21">Advanced <tspan x="24.18" dy="1.2em" class="st10">Threat </tspan><tspan x="15.84" dy="1.2em" class="st10">Analytics </tspan><tspan x="17.85" dy="1.2em" class="st10">(retiring)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://aarondinnage.github.io/Licensing/" xlink:show="new" target="_blank" xlink:title="GitHub Link">
 			<g id="shape1185-227" transform="translate(28.3465,-892.913)">
 				<title>GitHub Link</title>
-				
+				<desc>Microsoft 365 F1</desc>
 				<rect x="0" y="921.26" width="1544.88" height="56.6929" class="st11" />
-				<text x="582.2" y="964.01" class="st26">Microsoft 365 F1</text>			</g>
+				<text x="583.05" y="964.01" class="st26">Microsoft 365 F1</text>			</g>
 		</a>
 		<g id="shape1186-230" transform="translate(28.3465,-864.567)">
 			
-			<desc>January 2021</desc>
+			<desc>February 2021</desc>
 			<rect x="0" y="949.606" width="1544.88" height="28.3465" class="st11" />
-			<text x="697.51" y="970.98" class="st27">January 2021</text>		</g>
+			<text x="691.06" y="970.98" class="st27">February 2021</text>		</g>
 		<a xlink:href="https://twitter.com/AaronDinnage" xlink:show="new" target="_blank" xlink:title="Twitter">
 			<g id="shape1187-233" transform="translate(28.3465,-836.22)">
 				<title>Twitter</title>
-				
+				<desc>@AaronDinnage</desc>
 				<rect x="0" y="949.606" width="1544.88" height="28.3465" class="st11" />
-				<text x="718.27" y="967.98" class="st28">@AaronDinnage</text>			</g>
+				<text x="717.78" y="967.98" class="st28">@AaronDinnage</text>			</g>
 		</a>
 	</g>
 </svg>

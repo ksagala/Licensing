@@ -7,20 +7,20 @@
 	<style type="text/css">
 	<![CDATA[
 		.st1 {fill:#a5a5a5;fill-opacity:0.2;stroke:#7030a0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st2 {fill:#a5a5a5;fill-opacity:0.2;stroke:#c00000;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st3 {fill:#a5a5a5;fill-opacity:0.2;stroke:#00b0f0;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st4 {fill:#00b0f0;stroke:#00b0f0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st5 {fill:#ffffff;font-family:Segoe UI;font-size:1.5em;font-weight:bold}
-		.st6 {fill:#c00000;stroke:#c00000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
-		.st7 {fill:#00b0f0;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st8 {fill:#ffffff;font-family:Segoe UI;font-size:1.00001em;font-weight:bold}
+		.st2 {fill:#a5a5a5;fill-opacity:0.2;stroke:#a41500;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st3 {fill:#a5a5a5;fill-opacity:0.2;stroke:#2080a0;stroke-dasharray:33.75,20.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st4 {fill:#2080a0;stroke:#2080a0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st5 {fill:#ffffff;font-family:Arial;font-size:1.5em;font-weight:bold}
+		.st6 {fill:#a41500;stroke:#a41500;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st7 {fill:#2080a0;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st8 {fill:#ffffff;font-family:Arial;font-size:1.00001em;font-weight:bold}
 		.st9 {font-size:0.749994em}
 		.st10 {fill:#7030a0;stroke:#7030a0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
 		.st11 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st12 {fill:#000000;font-family:Segoe UI;font-size:3em;font-weight:bold}
-		.st13 {fill:#000000;font-family:Segoe UI;font-size:1.5em;font-weight:bold}
-		.st14 {fill:#0070c0;font-family:Segoe UI;font-size:1.00001em;font-weight:bold}
-		.st15 {fill:#c00000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st12 {fill:#000000;font-family:Arial;font-size:3em;font-weight:bold}
+		.st13 {fill:#000000;font-family:Arial;font-size:1.5em;font-weight:bold}
+		.st14 {fill:#0070c0;font-family:Arial;font-size:1.00001em;font-weight:bold}
+		.st15 {fill:#a41500;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st16 {font-size:1em}
 		.st17 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
@@ -43,203 +43,203 @@
 		<a xlink:href="https://www.microsoft.com/cloud-platform/enterprise-mobility-security" xlink:show="new" target="_blank" xlink:title="Enterprise Mobility + Security">
 			<g id="shape1004-7" transform="translate(-751.181,722.835) rotate(-90)">
 				<title>Enterprise Mobility + Security</title>
-				
+				<desc>EMS</desc>
 				<rect x="0" y="779.528" width="127.559" height="28.3465" rx="8.50394" ry="8.50394" class="st4" />
-				<text x="45.33" y="799.1" class="st5">EMS</text>			</g>
+				<text x="44.28" y="799.1" class="st5">EMS</text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/business/" xlink:show="new" target="_blank" xlink:title="Office 365 Business">
 			<g id="shape1011-10" transform="translate(-127.559,566.929) rotate(-90)">
 				<title>Office 365 Business</title>
-				
+				<desc>Office 365</desc>
 				<rect x="0" y="779.528" width="382.677" height="28.3465" rx="8.50394" ry="8.50394" class="st6" />
-				<text x="147.85" y="799.1" class="st5">Office 365</text>			</g>
+				<text x="148.32" y="799.1" class="st5">Office 365</text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/cloud-platform/enterprise-mobility-security" xlink:show="new" target="_blank" xlink:title="Enterprise Mobility + Security">
 			<g id="shape1034-13" transform="translate(-127.559,722.835) rotate(-90)">
 				<title>Enterprise Mobility + Security</title>
-				
+				<desc>EMS</desc>
 				<rect x="0" y="779.528" width="127.559" height="28.3465" rx="8.50394" ry="8.50394" class="st4" />
-				<text x="45.33" y="799.1" class="st5">EMS</text>			</g>
+				<text x="44.28" y="799.1" class="st5">EMS</text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/business/" xlink:show="new" target="_blank" xlink:title="Office 365 Business">
 			<g id="shape1051-16" transform="translate(-751.181,566.929) rotate(-90)">
 				<title>Office 365 Business</title>
-				
+				<desc>Office 365</desc>
 				<rect x="0" y="779.528" width="382.677" height="28.3465" rx="8.50394" ry="8.50394" class="st6" />
-				<text x="147.85" y="799.1" class="st5">Office 365</text>			</g>
+				<text x="148.32" y="799.1" class="st5">Office 365</text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/cloud-platform/microsoft-intune" xlink:show="new" target="_blank" xlink:title="Intune Device Management">
 			<g id="shape1068-19" transform="translate(113.386,-113.386)">
 				<title>Intune Device Management</title>
-				
+				<desc>Basic MDM (selective wipe)</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st7" />
-				<text x="10.66" y="770.64" class="st8">Basic MDM <tspan x="9.67" dy="1.3em" class="st9">(selective wipe)</tspan></text>			</g>
+				<text x="10.51" y="770.64" class="st8">Basic MDM <tspan x="9.26" dy="1.3em" class="st9">(selective wipe)</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic" xlink:show="new" target="_blank" xlink:title="Microsoft 365 Business Basic">
 			<g id="shape1107-23" transform="translate(85.0394,-28.3465)">
 				<title>Microsoft 365 Business Basic</title>
-				
+				<desc>Microsoft 365 Business Basic</desc>
 				<rect x="0" y="779.528" width="538.583" height="28.3465" rx="8.50394" ry="8.50394" class="st10" />
-				<text x="147.91" y="799.1" class="st5">Microsoft 365 Business Basic</text>			</g>
+				<text x="142.24" y="799.1" class="st5">Microsoft 365 Business Basic</text>			</g>
 		</a>
 		<a xlink:href="https://www.microsoft.com/microsoft-365/business/microsoft-365-business-basic" xlink:show="new" target="_blank" xlink:title="Microsoft 365 Business Basic">
 			<g id="shape1108-26" transform="translate(85.0394,-651.969)">
 				<title>Microsoft 365 Business Basic</title>
-				
+				<desc>Microsoft 365 Business Basic</desc>
 				<rect x="0" y="779.528" width="538.583" height="28.3465" rx="8.50394" ry="8.50394" class="st10" />
-				<text x="147.91" y="799.1" class="st5">Microsoft 365 Business Basic</text>			</g>
+				<text x="142.24" y="799.1" class="st5">Microsoft 365 Business Basic</text>			</g>
 		</a>
-		<a xlink:href="https://aarondinnage.github.io/Licensing/" xlink:title="GitHub Link">
+		<a xlink:href="https://aarondinnage.github.io/Licensing/" xlink:show="new" target="_blank" xlink:title="GitHub Link">
 			<g id="shape1110-29" transform="translate(28.3465,-737.008)">
 				<title>GitHub Link</title>
-				
+				<desc>Microsoft 365 Business Basic</desc>
 				<rect x="0" y="765.354" width="651.968" height="42.5197" class="st11" />
-				<text x="83.22" y="797.41" class="st12">Microsoft 365 Business Basic</text>			</g>
+				<text x="71.88" y="797.41" class="st12">Microsoft 365 Business Basic</text>			</g>
 		</a>
 		<g id="shape1111-32" transform="translate(28.3465,-708.661)">
 			
-			<desc>January 2021</desc>
+			<desc>February 2021</desc>
 			<rect x="0" y="779.528" width="651.968" height="28.3465" class="st11" />
-			<text x="269.79" y="799.1" class="st13">January 2021</text>		</g>
+			<text x="264.95" y="799.1" class="st13">February 2021</text>		</g>
 		<a xlink:href="https://twitter.com/AaronDinnage" xlink:show="new" target="_blank" xlink:title="Twitter">
 			<g id="shape1112-35" transform="translate(28.3465,-694.488)">
 				<title>Twitter</title>
-				
+				<desc>@AaronDinnage</desc>
 				<rect x="0" y="793.701" width="651.968" height="14.1732" class="st11" />
-				<text x="279.55" y="804.39" class="st14">@AaronDinnage</text>			</g>
+				<text x="279.13" y="804.39" class="st14">@AaronDinnage</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description#feature-availability-across-exchange-online-standalone-plans" xlink:show="new" target="_blank" xlink:title="Exchange Online">
 			<g id="shape1113-38" transform="translate(113.386,-524.381)">
 				<title>Exchange Online</title>
-				
+				<desc>Exchange Online Plan 1</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.7" y="761.64" class="st8">Exchange <tspan x="24.05" dy="1.2em" class="st16">Online </tspan><tspan x="25.16" dy="1.2em" class="st16">Plan 1</tspan></text>			</g>
+				<text x="14.17" y="761.64" class="st8">Exchange <tspan x="23.85" dy="1.2em" class="st16">Online </tspan><tspan x="24.84" dy="1.2em" class="st16">Plan 1</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/sharepoint/introduction" xlink:show="new" target="_blank" xlink:title="SharePoint Online">
 			<g id="shape1114-43" transform="translate(113.386,-269.291)">
 				<title>SharePoint Online</title>
-				
+				<desc>SharePoint Online</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="11.66" y="768.84" class="st8">SharePoint <tspan x="24.05" dy="1.2em" class="st16">Online</tspan></text>			</g>
+				<text x="10.85" y="768.84" class="st8">SharePoint <tspan x="23.85" dy="1.2em" class="st16">Online</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/onedrive-for-business/online-cloud-storage" xlink:show="new" target="_blank" xlink:title="OneDrive for Business">
 			<g id="shape1115-47" transform="translate(113.386,-354.331)">
 				<title>OneDrive for Business</title>
-				
+				<desc>OneDrive for Business Plan 1</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="6.07" y="761.64" class="st8">OneDrive for <tspan x="18.54" dy="1.2em" class="st16">Business </tspan><tspan x="25.16" dy="1.2em" class="st16">Plan 1</tspan></text>			</g>
+				<text x="6.18" y="761.64" class="st8">OneDrive for <tspan x="15.84" dy="1.2em" class="st16">Business </tspan><tspan x="24.84" dy="1.2em" class="st16">Plan 1</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/yammer/yammer-overview" xlink:show="new" target="_blank" xlink:title="Yammer">
 			<g id="shape1116-52" transform="translate(411.024,-269.291)">
 				<title>Yammer</title>
-				
+				<desc>Yammer Enterprise</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="19.02" y="768.84" class="st8">Yammer <tspan x="14.03" dy="1.2em" class="st16">Enterprise</tspan></text>			</g>
+				<text x="18.84" y="768.84" class="st8">Yammer <tspan x="12.84" dy="1.2em" class="st16">Enterprise</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/business/task-management-software" xlink:show="new" target="_blank" xlink:title="Planner">
 			<g id="shape1117-56" transform="translate(212.598,-354.331)">
 				<title>Planner</title>
-				
+				<desc>Planner</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="21.01" y="776.04" class="st8">Planner</text>			</g>
+				<text x="20.51" y="776.04" class="st8">Planner</text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/microsoft-teams/" xlink:show="new" target="_blank" xlink:title="Microsoft Teams">
 			<g id="shape1118-59" transform="translate(113.386,-439.37)">
 				<title>Microsoft Teams</title>
-				
+				<desc>Microsoft Teams</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.19" y="768.84" class="st8">Microsoft <tspan x="24.39" dy="1.2em" class="st16">Teams</tspan></text>			</g>
+				<text x="15.52" y="768.84" class="st8">Microsoft <tspan x="23.51" dy="1.2em" class="st16">Teams</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/stream/" xlink:show="new" target="_blank" xlink:title="Stream">
 			<g id="shape1119-63" transform="translate(212.598,-269.291)">
 				<title>Stream</title>
-				
+				<desc>Stream for Office 365</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="12.45" y="768.84" class="st8">Stream for <tspan x="13.53" dy="1.2em" class="st16">Office 365</tspan></text>			</g>
+				<text x="12.51" y="768.84" class="st8">Stream for <tspan x="13.84" dy="1.2em" class="st16">Office 365</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/business/myanalytics-personal-analytics" xlink:show="new" target="_blank" xlink:title="MyAnalytics">
 			<g id="shape1120-67" transform="translate(212.598,-524.381)">
 				<title>MyAnalytics</title>
-				
+				<desc>Insights by MyAnalytics</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="11.74" y="768.84" class="st8">Insights by <tspan x="7.98" dy="1.2em" class="st16">MyAnalytics</tspan></text>			</g>
+				<text x="10.85" y="768.84" class="st8">Insights by <tspan x="7.51" dy="1.2em" class="st16">MyAnalytics</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://powerapps.microsoft.com/" xlink:show="new" target="_blank" xlink:title="Power Apps">
 			<g id="shape1121-71" transform="translate(311.811,-354.331)">
 				<title>Power Apps</title>
-				
+				<desc>Power Apps for Office 365</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="8.79" y="761.64" class="st8">Power Apps<tspan x="34.16" dy="1.2em" class="st16">for</tspan><tspan x="13.53" dy="1.2em" class="st16">Office 365</tspan></text>			</g>
+				<text x="7.85" y="761.64" class="st8">Power Apps<tspan x="34.52" dy="1.2em" class="st16">for</tspan><tspan x="13.84" dy="1.2em" class="st16">Office 365</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://powerautomate.microsoft.com/" xlink:show="new" target="_blank" xlink:title="Power Automate">
 			<g id="shape1122-76" transform="translate(411.024,-354.331)">
 				<title>Power Automate</title>
-				
+				<desc>Power Automate for Office 365</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="24.75" y="761.64" class="st8">Power <tspan x="4.35" dy="1.2em" class="st16">Automate for</tspan><tspan x="13.53" dy="1.2em" class="st16">Office 365</tspan></text>			</g>
+				<text x="24.51" y="761.64" class="st8">Power <tspan x="5.19" dy="1.2em" class="st16">Automate for</tspan><tspan x="13.84" dy="1.2em" class="st16">Office 365</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://support.office.com/sway" xlink:show="new" target="_blank" xlink:title="Sway">
 			<g id="shape1123-81" transform="translate(311.811,-269.291)">
 				<title>Sway</title>
-				
+				<desc>Sway</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="27.91" y="776.04" class="st8">Sway</text>			</g>
+				<text x="27.18" y="776.04" class="st8">Sway</text>			</g>
 		</a>
 		<a xlink:href="https://support.office.com/forms" xlink:show="new" target="_blank" xlink:title="Microsoft Forms">
 			<g id="shape1124-84" transform="translate(411.024,-524.409)">
 				<title>Microsoft Forms</title>
-				
+				<desc>Microsoft Forms</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.19" y="768.84" class="st8">Microsoft <tspan x="25.21" dy="1.2em" class="st16">Forms</tspan></text>			</g>
+				<text x="15.52" y="768.84" class="st8">Microsoft <tspan x="24.18" dy="1.2em" class="st16">Forms</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/powerapps/teams/overview-data-platform" xlink:show="new" target="_blank" xlink:title="Microsoft Dataverse for Teams">
 			<g id="shape1125-88" transform="translate(311.811,-524.409)">
 				<title>Microsoft Dataverse for Teams</title>
-				
+				<desc>Microsoft Dataverse for Teams</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.19" y="761.64" class="st8">Microsoft <tspan x="4.52" dy="1.2em" class="st16">Dataverse for </tspan><tspan x="24.39" dy="1.2em" class="st16">Teams</tspan></text>			</g>
+				<text x="15.52" y="761.64" class="st8">Microsoft <tspan x="4.17" dy="1.2em" class="st16">Dataverse for </tspan><tspan x="23.51" dy="1.2em" class="st16">Teams</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://products.office.com/mobile/office" xlink:show="new" target="_blank" xlink:title="Office Mobile">
 			<g id="shape1126-93" transform="translate(510.236,-439.37)">
 				<title>Office Mobile</title>
-				
+				<desc>Office Mobile Apps</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="25.54" y="768.84" class="st8">Office<tspan x="6.78" dy="1.2em" class="st16">Mobile Apps</tspan></text>			</g>
+				<text x="25.52" y="768.84" class="st8">Office<tspan x="6.85" dy="1.2em" class="st16">Mobile Apps</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://support.office.com/article/5622C7C9-721D-4B3D-8CB9-A7276C2470E5" xlink:show="new" target="_blank" xlink:title="Office Online">
 			<g id="shape1127-97" transform="translate(411.024,-439.37)">
 				<title>Office Online</title>
-				
+				<desc>Office for the Web</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="25.54" y="768.84" class="st8">Office<tspan x="8.66" dy="1.2em" class="st16">for the Web</tspan></text>			</g>
+				<text x="25.52" y="768.84" class="st8">Office<tspan x="9.52" dy="1.2em" class="st16">for the Web</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-lists-begins-general-availability-roll-out-to/ba-p/1524768" xlink:show="new" target="_blank" xlink:title="Microsoft Lists">
 			<g id="shape1128-101" transform="translate(510.236,-524.409)">
 				<title>Microsoft Lists</title>
-				
+				<desc>Microsoft Lists</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.19" y="768.84" class="st8">Microsoft <tspan x="30.13" dy="1.2em" class="st16">Lists</tspan></text>			</g>
+				<text x="15.52" y="768.84" class="st8">Microsoft <tspan x="28.52" dy="1.2em" class="st16">Lists</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://support.microsoft.com/office/d236aef8-fcdf-4b5e-b5d7-7f157461e920" xlink:show="new" target="_blank" xlink:title="Microsoft Whiteboard">
 			<g id="shape1129-105" transform="translate(311.811,-439.37)">
 				<title>Microsoft Whiteboard</title>
-				
+				<desc>Microsoft Whiteboard</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.19" y="768.84" class="st8">Microsoft <tspan x="8.87" dy="1.2em" class="st16">Whiteboard</tspan></text>			</g>
+				<text x="15.52" y="768.84" class="st8">Microsoft <tspan x="9.52" dy="1.2em" class="st16">Whiteboard</tspan></text>			</g>
 		</a>
 		<a xlink:href="https://support.microsoft.com/office/490c1a8c-2333-4952-8125-841afadb9620" xlink:show="new" target="_blank" xlink:title="Microsoft To-Do">
 			<g id="shape1130-109" transform="translate(212.598,-439.37)">
 				<title>Microsoft To-Do</title>
-				
+				<desc>Microsoft To-Do</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="15.19" y="768.84" class="st8">Microsoft <tspan x="24.82" dy="1.2em" class="st16">To</tspan>-Do</text>			</g>
+				<text x="15.52" y="768.84" class="st8">Microsoft <tspan x="25.19" dy="1.2em" class="st16">To</tspan>-Do</text>			</g>
 		</a>
 		<a xlink:href="https://docs.microsoft.com/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams" xlink:show="new" target="_blank" xlink:title="Power Virtual Agents for Teams">
 			<g id="shape1131-113" transform="translate(510.236,-354.302)">
 				<title>Power Virtual Agents for Teams</title>
-				
+				<desc>Power Virtual Agents for Teams</desc>
 				<rect x="0" y="737.008" width="85.0394" height="70.8661" rx="8.50394" ry="8.50394" class="st15" />
-				<text x="4.1" y="761.64" class="st8">Power Virtual <tspan x="12.72" dy="1.2em" class="st16">Agents for </tspan><tspan x="24.39" dy="1.2em" class="st16">Teams</tspan></text>			</g>
+				<text x="4.18" y="761.64" class="st8">Power Virtual <tspan x="12.52" dy="1.2em" class="st16">Agents for </tspan><tspan x="23.51" dy="1.2em" class="st16">Teams</tspan></text>			</g>
 		</a>
 	</g>
 </svg>
