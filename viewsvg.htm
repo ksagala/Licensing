@@ -14,7 +14,7 @@
 		<meta property="og:title" content="License Diagram" />
 		<meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
 		<meta property="og:site_name" content="Microsoft 365 Licensing" />
-		<meta property="og:image:src" content="https://aarondinnage.github.io/Licensing/summary_wide.png" />
+		<meta property="og:image:url" content="https://aarondinnage.github.io/Licensing/summary_wide.png" />
 		<meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://aka.ms/m365maps" />
 		<link rel="canonical" href="https://aarondinnage.github.io/Licensing/viewsvg.htm" />
 		<link rel="icon" href="favicon.ico" />
@@ -71,7 +71,7 @@
 						// Update og:title with image name and meta image properties with PNG file
 						var meta = document.getElementsByTagName('meta');
 						for (var i=0; i < meta.length; i++) {
-							if (meta[i].getAttribute("name")=='twitter:image' || meta[i].getAttribute("property")=='og:image:src') {
+							if (meta[i].getAttribute("name")=='twitter:image' || meta[i].getAttribute("property")=='og:image:url') {
 								meta[i].content = pngUrl;
 							} else if (meta[i].getAttribute("property")=='og:title') {
 								meta[i].content = file;
