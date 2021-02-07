@@ -8,17 +8,18 @@
 		<meta name="description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
 		<meta name="author" content="Aaron Dinnage" />
 		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:image" content="https://aarondinnage.github.io/Licensing/summary.png" />
-		<meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://aka.ms/m365maps" />
+		<meta name="twitter:image" content="https://m365maps.com/summary.png" />
+		<meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
 		<meta name="twitter:site" content="@AaronDinnage" />
 		<meta name="twitter:creator" content="@AaronDinnage" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="License Diagram" />
 		<meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
+		<meta property="og:url" content="https://m365maps.com/viewsvg.htm" />
 		<meta property="og:site_name" content="Microsoft 365 Licensing" />
-		<meta property="og:image" content="https://aarondinnage.github.io/Licensing/summary_wide.png" />
-		<meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://aka.ms/m365maps" />
-		<link rel="canonical" href="https://aarondinnage.github.io/Licensing/viewsvg.htm" />
+		<meta property="og:image" content="https://m365maps.com/summary_wide.png" />
+		<meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
+		<link rel="canonical" href="https://m365maps.com/viewsvg.htm" />
 		<link rel="icon" href="favicon.ico" />
 		<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 		<style type="text/css">
@@ -44,7 +45,7 @@
 			window.addEventListener('load', function () {
 				var notfound = document.getElementById('notfound');
 				var file = getParameterByName('file');
-				var svgUrl = "https://aarondinnage.github.io/Licensing/" + file + ".svg";
+				var svgUrl = "/" + file + ".svg";
 
 				// Check SVG file exists
 				fetch(svgUrl).then(response => {
@@ -64,6 +65,8 @@
 						// Make "not found" label visible
 						notfound.style="visibility:visible;";
 					}
+				}).catch(err => {
+					notfound.style="visibility:visible;";
 				});
 			});
 		//]]></script>
@@ -72,7 +75,7 @@
 		<center>
 			<div id="notfound" style="visibility:hidden;">
 				<p>File not found</p>
-				<p><a href="./">Return to home</a></p>
+				<p><a href="/">Return to home</a></p>
 			</div>
 			<object type="image/svg+xml"></object>
 		</center>
