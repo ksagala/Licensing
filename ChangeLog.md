@@ -51,7 +51,9 @@ Cheers,
 * Updated "SharePoint Syntex" link: https://docs.microsoft.com/microsoft-365/contentunderstanding/
 * Updated "Universal Print" link: https://docs.microsoft.com/universal-print/
 * Fixed "Mile IQ" link on relevant Microsoft 365 Business plans: https://www.mileiq.com/office365/
-* Wrote a link checker for Visio files to stay on top of any broken links going forward, it's not perfect, but it helps: https://github.com/AaronDinnage/VisioLinkChecker
+* Wrote a link checker for Visio files to stay on top of any broken links going forward, it's not perfect, but it helps: https://github.com/AaronDinnage/VisioTools
+* Wrote a bulk export VB code to create PDF, PNG, and SVG diagrams quickly, also available here: https://github.com/AaronDinnage/VisioTools
+* Wrote an SVG file cleaner to remove comments, title and desc tags, and whitespace from SVG files exported from Visio, also available here: https://github.com/AaronDinnage/VisioTools
 * Removed Windows E3 "Voice, Pen, Touch, Ink, and Gesture" feature tile to create visual space for "Attack Surface Reduction" to be added. This feature is common to all Windows editions and hasn't really got anything to do with licensing, so it seemed like the most obvious one to retire from the diagrams.
 * Added "Attack Surface Reduction" into the Enterprise Windows license diagrams now that the online documentation explains the difference between Windows Enterprise and Microsoft Defender for Endpoint feature inclusions. Thank you to the many people that provided feedback around ASR's inclusion in these diagrams over the last year. https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction
 * Added "Enhanced ASR" to "Defender for Endpoint": https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction
