@@ -4,21 +4,21 @@ This is my collection of Microsoft 365 Licensing Diagrams, updated as product na
 
 You will find PDF, PNG, and SVG versions of the diagrams along with the Visio source files. I've also published the diagrams as a [web site](https://m365maps.com/) with GitHub Pages.
 
-The web site and PDF files have links on every feature tile so you can click through for more information!
+The web site, PDF, and SVG files have links on every feature tile so you can click through for more information!
 
 See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/ChangeLog.md) for update details.
 
 **Collections:**
-* [Microsoft 365 Licensing - PDF Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.PDF.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - PNG Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.PNG.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - PowerPoint Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.PowerPoint.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - Visio Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/Microsoft.365.Licensing.-.Visio.Pack.-.v2020.12.zip)
-* [Microsoft 365 Licensing - All-in-One Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2020.12/v2020.12.zip)
+* [Microsoft 365 Licensing - PDF Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.PDF.Pack.-.v2021.02.zip)
+* [Microsoft 365 Licensing - PNG Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.PNG.Pack.-.v2021.02.zip)
+* [Microsoft 365 Licensing - PowerPoint Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.PowerPoint.Pack.-.v2021.02.zip)
+* [Microsoft 365 Licensing - Visio Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.Visio.Pack.-.v2021.02.zip)
+* [Microsoft 365 Licensing - All-in-One Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/v2021.02.zip)
 
 **Featured File Download Links:**
 * [Microsoft 365 Enterprise](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise.pdf) (PDF)
 * [Microsoft 365 Enterprise Presentation](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise%20License%20Map.pptx) (PowerPoint)
-* [Microsoft 365 Enterprise Frontline](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise%20-%20With%20F1%20and%20F3.pdf) (PDF)
+* [Microsoft 365 Enterprise Frontline](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise%20-%20Frontline.pdf) (PDF)
 * [Microsoft 365 Education](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Education.pdf) (PDF)
 * [Microsoft 365 Business](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Business.pdf) (PDF)
 
