@@ -9,6 +9,63 @@ Cheers,
  \- Aaron.
 
 
+2021 / February:
+* Reworked the colour palette to improve visual accessibility (targetting WCAG AA).
+* Changed the text font to Arial for broader cross platform compatibility than Segoe UI.
+* Microsoft marketing reverted the term "Firstline" to "Frontline", so all F-SKU related material has been updated to use "Frontline".
+* Added "F5 Security", "F5 Compliance", and "F5 Security + Compliance" SKU's to Microsoft 365 Frontline diagrams: https://www.microsoft.com/licensing/news/new_f5_security_and_compliance_offer_for_frontline_workers
+* Removed Microsoft 365 E3/E5 Enterprise benefits from the Frontline page and removed E3 and E5 from the same page to focus it on Frontline offers only.
+* Added "Student Use Benefit" diagrams for Education plans, thank you to Ben Fletcher for help getting these completed. Please refer to the full Microsoft Product Terms for detail on Student Use Benefit ratios, and terms & conditions: https://www.microsoft.com/licensing/product-licensing/products
+* Added a "Microsoft Viva" panel to Microsoft 365 Enterprise, Education, Frontline, and Business diagrams: https://www.microsoft.com/en-us/microsoft-365/blog/2021/02/04/microsoft-viva-empowering-every-employee-for-the-new-digital-age/
+* Added "Viva Topics" as a related service on Microsoft 365 Enterprise, Education, Frontline, and Business diagrams: https://techcommunity.microsoft.com/t5/microsoft-viva-blog/introducing-microsoft-viva-topics/ba-p/2107007
+* Added "Viva Insights (preview)" as a related service on Microsoft 365 Enterprise, Education, Frontline, and Business diagrams: https://techcommunity.microsoft.com/t5/microsoft-viva-blog/microsoft-viva-insights-helps-people-nurture-wellbeing-and-be/ba-p/2107010
+* Added "Viva Learning (coming soon)" as a related service on Microsoft 365 Enterprise, Education, Frontline, and Business diagrams: https://techcommunity.microsoft.com/t5/microsoft-viva-blog/announcing-microsoft-viva-learning-private-preview/ba-p/2107023
+* Added "Viva Connections (coming soon)" as a related service on Microsoft 365 Enterprise, Education, Frontline, and Business diagrams:  https://techcommunity.microsoft.com/t5/microsoft-viva-blog/microsoft-viva-connections-helps-everyone-to-stay-engaged-and/ba-p/2107009
+* Added "Related Services" panel to "Microsoft 365 Business" diagram.
+* Added "Microsoft 365 Business Voice" to "Related Services" panel on "Microsoft 365 Business" diagram: https://docs.microsoft.com/MicrosoftTeams/business-voice/whats-business-voice
+* Expanded and added the short descriptions to the "Related Services" panel on "Microsoft 365 Enteprise" full and Venn diagrams to match the Landscape, Frontline, and Education diagrams.
+* Added "Azure Sentinel" to "Related Services" panel for Microsoft 365 Enterprise, Education, Frontline, and Business diagrams: https://azure.microsoft.com/services/azure-sentinel/
+* Added SVG versions of every diagram.
+* Created a web page version of the diagrams. It's built on GitHub Pages and uses the live up-to-date SVG version of each diagram directly from GitHub: https://m365maps.com/
+* Added a donation option for folks that would like to give back for the value they've received from the diagrams, if this can help cover the domain registration and associated costs with maintaing these diagrams then I'll be over the moon: https://paypal.me/pools/c/8ww03FCFcP
+* Made the page title on each Microsoft 365 diagram link to the GitHub Pages web site for the diagrams: https://m365maps.com/
+* Changed the label on the Windows feature "Conditional Access" to "Windows Conditional Access" to remove ambiguity with the Azure AD "Conditional Access" feature.
+* Corrected a mistake where "Bookings" was in "Office 365 E1", it should have come in at "Office 365 E3". Thank you to Xu Ying for spotting this first!
+* Removed duplicate "Yammer Enterprise" tile in "Microsoft 365 F3" stand-alone diagram.
+* The feature "Trainable Classifiers" is no longer in preview and is now Generally Available: https://techcommunity.microsoft.com/t5/microsoft-security-and/announcing-ga-of-machine-learning-based-trainable-classifiers/ba-p/2054416
+* The feature "Application Guard for Office" is no longer in preview and is now Generally Available: https://techcommunity.microsoft.com/t5/microsoft-security-and/application-guard-for-office-now-generally-available/ba-p/2007539
+* Added "Step-up" to elements of some of the diagrams to more clearly denote where the diagrams show "Full USL" or just the extra elements a step-up provides. Thanks to Brian Reid for the feedback that resulted in this change.
+* Renamed "Office Device Licenses" in "Microsoft 365 Enterprise Benefits" to "Office Professional Plus" to align with the language used in the Product Terms.
+* Renamed "Productivity Server Licenses" in "Microsoft 365 Enterprise Benefits" to "Office Servers" to align with the language used in the Product Terms.
+* Added qualifier to "Office Servers" in "Microsoft 365 Enterprise Benefits" explaining CSP/MCA is excluded. Thanks to Jeroen Huylebroeck for spotting the gap. See Product Terms: https://www.microsoft.com/licensing/product-licensing/products
+* Fixed broken link for "Cloud App Security Integration" in "Microsoft Defender for Endpoint", thanks to Sven Wasmer for spotting this: https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-cloud-app-security-integration
+* Added "Real-Time Reports" to "Microsoft Defender for Office 365 Plan 1": https://docs.microsoft.com/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#real-time-reports
+* Updated "Information Governance" link: https://docs.microsoft.com/microsoft-365/compliance/manage-information-governance
+* Updated "Advanced Message Encryption" link: https://docs.microsoft.com/microsoft-365/compliance/ome-advanced-message-encryption
+* Updated "Microsoft 365 E5/A5/F5 Security" links: https://docs.microsoft.com/microsoft-365/security/
+* Updated "Microsoft 365 E5/A5/F5 Compliance" links: https://docs.microsoft.com/microsoft-365/compliance/
+* Updated "Double Key Encryption" link: https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption
+* Updated "Endpoint DLP" link: https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about
+* Updated "Information Barriers" link: https://docs.microsoft.com/microsoft-365/compliance/information-barriers
+* Updated Office 365 "Privileged Access Management" link: https://docs.microsoft.com/microsoft-365/compliance/privileged-access-management-solution-overview
+* Updated "SharePoint Syntex" link: https://docs.microsoft.com/microsoft-365/contentunderstanding/
+* Updated "Universal Print" link: https://docs.microsoft.com/universal-print/
+* Fixed "Mile IQ" link on relevant Microsoft 365 Business plans: https://www.mileiq.com/office365/
+* Wrote a link checker for Visio files to stay on top of any broken links going forward, it's not perfect, but it helps: https://github.com/AaronDinnage/VisioLinkChecker
+* Removed Windows E3 "Voice, Pen, Touch, Ink, and Gesture" feature tile to create visual space for "Attack Surface Reduction" to be added. This feature is common to all Windows editions and hasn't really got anything to do with licensing, so it seemed like the most obvious one to retire from the diagrams.
+* Added "Attack Surface Reduction" into the Enterprise Windows license diagrams now that the online documentation explains the difference between Windows Enterprise and Microsoft Defender for Endpoint feature inclusions. Thank you to the many people that provided feedback around ASR's inclusion in these diagrams over the last year. https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction
+* Added "Enhanced ASR" to "Defender for Endpoint": https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction
+* Expanded "Azure Active Directory Premium Plan 1" on "Microsoft 365 Business Premium" diagrams.
+* Added "Advanced Threat Analytics" to "Microsoft 365 Business Premium": https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description
+* Added "Endpoint Analytics" to "Microsoft 365 Business Premium": https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description
+* Updated "Information Protection (Office 365)" link: https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels
+* Updated "Rules-Based Classification (Office 365)" link: https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically
+* Updated "Information Protection" (EMS) link: https://docs.microsoft.com/azure/information-protection/what-is-information-protection
+* Updated "Rules-Based Classification (AIP Client & Scanner)" link: https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner
+
+
+====================================
+
 2020 / December:
 * Made the note in the readme that these diagrams only cover publicly confirmed license types and do not include retired or off-list license plans. Some customers will have retired SKUs in their Enterprise Agreement and won't find them on these diagrams, they should work with their Microsoft team to understand the differences.
 * Removed "on a Page" from file names to shorten them for easier navigation on GitHub.

@@ -47,22 +47,16 @@
 				var file = getParameterByName('file');
 				var svgUrl = "/" + file + ".svg";
 
-				// Check SVG file exists
 				fetch(svgUrl).then(response => {
 					if (response.status === 200) {
-						// Remove "not found" label
 						notfound.remove();
 
-						// Update title with diagram name 
-						var title = document.getElementsByTagName('title')[0];
-						title.text = file;
+						document.getElementsByTagName('title')[0].text = file;
 
-						// Load SVG file into viewer
 						var svg = document.getElementsByTagName('object')[0];
 						svg.style = "width:" + document.body.offsetWidth + "px;";
 						svg.data = svgUrl;
 					} else {
-						// Make "not found" label visible
 						notfound.style="visibility:visible;";
 					}
 				}).catch(err => {
