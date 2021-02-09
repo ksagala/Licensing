@@ -13,7 +13,7 @@ See [Change Log](https://github.com/AaronDinnage/Licensing/blob/master/ChangeLog
 * [Microsoft 365 Licensing - PNG Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.PNG.Pack.-.v2021.02.zip)
 * [Microsoft 365 Licensing - PowerPoint Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.PowerPoint.Pack.-.v2021.02.zip)
 * [Microsoft 365 Licensing - Visio Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/Microsoft.365.Licensing.-.Visio.Pack.-.v2021.02.zip)
-* [Microsoft 365 Licensing - All-in-One Pack](https://github.com/AaronDinnage/Licensing/releases/download/v2021.02/v2021.02.zip)
+* [Microsoft 365 Licensing - All-in-One Pack](https://github.com/AaronDinnage/Licensing/archive/v2021.02.zip)
 
 **Featured File Download Links:**
 * [Microsoft 365 Enterprise](https://github.com/AaronDinnage/Licensing/raw/master/Microsoft%20365%20Enterprise.pdf) (PDF)
