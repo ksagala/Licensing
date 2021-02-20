@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html lang="en-au" dir="ltr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="robots" content="noindex, follow" />
-		<title>License Diagram</title>
-		<meta name="description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
-		<meta name="author" content="Aaron Dinnage" />
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:image" content="https://m365maps.com/summary.png" />
-		<meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
-		<meta name="twitter:site" content="@AaronDinnage" />
-		<meta name="twitter:creator" content="@AaronDinnage" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="License Diagram" />
-		<meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
-		<meta property="og:url" content="https://m365maps.com/viewsvg.htm" />
-		<meta property="og:site_name" content="Microsoft 365 Licensing" />
-		<meta property="og:image" content="https://m365maps.com/summary_wide.png" />
-		<meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
-		<link rel="canonical" href="https://m365maps.com/viewsvg.htm" />
-		<link rel="icon" href="favicon.ico" />
-		<link rel="icon" href="favicon.svg" type="image/svg+xml" />
-		<style type="text/css">
-			body {
-				margin: 0;
-				font-size: 16px;
-				line-height: 1.5;
-				font-family: Arial, Helvetica, sans-serif;
-				color: #24292e;
-				background-color: #fff;
-				overflow: scroll;
-			}
-		</style>
-		<script type="text/javascript">//<![CDATA[
-			function getParameterByName(name, url = window.location.href) {
-				name = name.replace(/[\[\]]/g, '\\$&');
-				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'), results = regex.exec(url);
-				if (!results) return null;
-				if (!results[2]) return '';
-				return decodeURIComponent(results[2].replace(/\+/g, ' '));
-			}
-
-			window.addEventListener('load', function () {
-				var notfound = document.getElementById('notfound');
-				var file = getParameterByName('file');
-				var svgUrl = "/" + file + ".svg";
-
-				fetch(svgUrl).then(response => {
-					if (response.status === 200) {
-						notfound.remove();
-
-						document.getElementsByTagName('title')[0].text = file;
-
-						var svg = document.getElementsByTagName('object')[0];
-						svg.style = "width:" + document.body.offsetWidth + "px;";
-						svg.data = svgUrl;
-					} else {
-						notfound.style="visibility:visible;";
-					}
-				}).catch(err => {
-					notfound.style="visibility:visible;";
-				});
-			});
-		//]]></script>
-	</head>
-	<body>
-		<center>
-			<div id="notfound" style="visibility:hidden;">
-				<p>File not found</p>
-				<p><a href="/">Return to home</a></p>
-			</div>
-			<object type="image/svg+xml"></object>
-		</center>
-	</body>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, follow"/>
+<title>License Diagram</title>
+<meta name="description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage"/>
+<meta name="author" content="Aaron Dinnage"/>
+<meta property="article:author" content="Aaron Dinnage"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="https://m365maps.com/summary.png"/>
+<meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/"/>
+<meta name="twitter:site" content="@AaronDinnage"/>
+<meta name="twitter:creator" content="@AaronDinnage"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="License Diagram"/>
+<meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage"/>
+<meta property="og:site_name" content="Microsoft 365 Licensing"/>
+<meta property="og:image" content="https://m365maps.com/summary_wide.png"/>
+<meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/"/>
+<meta property="og:url" content="https://m365maps.com/viewsvg.htm"/>
+<link rel="canonical" href="https://m365maps.com/viewsvg.htm"/>
+<link rel="icon" href="favicon.ico"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<style type="text/css">
+html,body{width:100%;height:100%;margin:0;}
+body{font-family:sans-serif;text-align:center;}
+</style>
+<script type="text/javascript">//<![CDATA[
+function showError(error) {document.body.innerHTML='<p>Error</p><p>'+error+'</p><p><a href="/">Home</a></p>';}
+function pageLoad() {
+var split = window.location.href.split(/[#=]/);
+if (split.length != 2 || split[1] == '') { showError('Missing diagram name'); return; }
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/' + split[1] + '.svg');
+xhr.onload = function(data) {
+if (data.target.status != 200) { showError(data.target.response); return; }
+document.getElementsByTagName('title')[0].text = decodeURIComponent(split[1]);
+document.body.innerHTML = data.target.response;
+var svgTag = document.getElementsByTagName('svg')[0];
+var svgBox = svgTag.getBoundingClientRect();
+var scale = Math.min(window.innerWidth / svgBox.width, window.innerHeight / svgBox.height) * 0.985;
+svgTag.setAttribute('width', Math.round(svgBox.width * scale) + 'px');
+svgTag.setAttribute('height', Math.round(svgBox.height * scale) + 'px');
+};
+xhr.onerror = function() {showError('An error occurred, please try again');}
+xhr.send();
+}
+window.addEventListener('load', pageLoad);
+window.addEventListener('hashchange', pageLoad);
+//]]></script>
+</head>
+<body></body>
 </html>
