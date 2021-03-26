@@ -1,55 +1,72 @@
 <!DOCTYPE html>
-<html lang="en-au" dir="ltr">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="robots" content="noindex, follow"/>
-<title>License Diagram</title>
-<meta name="description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage"/>
-<meta name="author" content="Aaron Dinnage"/>
-<meta property="article:author" content="Aaron Dinnage"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:image" content="https://m365maps.com/summary.png"/>
-<meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/"/>
-<meta name="twitter:site" content="@AaronDinnage"/>
-<meta name="twitter:creator" content="@AaronDinnage"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="License Diagram"/>
-<meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage"/>
-<meta property="og:site_name" content="Microsoft 365 Licensing"/>
-<meta property="og:image" content="https://m365maps.com/summary_wide.png"/>
-<meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/"/>
-<meta property="og:url" content="https://m365maps.com/viewsvg.htm"/>
-<link rel="canonical" href="https://m365maps.com/viewsvg.htm"/>
-<link rel="icon" href="favicon.ico"/>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-<style type="text/css">
-html,body{width:100%;height:100%;margin:0;}
-body{font-family:sans-serif;text-align:center;}
-</style>
-<script type="text/javascript">//<![CDATA[
-function showError(error) {document.body.innerHTML='<p>Error</p><p>'+error+'</p><p><a href="/">Home</a></p>';}
-function pageLoad() {
-var split = window.location.href.split(/[#=]/);
-if (split.length != 2 || split[1] == '') { showError('Missing diagram name'); return; }
-var xhr = new XMLHttpRequest();
-xhr.open('GET', '/' + split[1] + '.svg');
-xhr.onload = function(data) {
-if (data.target.status != 200) { showError(data.target.response); return; }
-document.getElementsByTagName('title')[0].text = decodeURIComponent(split[1]);
-document.body.innerHTML = data.target.response;
-var svgTag = document.getElementsByTagName('svg')[0];
-var svgBox = svgTag.getBoundingClientRect();
-var scale = Math.min(window.innerWidth / svgBox.width, window.innerHeight / svgBox.height) * 0.985;
-svgTag.setAttribute('width', Math.round(svgBox.width * scale) + 'px');
-svgTag.setAttribute('height', Math.round(svgBox.height * scale) + 'px');
-};
-xhr.onerror = function() {showError('An error occurred, please try again');}
-xhr.send();
-}
-window.addEventListener('load', pageLoad);
-window.addEventListener('hashchange', pageLoad);
-//]]></script>
-</head>
-<body></body>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="origin" />
+    <meta name="theme-color" content="#002266" />
+    <meta name="application-name" content="M365 Maps" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="M365 Maps" />
+    <meta name="description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
+    <meta name="author" content="Aaron Dinnage" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
+    <meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
+    <meta name="twitter:site" content="@AaronDinnage" />
+    <meta name="twitter:creator" content="@AaronDinnage" />
+    <meta property="article:author" content="Aaron Dinnage" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="License Diagram" />
+    <meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
+    <meta property="og:site_name" content="M365 Maps" />
+    <meta property="og:image" content="https://m365maps.com/media/summary_wide.png" />
+    <meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
+    <meta property="og:url" content="https://m365maps.com/viewsvg.htm" />
+    <link rel="canonical" href="https://m365maps.com/viewsvg.htm" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/common.min.css" />
+    <link rel="stylesheet" href="/css/viewsvg.min.css" />
+    <script src="/js/common.min.js"></script>
+    <script src="/js/viewsvg.min.js"></script>
+    <title>License Diagram | M365 Maps</title>
+  </head>
+  <body>
+    <noscript>
+      <p><strong>Error</strong></p>
+      <p style="color:#ff0000;">Javascript disabled. Please enable JavaScript.</p>
+      <p><a href="/">Home</a></p>
+    </noscript>
+
+    <div id="errorDiv" style="display:none;">
+      <p><strong>Error</strong></p>
+      <p id="errorMessage"></p>
+      <p><a href="/">Home</a></p>
+    </div>
+
+    <div id="offline" style="display:none;">OFFLINE</div>
+
+    <div id="menu" style="display:none;right:-300px;">
+      <img id="menuGrip" src="/media/open.svg" width="16" height="16" alt="Menu" title="Open menu" />
+      <a href="/" class="menu"><img id="menuHome" src="/media/home.svg" width="16" height="16" alt="Home" title="Go home" /></a>
+      <img id="menuFlag" src="/media/unflagged.svg" width="16" height="16" class="menu" alt="Flag" />
+      <img id="menuPrint" src="/media/print.svg" width="16" height="16" class="menu" alt="Print" title="Print" />
+      <img id="menuSave" src="/media/save.svg" width="16" height="16" class="menu" alt="Save" title="Save a copy" style="display:none;" />
+      <img id="menuHighlight" src="/media/edit-off.svg" width="16" height="16" class="menu" alt="Edit" title="Turn on edit mode" />
+      <a id="menuPdf" href="#" class="menu download" title="Download PDF" style="display:block;">PDF</a>
+      <a id="menuPng" href="#" class="menu download" title="Download PNG" style="display:block;">PNG</a>
+      <a id="menuExportSvg" href="#" class="menu export" title="Export SVG" style="display:none;">SVG</a>
+      <a id="menuExportPng" href="#" class="menu export" title="Export PNG" style="display:none;">PNG</a>
+    </div>
+
+    <svg style="display:none;"></svg>
+  </body>
 </html>

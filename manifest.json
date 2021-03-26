@@ -1,0 +1,54 @@
+{
+  "background_color": "#ffffff",
+  "description": "A collection of Microsoft 365 licensing diagrams by Aaron Dinnage",
+  "display": "standalone",
+  "icons": [
+    { "src": "/media/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/media/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/media/favicon-192-mask.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/media/favicon-512-mask.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/media/favicon.svg", "sizes": "520x520", "type": "image/svg+xml" },
+    { "src": "/favicon.ico", "sizes": "32x32", "type": "image/x-icon" }
+  ],
+  "lang": "en",
+  "name": "M365 Maps",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "short_name": "m365maps",
+  "shortcuts": [
+    {
+      "name": "Home",
+      "description": "Microsoft 365 licensing",
+      "url": "/",
+      "icons": [ { "src": "/media/shortcut-home.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
+      "name": "Saved",
+      "description": "Saved diagrams",
+      "url": "/saved.htm",
+      "icons": [ { "src": "/media/shortcut-save.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
+      "name": "Changes",
+      "description": "Change log",
+      "url": "/changes.htm",
+      "icons": [ { "src": "/media/shortcut-changes.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
+      "name": "Guide",
+      "description": "User guide",
+      "url": "/guide.htm",
+      "icons": [ { "src": "/media/shortcut-guide.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
+      "name": "Settings",
+      "description": "Site settings",
+      "url": "/settings.htm",
+      "icons": [ { "src": "/media/shortcut-cog.png", "type": "image/png", "sizes": "192x192" } ]
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#002266"
+}

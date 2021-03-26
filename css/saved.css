@@ -1,0 +1,72 @@
+h1 {
+  font-size: 24px;
+  padding-left: 24px;
+  background: url(/media/save.svg) center left no-repeat;
+  background-size: 20px 20px;
+  margin: 0 0 8px 0;
+}
+
+#collection {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-auto-columns: minmax(min-content, max-content) min-content;
+  grid-auto-flow: row;
+  gap: 2px 16px;
+  align-items: center;
+}
+
+div.divider {
+  grid-row: auto;
+  grid-column: span 2;
+  margin: 4px 0;
+  border-top: 1px solid #cccccc;
+}
+
+h2 {
+  grid-row: auto;
+  grid-column: 1;
+  justify-self: start;
+}
+
+a.diagram {
+  /* IE11 layout hack */
+  float: left;
+}
+
+div.actions {
+  grid-row: auto;
+  grid-column: 2;
+  white-space: nowrap;
+}
+
+img.rename {
+  cursor: pointer;
+  /* IE11 layout hack */
+  vertical-align: text-bottom;
+  margin: 0 4px;
+}
+
+img.delete {
+  cursor: pointer;
+  /* IE11 layout hack */
+  vertical-align: text-bottom;
+  margin: 0 4px;
+}
+
+a.export {
+  background: url(/media/export.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 16px;
+  width: 36px;
+  margin: 0 4px;
+}
+
+a.home-link {
+  grid-row: auto;
+  grid-column: 1;
+  text-align: left;
+}
+
+div#menu {
+  right: 0;
+}
