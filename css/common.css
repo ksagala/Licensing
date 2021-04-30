@@ -1,0 +1,157 @@
+/* Light Theme */
+
+.theme-light body {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+.theme-light input, .theme-light select, .theme-light button {
+  color: #333333;
+  background-color: #EEEEEE;
+}
+
+.theme-light #errorDiv {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+.theme-light .dark-only {
+  display: none;
+}
+
+/* Dark Theme */
+
+.theme-dark body {
+  background-color: #202020;
+  color: #D5D5D5;
+}
+
+.theme-dark input, .theme-dark select, .theme-dark button {
+  color: #D5D5D5;
+  background-color: #3B3B3B;
+}
+
+.theme-dark #errorDiv {
+  background-color: #202020;
+  color: #D5D5D5;
+}
+
+.theme-dark .light-only {
+  display: none;
+}
+
+/* Print Styles */
+
+@media print {
+  body {
+    background-color: #ffffff;
+  }
+  div#menu {
+    visibility: hidden;
+  }
+  div#offline {
+    visibility: hidden;
+  }
+  div.section-links {
+    visibility: hidden;
+  }
+}
+
+/* Common Styles */
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #0070F7;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 8px 8px 32px 8px;
+}
+
+div#offline {
+  background: #000000;
+  padding: 4px 12px;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 8px;
+  color: #ffffff;
+  position: fixed;
+  z-index: 1;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+h3 {
+  margin: 10px 0 2px 0;
+  font-size: 16px;
+}
+
+img {
+  border: 0;
+  margin: 0;
+  vertical-align: text-top;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+button {
+  border-radius: 8px;
+  border-color: #cccccc;
+  border-width: 1px;
+  margin: 2px 8px;
+  padding: 6px 8px;
+  font-weight: bold;
+  cursor: pointer;
+  float: left;
+}
+
+button>img {
+  padding-right: 8px;
+  vertical-align: middle;
+}
+
+.skip-link {
+  position: absolute;
+  top: -64px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+div#menu {
+  background: #cccccc;
+  padding: 4px;
+  top: 0;
+  border-bottom-left-radius: 8px;
+  position: fixed;
+  z-index: 1;
+  line-height: 16px;
+  transform: translateZ(0);
+}
+
+a.home-link {
+  background: url(/media/home.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}

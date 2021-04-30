@@ -1,0 +1,135 @@
+a.changes {
+  cursor: pointer;
+  background: url(/media/changes.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a.guide {
+  cursor: pointer;
+  background: url(/media/guide.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a.settings {
+  cursor: pointer;
+  background: url(/media/cog.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a.saved {
+  cursor: pointer;
+  background: url(/media/save.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a.home {
+  cursor: pointer;
+  background: url(/media/home.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a#flagAll {
+  cursor: pointer;
+  background: url(/media/flagged.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a#clearAll {
+  cursor: pointer;
+  background: url(/media/unflagged.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0 0 4px 0;
+}
+
+div.link-collection {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-auto-columns: minmax(min-content, max-content) auto;
+  grid-auto-flow: row;
+  gap: 2px 6px;
+  margin-bottom: 12px;
+}
+
+div.divider {
+  grid-row: auto;
+  grid-column: span 2;
+  margin: 4px 0;
+  border-top: 1px solid #cccccc;
+}
+
+h2.link-header {
+  grid-row: auto;
+  grid-column: 1;
+  justify-self: start;
+  margin: 0;
+  /* IE11 layout hack */
+  float: left;
+}
+
+div.link-set {
+  grid-row: auto;
+  grid-column: 2;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+div.link-pair {
+  width: 120px;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 0;
+}
+
+a.link-text {
+  grid-row: 1;
+  grid-column: 2;
+  white-space: nowrap;
+  margin: 2px;
+}
+
+img.link-flag {
+  grid-row: 1;
+  grid-column: 1;
+  cursor: pointer;
+  padding-top: 1px;
+  margin: 2px 4px 2px 2px;
+  vertical-align: text-bottom;
+}
+
+div.collection-footer {
+  grid-row: auto;
+  grid-column: 2;
+}
+
+/* Preview Images on Hover */
+
+/* a.link-text img {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+
+a.link-text:hover img {
+  display: block;
+} */

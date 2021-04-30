@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="referrer" content="origin" />
+    <meta name="theme-color" content="#002266" />
+    <meta name="application-name" content="M365 Maps" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="M365 Maps" />
+    <meta name="description" content="Saved diagrams list" />
+    <meta name="author" content="Aaron Dinnage" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
+    <meta name="twitter:image:alt" content="M365 Maps saved diagrams page" />
+    <meta name="twitter:site" content="@AaronDinnage" />
+    <meta name="twitter:creator" content="@AaronDinnage" />
+    <meta property="article:author" content="Aaron Dinnage" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Settings" />
+    <meta property="og:description" content="M365 Maps saved diagrams page" />
+    <meta property="og:site_name" content="M365 Maps" />
+    <meta property="og:image" content="https://m365maps.com/media/summary_large_image.png" />
+    <meta property="og:image:alt" content="M365 Maps saved diagrams page" />
+    <meta property="og:url" content="https://m365maps.com/saved.htm" />
+    <link rel="canonical" href="https://m365maps.com/saved.htm" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/common.min.css" />
+    <link rel="stylesheet" href="/css/saved.min.css" />
+    <script src="/js/common.min.js"></script>
+    <script src="/js/saved.min.js"></script>
+    <title>Saved Diagrams | M365 Maps</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#collection">Skip to main content</a>
+    <h1><a href="/saved.htm">Saved diagrams</a></h1>
+
+    <noscript>
+      <p><strong style="color:#ff0000;">WARNING: Javascript disabled. Please enable JavaScript.</strong></p>
+    </noscript>
+
+    <input id="fileSelector" type="file" accept=".svg" multiple style="display:none;" />
+    <div id="offline" style="display:none;">OFFLINE</div>
+    <div id="menu"><a href="/" class="home-link">Home</a></div>
+
+    <div id="collection"></div>
+
+    <button id="exportAllPng" title="Export all saved diagrams as PNG"><img src="/media/export.svg" width="18" height="18" alt="Export all (PNG)" />Export all (PNG)</button>
+    <button id="exportAllSvg" title="Export all saved diagrams as SVG"><img src="/media/export.svg" width="18" height="18" alt="Export all (SVG)" />Export all (SVG)</button>
+    <button id="import" title="Import SVG diagram"><img src="/media/import.svg" width="18" height="18" alt="Import SVG" />Import SVG</button>
+
+  </body>
+</html>

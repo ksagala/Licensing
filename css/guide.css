@@ -1,0 +1,187 @@
+h1 {
+  font-size: 24px;
+  padding-left: 24px;
+  background: url(/media/guide.svg) center left no-repeat;
+  background-size: 20px 20px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 32px 0 16px 0;
+}
+
+div.divider {
+  margin: 4px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+div.spacer {
+  height: 16px;
+}
+
+.toc {
+  font-weight: bold;
+}
+
+div.section-links {
+  text-align: center;
+  margin: 8px 0;
+  padding: 4px 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+div.table-icon-description {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-auto-columns: max-content auto;
+  grid-auto-flow: row;
+  gap: 8px 16px;
+  margin-top: 16px;
+}
+
+div.table-divider {
+  grid-row: auto;
+  grid-column: span 2;
+  margin: 4px 0;
+  border-top: 1px solid #cccccc;
+  /* IE11 hack */
+  clear: left;
+}
+
+div.row-icon {
+  grid-row: auto;
+  grid-column: 1;
+  justify-self: center;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  padding: 4px;
+  /* IE11 Hack */
+  float: left;
+  height: 22px;
+}
+
+div.row-setting {
+  grid-row: auto;
+  grid-column: 1;
+  justify-self: start;
+  margin: 0;
+  padding: 4px;
+  font-weight: bold;
+}
+
+div.row-description {
+  grid-row: auto;
+  grid-column: 2;
+  justify-self: start;
+  align-self: center;
+}
+
+span.header-icon {
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+}
+
+span.header-description {
+  font-weight: bold;
+  text-align: left;
+}
+
+img.inline-icon {
+  vertical-align: middle;
+}
+
+a.top-link {
+  background: url(/media/top.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a.section-link {
+  background: url(/media/section-top.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
+a.header-link {
+  margin-left: 8px;
+}
+
+img.header-link {
+  vertical-align: middle;
+}
+
+ul {
+  margin: 16px 2px;
+}
+
+li {
+  margin: 8px 2px;
+}
+
+img.viewsvg-menu-screenshot {
+  margin: 4px auto 16px auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img.screenshot {
+  background-color: #cccccc;
+  border: 2px solid #cccccc;
+  margin: 4px auto 16px auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a.link-list {
+  padding-left: 32px;
+  margin: 4px 16px;
+}
+
+a.twitter {
+  background: url('/media/twitter.svg') no-repeat left center;
+  background-size: 16px 16px;
+}
+
+a.linkedin {
+  background: url('/media/linkedin.svg') no-repeat left center;
+  background-size: 16px 16px;
+}
+
+a.github {
+  background: url('/media/github.svg') no-repeat left center;
+  background-size: 16px 16px;
+}
+
+a.paypal {
+  background: url('/media/paypal.svg') no-repeat left center;
+  background-size: 16px 16px;
+}
+
+a.feedback {
+  background: url('/media/feedback.svg') no-repeat left center;
+  background-size: 16px 16px;
+}
+
+a.bug {
+  background: url('/media/bug.svg') no-repeat left center;
+  background-size: 16px 16px;
+}
+
+div#menu {
+  right: 0;
+}
+
+p.tip {
+  display: block;
+  border: 1px solid #cccccc;
+  background-color: rgba(240, 192, 128, 0.25);
+  padding: 4px;
+}

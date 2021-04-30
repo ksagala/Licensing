@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="origin" />
+    <meta name="theme-color" content="#002266" />
+    <meta name="application-name" content="M365 Maps" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="M365 Maps" />
+    <meta name="description" content="M365 Maps settings page" />
+    <meta name="author" content="Aaron Dinnage" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
+    <meta name="twitter:image:alt" content="M365 Maps settings page" />
+    <meta name="twitter:site" content="@AaronDinnage" />
+    <meta name="twitter:creator" content="@AaronDinnage" />
+    <meta property="article:author" content="Aaron Dinnage" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Settings" />
+    <meta property="og:description" content="M365 Maps settings page" />
+    <meta property="og:site_name" content="M365 Maps" />
+    <meta property="og:image" content="https://m365maps.com/media/summary_large_image.png" />
+    <meta property="og:image:alt" content="M365 Maps settings page" />
+    <meta property="og:url" content="https://m365maps.com/settings.htm" />
+    <link rel="canonical" href="https://m365maps.com/settings.htm" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/common.min.css" />
+    <link rel="stylesheet" href="/css/settings.min.css" />
+    <script src="/js/common.min.js"></script>
+    <script src="/js/settings.min.js"></script>
+    <title>Settings | M365 Maps</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#settings">Skip to main content</a>
+
+    <h1><a href="/settings.htm">Settings</a></h1>
+    <noscript>
+      <p><strong style="color:#ff0000;">WARNING: Javascript disabled. Please enable JavaScript.</strong></p>
+    </noscript>
+
+    <div id="offline" style="display:none;">OFFLINE</div>
+    <div id="menu"><a href="/" class="home-link">Home</a></div>
+
+    <div id="settings" class="settings-collection">
+      <div class="divider"></div>
+      <h2 class="settings-header highlight">Highlights</h2>
+      <div class="settings-values">
+        <input id="highlight1" type="color" class="highlight" title="Highlight on Click" />
+        <input id="highlight2" type="color" class="highlight" title="Highlight on Shift + Click" />
+        <input id="highlight3" type="color" class="highlight" title="Highlight on Control + Click" />
+      </div>
+      <div class="divider"></div>
+      <h2 class="settings-header menu"><label for="menuState">Menu</label></h2>
+      <div class="settings-values">
+        <select id="menuState" title="Set the menu state for the diagram view page">
+          <option>Open</option>
+          <option>Closed</option>
+        </select>
+      </div>
+      <div class="divider"></div>
+      <h2 class="settings-header theme"><label for="theme">Theme</label></h2>
+      <div class="settings-values">
+        <select id="theme" title="Set the theme for all pages">
+          <option>Light</option>
+          <option>Dark</option>
+          <option>System</option>
+        </select>
+      </div>
+      <div class="divider"></div>
+      <h2 class="settings-header zoom"><label for="zoom">Zoom</label></h2>
+      <div class="settings-values">
+        <select id="zoom" title="Set the default zoom for the diagram view page">
+          <option>Fit</option>
+          <option>Fit Width</option>
+          <option>Fit Height</option>
+          <option>Fill</option>
+        </select>
+      </div>
+      <div class="divider"></div>
+    </div>
+
+    <button id="defaults" title="Apply default settings"><img src="/media/defaults.svg" width="18" height="18" alt="Default" />Default</button>
+    <button id="save" title="Save settings"><img src="/media/save.svg" width="18" height="18" alt="Save" />Save</button>
+    <button id="cancel" title="Cancel changes"><img src="/media/delete.svg" width="18" height="18" alt="Cancel" />Cancel</button>
+  </body>
+</html>

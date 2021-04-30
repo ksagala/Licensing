@@ -1,0 +1,49 @@
+h1 {
+  font-size: 24px;
+  padding-left: 24px;
+  background: url(/media/changes.svg) center left no-repeat;
+  background-size: 20px 20px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 16px 0 4px 0;
+}
+
+ul {
+  margin: 8px 0;
+}
+
+div.divider {
+  margin: 4px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+div.spacer {
+  height: 16px;
+}
+
+div.section-links {
+  text-align: center;
+}
+
+a.top-link {
+  background: url(/media/top.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+  text-align: center;
+}
+
+a.header-link {
+  margin-left: 8px;
+}
+
+img.header-link {
+  vertical-align: middle;
+}
+
+div#menu {
+  right: 0;
+}
