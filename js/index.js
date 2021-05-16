@@ -126,7 +126,11 @@ function appOnline() {
 function pageLoad() {
   showFlags();
 
-  if (isIE) fixToMaxItemWidth('link-header', 8, false);
+  if (isIE)
+    fixToMaxItemWidth('link-header', 8, false);
+
+  document.getElementById('iewarning').style
+    .display = (isIE ? 'block' : 'none');
 
   document.getElementById('offline').style
     .display = (navigator.onLine ? 'none' : 'block');

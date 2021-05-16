@@ -1,5 +1,5 @@
-const AppCache = 'app-20210327';
-const DiagramsCache = 'diagrams-20210327';
+const AppCache = 'app-20210516';
+const DiagramsCache = 'diagrams-20210516';
 
 const AppUrls = [
   '/',

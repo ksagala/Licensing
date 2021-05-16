@@ -38,7 +38,7 @@ a.home {
   margin: 0 2px;
 }
 
-a#flagAll {
+#flagAll {
   cursor: pointer;
   background: url(/media/flagged.svg) center left no-repeat;
   background-size: 16px 16px;
@@ -46,12 +46,20 @@ a#flagAll {
   margin: 0 2px;
 }
 
-a#clearAll {
+#clearAll {
   cursor: pointer;
   background: url(/media/unflagged.svg) center left no-repeat;
   background-size: 16px 16px;
   padding-left: 20px;
   margin: 0 2px;
+}
+
+#iewarning {
+  color:#ff0000;
+  border: 1px solid #cccccc;
+  background-color: rgba(240, 192, 128, 0.25);
+  padding: 12px 12px 0 12px;
+  margin: 10px 0;
 }
 
 h1 {
