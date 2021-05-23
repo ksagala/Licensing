@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-title" content="M365 Maps" />
-    <meta name="description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
+    <meta name="description" content="A Microsoft 365 licensing diagram from the m365maps.com collection by Aaron Dinnage" />
     <meta name="author" content="Aaron Dinnage" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
@@ -21,7 +21,7 @@
     <meta property="article:author" content="Aaron Dinnage" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="License Diagram" />
-    <meta property="og:description" content="A Microsoft 365 licensing diagram from the collection by Aaron Dinnage" />
+    <meta property="og:description" content="A Microsoft 365 licensing diagram from the m365maps.com collection by Aaron Dinnage" />
     <meta property="og:site_name" content="M365 Maps" />
     <meta property="og:image" content="https://m365maps.com/media/summary_wide.png" />
     <meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="/css/common.min.css" />
     <link rel="stylesheet" href="/css/viewsvg.min.css" />
     <script src="/js/common.min.js"></script>
-    <script src="/js/viewsvg.min.js"></script>
+    <script src="/js/viewsvg.js"></script>
     <title>License Diagram | M365 Maps</title>
   </head>
   <body>
@@ -57,15 +57,14 @@
     <div id="menu" style="display:none;right:-300px;">
       <img id="menuGrip" src="/media/open.svg" width="16" height="16" alt="Menu" title="Open menu" />
       <a href="/" class="menu"><img id="menuHome" src="/media/home.svg" width="16" height="16" alt="Home" title="Go home" /></a>
-      <img id="menuFlag" src="/media/unflagged.svg" width="16" height="16" class="menu" alt="Flag" />
       <img id="menuPrint" src="/media/print.svg" width="16" height="16" class="menu" alt="Print" title="Print" />
       <img id="menuSave" src="/media/save.svg" width="16" height="16" class="menu" alt="Save" title="Save a copy" style="display:none;" />
       <img id="menuHighlight" src="/media/edit-off.svg" width="16" height="16" class="menu" alt="Edit" title="Turn on edit mode" />
-      <a id="menuPdf" href="#" class="menu download" title="Download PDF" style="display:block;">PDF</a>
-      <a id="menuPng" href="#" class="menu download" title="Download PNG" style="display:block;">PNG</a>
       <a id="menuExportSvg" href="#" class="menu export" title="Export SVG" style="display:none;">SVG</a>
       <a id="menuExportPng" href="#" class="menu export" title="Export PNG" style="display:none;">PNG</a>
     </div>
+
+    <h1 style="display:none;">License Diagram</h1>
 
     <svg style="display:none;"></svg>
   </body>

@@ -6,6 +6,14 @@ a.changes {
   margin: 0 2px;
 }
 
+a.downloads {
+  cursor: pointer;
+  background: url(/media/download.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
+  margin: 0 2px;
+}
+
 a.guide {
   cursor: pointer;
   background: url(/media/guide.svg) center left no-repeat;
@@ -55,7 +63,7 @@ a.home {
 }
 
 #iewarning {
-  color:#ff0000;
+  color: #ff0000;
   border: 1px solid #cccccc;
   background-color: rgba(240, 192, 128, 0.25);
   padding: 12px 12px 0 12px;

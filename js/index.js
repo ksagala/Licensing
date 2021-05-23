@@ -21,7 +21,7 @@ function flagClick(event) {
   const flagImage = event.target;
   const flagLink = flagImage.parentElement
     .getElementsByClassName('link-text').item(0);
-  const filename = flagLink.hash.substring(1);
+  const filename = flagLink.pathname.substring(1, flagLink.pathname.length - 4);
 
   const flagIndex = PageData.Flags.indexOf(filename);
   if (flagIndex === -1) {
@@ -45,7 +45,8 @@ function flagAllClick(event) {
   for (let index = 0; index < links.length; index += 1) {
     const link = links[index];
 
-    const filename = link.hash.substring(1);
+    const filename = link.pathname.substring(1, link.pathname.length - 4);
+
     PageData.Flags.push(filename);
 
     const flagImage = link.parentElement
@@ -93,7 +94,7 @@ function showFlags() {
 
     flagImage.addEventListener('click', flagClick);
 
-    const filename = link.hash.substring(1);
+    const filename = link.pathname.substring(1, link.pathname.length - 4);
 
     // TODO: Hover preview?
     // const preview = document.createElement('img');

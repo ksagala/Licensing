@@ -284,6 +284,7 @@ function setupHeaders(tagName) {
   }
 }
 
+
 /** TODO: Implement alternative to native alert function. */
 function customAlert(message) {
   window.alert(message);

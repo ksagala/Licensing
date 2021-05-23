@@ -43,6 +43,12 @@
       "icons": [ { "src": "/media/shortcut-guide.png", "type": "image/png", "sizes": "192x192" } ]
     },
     {
+      "name": "Downloads",
+      "description": "Diagram downloads",
+      "url": "/downloads.htm",
+      "icons": [ { "src": "/media/shortcut-downloads.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
       "name": "Settings",
       "description": "Site settings",
       "url": "/settings.htm",

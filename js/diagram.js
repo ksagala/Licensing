@@ -9,7 +9,8 @@ function resetPageData() {
   PageData.Highlighting = false;
   PageData.MenuOffset = 0;
   PageData.MenuOpen = false;
-  PageData.SavedImageTitle = 'untitled';
+  PageData.Flagged = false;
+  PageData.Flags = [];
   PageData.Scroll = {
     Top: 0,
     Left: 0,
@@ -63,6 +64,9 @@ function updateMenu() {
 
   const menuPanel = document.getElementById('menu');
   const menuGrip = document.getElementById('menuGrip');
+  const menuFlag = document.getElementById('menuFlag');
+  const menuPdf = document.getElementById('menuPdf');
+  const menuPng = document.getElementById('menuPng');
   const menuSave = document.getElementById('menuSave');
   const menuHighlight = document.getElementById('menuHighlight');
   const menuExportSvg = document.getElementById('menuExportSvg');
@@ -81,6 +85,14 @@ function updateMenu() {
     menuHighlight.title = 'Turn on highlighter';
   }
 
+  if (PageData.Flagged) {
+    menuFlag.src = '/media/flagged.svg';
+    menuFlag.title = 'Remove flag';
+  } else {
+    menuFlag.src = '/media/unflagged.svg';
+    menuFlag.title = 'Flag this diagram';
+  }
+
   if (PageData.Highlighting) {
     menuSave.style.display = 'inline';
 
@@ -91,10 +103,18 @@ function updateMenu() {
     menuExportPng.style.display = (isIOSEdge || isIE ? 'none' : 'inline');
   } else {
     menuSave.style.display = 'none';
+    menuExportSvg.style.display = 'none';
+    menuExportPng.style.display = 'none';
+  }
 
-    menuExportSvg.style.display = (!isIOSEdge ? 'inline' : 'none');
+  menuFlag.style.display = 'inline';
 
-    menuExportPng.style.display = (!isIE && !isIOSEdge ? 'inline' : 'none');
+  if (PageData.Highlighting) {
+    menuPdf.style.display = 'none';
+    menuPng.style.display = 'none';
+  } else {
+    menuPdf.style.display = 'inline';
+    menuPng.style.display = 'inline';
   }
 
   menuPanel.style.display = 'block';
@@ -183,6 +203,28 @@ function menuGripClick() {
   setMenuPosition();
 }
 
+/** Handles the user clicking the menu Flag item. */
+function flagClick(event) {
+  // console.log('flagClick');
+
+  event.preventDefault();
+
+  if (PageData.Flagged) {
+    const flagIndex = PageData.Flags.indexOf(PageData.Filename);
+    if (flagIndex > -1) PageData.Flags.splice(flagIndex, 1);
+
+    PageData.Flagged = false;
+  } else {
+    PageData.Flags.push(PageData.Filename);
+
+    PageData.Flagged = true;
+  }
+
+  localStorage.setItem(StoreName.Flags, JSON.stringify(PageData.Flags));
+
+  updateMenu();
+}
+
 /** Handles the user clicking the menu Print item. */
 function printClick(event) {
   // console.log('printClick');
@@ -209,16 +251,12 @@ function menuSaveClick(event) {
 
   event.preventDefault();
 
-  let diagramTitle = PageData.SavedImageTitle;
-  let storageKey = Date.now().toString();
+  let diagramTitle = decodeURIComponent(PageData.Filename);
+  diagramTitle = customPrompt('Save diagram as:', diagramTitle);
 
-  let overwrite = customConfirm('Overwrite existing diagram?');
-  if (overwrite) {
-    storageKey = PageData.Filename;
-  } else {
-    diagramTitle = customPrompt('Save diagram as:', diagramTitle);
-    if (!diagramTitle) return;
-  }
+  if (!diagramTitle) return;
+
+  let storageKey = Date.now().toString();
 
   const svgXml = getSvgXml();
   const svgObject = { Title: diagramTitle, SvgXml: svgXml };
@@ -232,7 +270,7 @@ function exportSvgClick(event) {
 
   event.preventDefault();
 
-  const filename = PageData.SavedImageTitle + '.svg';
+  const filename = decodeURIComponent(PageData.Filename) + '.svg';
   const svgXml = getSvgXml();
 
   exportSvg(filename, svgXml);
@@ -247,7 +285,7 @@ function exportPngClick(event) {
   if (isIE) return;
 
   const background = window.getComputedStyle(document.body).backgroundColor;
-  const filename = PageData.SavedImageTitle + '.png';
+  const filename = decodeURIComponent(PageData.Filename) + '.png';
   const svgXml = getSvgXml();
 
   exportPng(filename, svgXml, background);
@@ -259,6 +297,9 @@ function setupMenu() {
 
   document.getElementById('menuGrip')
     .addEventListener('click', menuGripClick);
+
+  document.getElementById('menuFlag')
+    .addEventListener('click', flagClick);
 
   document.getElementById('menuPrint')
     .addEventListener('click', printClick);
@@ -333,6 +374,8 @@ function sizeSvg() {
   // console.log('sizeSvg');
 
   if (!PageData.SvgTag) return;
+
+  PageData.SvgTag.style.display = 'inline';
 
   let scale = 0.985;
 
@@ -480,97 +523,36 @@ function mouseMove(event) {
   );
 }
 
-/** Loads XML data into the SVG tag and correctly displays it. */
-function loadSvg(xml) {
-  // console.log('loadSvg');
-
-  document.body.removeChild(PageData.SvgTag);
-  PageData.SvgTag = null;
-
-  let svgXml = xml
-    .replace(/<!--.*-->/i, '')
-    .replace(/<\?xml.*\?>/i, '')
-    .replace(/<!doctype.*>/i, '')
-    .replace(/^[\n\r]+/, '');
-
-  // Saved diagrams will have the highlight styles, but first load and
-  // imported diagrams may not.
-  if (svgXml.indexOf('m365MapsHighlights') === -1) {
-    const highlightStyle = '<style id="m365MapsHighlights">'
-      + '.highlight1{fill:' + Settings.Highlight1 + '!important;transition:0.4s;}'
-      + '.highlight2{fill:' + Settings.Highlight2 + '!important;transition:0.4s;}'
-      + '.highlight3{fill:' + Settings.Highlight3 + '!important;transition:0.4s;}'
-      + '</style>';
-
-    // TODO: Instead of replacing in the string (memory intesive) the following
-    // line can be used when not supporting IE11:
-    // PageData.SvgTag.insertAdjacentHTML('afterbegin', highlightStyle);
-
-    svgXml = svgXml.replace(/<\/svg>/i, highlightStyle + '</svg>');
-  }
-
-  PageData.SvgTag = createElementFromHtml(svgXml);
-  document.body.appendChild(PageData.SvgTag);
-
-  PageData.SvgTag.addEventListener('click', clickEvent);
-  PageData.SvgTag.addEventListener('auxclick', auxClickEvent);
-
-  sizeSvg();
-  updateMenu();
-  setMenuPosition();
-}
-
-/** Hash Change event handler. */
-function hashChange() {
-  // console.log('hashChange');
-
-  hideError();
-
-  // Site now uses # for diagram name but previously used query string (?)
-  let fileIndex = window.location.href.indexOf('#');
-  if (fileIndex === -1) fileIndex = window.location.href.indexOf('=');
-  if (fileIndex === -1 || fileIndex === window.location.href.length - 1) {
-    showError('Missing file name');
-    return;
-  }
-
-  if (window.location.href[fileIndex + 1] === '*') {
-    // Saved
-
-    PageData.Filename = window.location.href.substring(fileIndex + 2);
-
-    const json = localStorage.getItem(PageData.Filename);
-    if (!json) {
-      showError('Failed to load saved diagram');
-      return;
+/** Load flagged diagrms list from local storage. */
+function loadFlags() {
+  const flagsJSON = localStorage.getItem(StoreName.Flags);
+  if (flagsJSON) {
+    const flags = JSON.parse(flagsJSON);
+    if (flags) {
+      PageData.Flags = flags;
     }
-
-    const data = JSON.parse(json);
-    if (!data || !data.SvgXml) {
-      showError('Failed to process saved diagram data');
-      return;
-    }
-
-    PageData.SavedImageTitle = data.Title;
-    document.title = PageData.SavedImageTitle;
-    loadSvg(data.SvgXml);
-  } else {
-    // Redirect
-    const redirect = window.location.origin + '/' + window.location.href.substring(fileIndex + 1) + '.htm';
-    location.replace(redirect);
   }
 }
 
 /** Page Load event handler. */
 function pageLoad() {
   // console.log('pageLoad');
-
-  PageData.SvgTag = document.getElementsByTagName('svg').item(0);
-
+  
+  hideError();
+  loadFlags();
   setupMenu();
 
-  hashChange();
-  window.addEventListener('hashchange', hashChange);
+  PageData.SvgTag = document.getElementsByTagName('svg').item(0);
+  PageData.Filename = window.location.pathname.substring(1, window.location.pathname.length - 4);
+  PageData.Flagged = (PageData.Flags.indexOf(PageData.Filename) !== -1);
+
+  sizeSvg();
+  updateMenu();
+  setMenuPosition();
+
+  // Add click listeners to the SVG diagram
+  PageData.SvgTag.addEventListener('click', clickEvent);
+  PageData.SvgTag.addEventListener('auxclick', auxClickEvent);
 
   // Mouse actions for drag to scroll
   window.addEventListener('mousedown', mouseDown);
