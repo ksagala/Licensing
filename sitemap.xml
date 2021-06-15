@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://m365maps.com/</loc>
-    <lastmod>2021-05-24</lastmod>
+    <lastmod>2021-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://m365maps.com/changes.htm</loc>
-    <lastmod>2021-05-24</lastmod>
+    <lastmod>2021-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://m365maps.com/downloads.htm</loc>
-    <lastmod>2021-05-24</lastmod>
+    <lastmod>2021-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://m365maps.com/guide.htm</loc>
-    <lastmod>2021-05-24</lastmod>
+    <lastmod>2021-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://m365maps.com/matrix.htm</loc>
+    <lastmod>2021-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

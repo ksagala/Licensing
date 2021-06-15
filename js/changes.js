@@ -10,7 +10,7 @@ function appOnline() {
 
 /** Page Load event handler. */
 function pageLoad() {
-  setupHeaders('h2');
+  Common.setupHeaders('h2');
 
   document.getElementById('offline').style
     .display = (navigator.onLine ? 'none' : 'block');
@@ -18,10 +18,4 @@ function pageLoad() {
   window.addEventListener('online', appOnline);
 }
 
-registerServiceWorker();
-
 window.addEventListener('load', pageLoad);
-
-loadSettings();
-setTheme(Settings.Theme);
-addThemeListener(themeChange);

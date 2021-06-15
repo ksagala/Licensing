@@ -1,26 +1,25 @@
 h1 {
   font-size: 24px;
-  padding-left: 24px;
+  padding-left: 28px;
   background: url(/media/download.svg) center left no-repeat;
   background-size: 20px 20px;
-  margin-bottom: 8px;
 }
 
 h2 {
   font-size: 22px;
-  margin: 32px 0 16px 0;
+  margin: 16px 0;
 }
 
 div.divider {
   margin: 4px 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 
 div.spacer {
   height: 16px;
 }
 
-div#menu {
+#menu {
   right: 0;
 }
 

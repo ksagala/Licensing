@@ -3,6 +3,8 @@ html, body {
   height: 100%;
   margin: 0;
   -webkit-user-select: none;
+  /* IE11 */
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -30,18 +32,18 @@ a.export {
   cursor: pointer;
 }
 
-div#errorDiv {
+#errorDiv {
   top: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
 }
 
-div#menu {
+#menu {
   transition: 0.3s;
 }
 
-img#menuGrip {
+#menuGrip {
   float: left;
   cursor: pointer;
   padding: 0 2px;
@@ -51,4 +53,37 @@ img.menu {
   float: left;
   cursor: pointer;
   margin: 0 6px;
+}
+
+/* Image Controls */
+
+#imageControls {
+  background: #CCC;
+  padding: 8px;
+  right: 0;
+  border-bottom-left-radius: 8px;
+  position: fixed;
+  z-index: 1;
+  line-height: 16px;
+  transform: translateZ(0);
+  transition: 0.5s;
+  width: 220px;
+  color: #0070F7;
+}
+
+label.slider {
+  float: left;
+  line-height: 24px;
+  margin: 2px;
+}
+
+input.slider {
+  float: right;
+  clear: right;
+  height: 24px;
+}
+
+button {
+  margin: 8px 8px 2px 8px;
+  float: none;
 }

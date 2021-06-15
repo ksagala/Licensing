@@ -1,9 +1,8 @@
 h1 {
   font-size: 24px;
-  padding-left: 24px;
+  padding-left: 28px;
   background: url(/media/changes.svg) center left no-repeat;
   background-size: 20px 20px;
-  margin-bottom: 8px;
 }
 
 h2 {
@@ -17,7 +16,7 @@ ul {
 
 div.divider {
   margin: 4px 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 
 div.spacer {
@@ -44,6 +43,6 @@ img.header-link {
   vertical-align: middle;
 }
 
-div#menu {
+#menu {
   right: 0;
 }

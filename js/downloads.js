@@ -16,10 +16,4 @@ function pageLoad() {
   window.addEventListener('online', appOnline);
 }
 
-registerServiceWorker();
-
 window.addEventListener('load', pageLoad);
-
-loadSettings();
-setTheme(Settings.Theme);
-addThemeListener(themeChange);

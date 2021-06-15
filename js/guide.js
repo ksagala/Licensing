@@ -10,9 +10,9 @@ function appOnline() {
 
 /** Page Load event handler. */
 function pageLoad() {
-  setupHeaders('h2');
+  Common.setupHeaders('h2');
 
-  if (isIE) fixToMaxItemWidth('row-icon', 16, false);
+  if (Common.isIE) Common.fixToMaxItemWidth('row-icon', 16, false);
 
   document.getElementById('offline').style
     .display = (navigator.onLine ? 'none' : 'block');
@@ -20,10 +20,4 @@ function pageLoad() {
   window.addEventListener('online', appOnline);
 }
 
-registerServiceWorker();
-
 window.addEventListener('load', pageLoad);
-
-loadSettings();
-setTheme(Settings.Theme);
-addThemeListener(themeChange);

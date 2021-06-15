@@ -1,19 +1,18 @@
 h1 {
   font-size: 24px;
-  padding-left: 24px;
+  padding-left: 28px;
   background: url(/media/guide.svg) center left no-repeat;
   background-size: 20px 20px;
-  margin-bottom: 8px;
 }
 
 h2 {
   font-size: 22px;
-  margin: 32px 0 16px 0;
+  margin: 16px 0;
 }
 
 div.divider {
   margin: 4px 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #CCC;
 }
 
 div.spacer {
@@ -28,8 +27,8 @@ div.section-links {
   text-align: center;
   margin: 8px 0;
   padding: 4px 0;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
 }
 
 div.table-icon-description {
@@ -45,7 +44,7 @@ div.table-divider {
   grid-row: auto;
   grid-column: span 2;
   margin: 4px 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #CCC;
   /* IE11 hack */
   clear: left;
 }
@@ -132,8 +131,8 @@ img.viewsvg-menu-screenshot {
 }
 
 img.screenshot {
-  background-color: #cccccc;
-  border: 2px solid #cccccc;
+  background-color: #CCC;
+  border: 2px solid #CCC;
   margin: 4px auto 16px auto;
   display: block;
   max-width: 100%;
@@ -146,42 +145,42 @@ a.link-list {
 }
 
 a.twitter {
-  background: url('/media/twitter.svg') no-repeat left center;
+  background: url(/media/twitter.svg) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.linkedin {
-  background: url('/media/linkedin.svg') no-repeat left center;
+  background: url(/media/linkedin.svg) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.github {
-  background: url('/media/github.svg') no-repeat left center;
+  background: url(/media/github.svg) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.paypal {
-  background: url('/media/paypal.svg') no-repeat left center;
+  background: url(/media/paypal.svg) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.feedback {
-  background: url('/media/feedback.svg') no-repeat left center;
+  background: url(/media/feedback.svg) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.bug {
-  background: url('/media/bug.svg') no-repeat left center;
+  background: url(/media/bug.svg) no-repeat left center;
   background-size: 16px 16px;
 }
 
-div#menu {
+#menu {
   right: 0;
 }
 
 p.tip {
   display: block;
-  border: 1px solid #cccccc;
+  border: 1px solid #CCC;
   background-color: rgba(240, 192, 128, 0.25);
   padding: 4px;
 }
