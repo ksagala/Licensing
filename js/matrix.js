@@ -297,19 +297,20 @@ function appOnline() {
 function pageLoad() {
   // console.log('pageLoad');
 
-  if (Common.isIE) {
-    Common.fixToMaxItemWidth('licenseType', 4, false);
-    Common.fixToMaxItemWidth('checkLabel', 4, false);
-  }
-
-  const header = document.getElementById('header');
-  header.style.width = document.body.scrollWidth + 'px';
-
   PageData.ComparisonContainer = document.getElementById('comparisons');
   PageData.ComparisonInputs = PageData.ComparisonContainer.getElementsByTagName('input');
 
   const featuresTable = document.getElementById('featuresTable');
   PageData.TableRows = featuresTable.getElementsByTagName('tr');
+
+  if (Common.isIE) {
+    Common.fixToMaxItemWidth('licenseType', 4, false);
+    Common.fixToMaxItemWidth('checkLabel', 4, false);
+    PageData.ComparisonContainer.style.display = 'inline-block';
+  }
+
+  const header = document.getElementById('header');
+  header.style.width = document.body.scrollWidth + 'px';
 
   setupComparisonSelection();
   setupFeatureSearch();

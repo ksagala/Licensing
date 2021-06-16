@@ -1,5 +1,5 @@
-const AppCache = 'app-20210615';
-const DiagramsCache = 'diagrams-20210615';
+const AppCache = 'app-20210616';
+const DiagramsCache = 'diagrams-20210616';
 
 const AppUrls = [
   '/',
@@ -146,6 +146,9 @@ const DiagramUrls = [
 /** Service Worker Install caches core app components and diagrams. */
 function swInstall(event) {
   console.log('[Service Worker] Install', AppCache, DiagramsCache);
+
+  self.skipWaiting();
+
   event.waitUntil(Promise.all([
     caches.has(AppCache).then(
       function hasAppCache(has) {

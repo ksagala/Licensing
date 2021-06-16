@@ -109,10 +109,26 @@ const Common = {
   isIOS: (window.navigator.userAgent.indexOf('iPad') !== -1 ||
     window.navigator.userAgent.indexOf('iPhone') !== -1),
 
+  /** Is the page refreshing for an update? */
+  updateRefresh: false,
+
+  /** Controller Change event listener to refresh the page. */
+  controllerChanged: function () {
+    // console.log('controllerChanged');
+
+    if (this.updateRefresh) return;
+    this.updateRefresh = true;
+
+    window.location.reload();
+  },
+
   /** Registers the Service Worker. */
   registerServiceWorker: function () {
+    // console.log('registerServiceWorker');
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register(this.ServiceWorkerJS, { scope: '/' });
+      navigator.serviceWorker.addEventListener('controllerchange', this.controllerChanged);
     }
   },
 

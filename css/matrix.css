@@ -34,7 +34,9 @@ h1 {
 }
 
 h1, #comparisons {
+  position: relative;
   position: sticky;
+  left: 8px;
   left: calc(env(safe-area-inset-left, 0) + 8px);
   width: max-content;
 }
