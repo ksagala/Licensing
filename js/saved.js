@@ -96,7 +96,7 @@ function addNewRow(container, key, entry) {
   const thisDivider = newDivider();
 
   entryRename.addEventListener('click', function renameClick() {
-    const newName = customPrompt('Rename saved diagram:', entryLink.textContent);
+    const newName = Common.customPrompt('Rename saved diagram:', entryLink.textContent);
 
     if (newName) {
       entry.Title = newName;
@@ -104,8 +104,8 @@ function addNewRow(container, key, entry) {
       localStorage.setItem(key, entryJSON);
       entryLink.textContent = newName;
 
-      if (isIE) {
-        fixToMaxItemWidth('diagram', 20, true);
+      if (Common.isIE) {
+        Common.fixToMaxItemWidth('diagram', 20, true);
       }
     }
   });
@@ -117,7 +117,7 @@ function addNewRow(container, key, entry) {
     const message = 'Are you sure you want to delete "'
       + entryLink.textContent + '"?';
 
-    if (customConfirm(message)) {
+    if (Common.customConfirm(message)) {
       localStorage.removeItem(key);
 
       container.removeChild(entryHeader);
@@ -133,19 +133,19 @@ function addNewRow(container, key, entry) {
     }
   });
 
-  if (!isIOSEdge) {
+  if (!Common.isIOSEdge) {
     const entrySvgLink = newSvgLink();
     entryActions.appendChild(entrySvgLink);
 
     entrySvgLink.addEventListener('click',
       function svgLinkClick(event) {
         event.preventDefault();
-        exportSvg(entry.Title + '.svg', entry.SvgXml);
+        Common.exportSvg(entry.Title + '.svg', entry.SvgXml);
       }
     );
   }
 
-  if (!isIOSEdge && !isIE) {
+  if (!Common.isIOSEdge && !Common.isIE) {
     const entryPngLink = newPngLink();
     entryActions.appendChild(entryPngLink);
 
@@ -153,7 +153,7 @@ function addNewRow(container, key, entry) {
       function pngLinkClick(event) {
         event.preventDefault();
         const background = window.getComputedStyle(document.body).backgroundColor;
-        exportPng(entry.Title + '.png', entry.SvgXml, background);
+        Common.exportPng(entry.Title + '.png', entry.SvgXml, background);
       }
     );
   }
@@ -172,7 +172,7 @@ function populateList() {
   let keys = [];
   for (let index = 0; index < localStorage.length; index += 1) {
     const key = localStorage.key(index);
-    if (key !== StoreName.Flags && key !== StoreName.Settings) {
+    if (key !== Common.StoreName.Flags && key !== Common.StoreName.Settings) {
       keys.push(key);
     }
   }
@@ -198,8 +198,8 @@ function populateList() {
   if (keys.length === 0) {
     addEmptyMessage(container);
     container.appendChild(newDivider());
-  } else if (isIE) {
-    fixToMaxItemWidth('diagram', 20, false);
+  } else if (Common.isIE) {
+    Common.fixToMaxItemWidth('diagram', 20, false);
   }
 }
 
@@ -214,7 +214,7 @@ function filesSelected(event) {
     reader.addEventListener('load',
       function fileLoaded(event) {
         let diagramTitle = file.name;
-        diagramTitle = customPrompt('Import diagram as:', diagramTitle);
+        diagramTitle = Common.customPrompt('Import diagram as:', diagramTitle);
         if (diagramTitle) {
           const storageKey = Date.now().toString();
           const svgObject = { Title: diagramTitle, SvgXml: event.target.result };
@@ -242,7 +242,7 @@ function exportAllDiagrams(exportType) {
   for (let i = 0; i < exportLinks.length; i++) {
     const exportLink = exportLinks[i];
     if (exportLink.textContent === exportType) {
-      simulateClick(exportLink);
+      Common.simulateClick(exportLink);
       // exportLink.click();
     }
   }
@@ -261,7 +261,7 @@ function exportAllDiagramsPng() {
 /** Triggers the file upload process. */
 function importDiagram() {
   const fileSelector = document.getElementById('fileSelector');
-  simulateClick(fileSelector);
+  Common.simulateClick(fileSelector);
   // fileSelector.click();
 }
 
@@ -280,14 +280,14 @@ function pageLoad() {
   populateList();
 
   const exportAllPng = document.getElementById('exportAllPng');
-  if (isIE || isIOS) {
+  if (Common.isIE || Common.isIOS) {
     exportAllPng.style.display = 'none';
   } else {
     exportAllPng.addEventListener('click', exportAllDiagramsPng);
   }
 
   const exportAllSvg = document.getElementById('exportAllSvg');
-  if (isIOS) {
+  if (Common.isIOS) {
     exportAllSvg.style.display = 'none';
   } else {
     exportAllSvg.addEventListener('click', exportAllDiagramsSvg);
@@ -305,10 +305,4 @@ function pageLoad() {
   window.addEventListener('online', appOnline);
 }
 
-registerServiceWorker();
-
 window.addEventListener('load', pageLoad);
-
-loadSettings();
-setTheme(Settings.Theme);
-addThemeListener(themeChange);

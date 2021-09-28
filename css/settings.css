@@ -1,10 +1,8 @@
 h1 {
   font-size: 24px;
-  padding-left: 24px;
+  padding-left: 28px;
   background: url(/media/cog.svg) center left no-repeat;
   background-size: 20px 20px;
-  margin-top: 0;
-  margin-bottom: 8px;
 }
 
 div.settings-collection {
@@ -20,7 +18,7 @@ div.divider {
   grid-row: auto;
   grid-column: span 2;
   margin: 4px 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #CCC;
 }
 
 h2 {
@@ -77,6 +75,6 @@ div.settings-values {
   padding: 0;
 }
 
-div#menu {
+#menu {
   right: 0;
 }

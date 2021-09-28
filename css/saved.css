@@ -1,9 +1,8 @@
 h1 {
   font-size: 24px;
-  padding-left: 24px;
+  padding-left: 28px;
   background: url(/media/save.svg) center left no-repeat;
   background-size: 20px 20px;
-  margin: 0 0 8px 0;
 }
 
 #collection {
@@ -19,7 +18,7 @@ div.divider {
   grid-row: auto;
   grid-column: span 2;
   margin: 4px 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
 }
 
 h2 {
@@ -67,6 +66,6 @@ a.home-link {
   text-align: left;
 }
 
-div#menu {
+#menu {
   right: 0;
 }

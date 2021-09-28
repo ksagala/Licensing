@@ -1,18 +1,18 @@
 /* Light Theme */
 
 .theme-light body {
-  background-color: #FFFFFF;
-  color: #333333;
+  background-color: #FFF;
+  color: #333;
 }
 
 .theme-light input, .theme-light select, .theme-light button {
-  color: #333333;
-  background-color: #EEEEEE;
+  background-color: #EEE;
+  color: #333;
 }
 
 .theme-light #errorDiv {
-  background-color: #FFFFFF;
-  color: #333333;
+  background-color: #FFF;
+  color: #333;
 }
 
 .theme-light .dark-only {
@@ -27,8 +27,8 @@
 }
 
 .theme-dark input, .theme-dark select, .theme-dark button {
-  color: #D5D5D5;
   background-color: #3B3B3B;
+  color: #D5D5D5;
 }
 
 .theme-dark #errorDiv {
@@ -44,12 +44,12 @@
 
 @media print {
   body {
-    background-color: #ffffff;
+    background-color: #FFF;
   }
-  div#menu {
+  #menu {
     visibility: hidden;
   }
-  div#offline {
+  #offline {
     visibility: hidden;
   }
   div.section-links {
@@ -72,19 +72,20 @@ body {
   margin: 8px 8px 32px 8px;
 }
 
-div#offline {
-  background: #000000;
+#offline {
+  background: #000;
   padding: 4px 12px;
   bottom: 0;
   right: 0;
   border-top-left-radius: 8px;
-  color: #ffffff;
+  color: #FFF;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 
 h1 {
   margin-top: 0;
+  margin-bottom: 8px;
 }
 
 h2 {
@@ -110,7 +111,7 @@ p {
 
 button {
   border-radius: 8px;
-  border-color: #cccccc;
+  border-color: #CCC;
   border-width: 1px;
   margin: 2px 8px;
   padding: 6px 8px;
@@ -128,23 +129,23 @@ button>img {
   position: absolute;
   top: -64px;
   left: 0;
-  background: #000000;
-  color: white;
+  background: #000;
+  color: #FFF;
   padding: 8px;
-  z-index: 100;
+  z-index: 4;
 }
 
 .skip-link:focus {
   top: 0;
 }
 
-div#menu {
-  background: #cccccc;
+#menu {
+  background: #CCC;
   padding: 4px;
   top: 0;
   border-bottom-left-radius: 8px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   line-height: 16px;
   transform: translateZ(0);
 }

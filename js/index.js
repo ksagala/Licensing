@@ -21,7 +21,7 @@ function flagClick(event) {
   const flagImage = event.target;
   const flagLink = flagImage.parentElement
     .getElementsByClassName('link-text').item(0);
-  const filename = flagLink.hash.substring(1);
+  const filename = flagLink.pathname.substring(1, flagLink.pathname.length - 4);
 
   const flagIndex = PageData.Flags.indexOf(filename);
   if (flagIndex === -1) {
@@ -32,7 +32,7 @@ function flagClick(event) {
     updateFlag(flagImage, false);
   }
 
-  localStorage.setItem(StoreName.Flags, JSON.stringify(PageData.Flags));
+  localStorage.setItem(Common.StoreName.Flags, JSON.stringify(PageData.Flags));
 }
 
 /** Handles the user clicking the Flag all item at the bottom of the links. */
@@ -45,7 +45,8 @@ function flagAllClick(event) {
   for (let index = 0; index < links.length; index += 1) {
     const link = links[index];
 
-    const filename = link.hash.substring(1);
+    const filename = link.pathname.substring(1, link.pathname.length - 4);
+
     PageData.Flags.push(filename);
 
     const flagImage = link.parentElement
@@ -55,7 +56,7 @@ function flagAllClick(event) {
   }
 
   const flagsJSON = JSON.stringify(PageData.Flags);
-  localStorage.setItem(StoreName.Flags, flagsJSON);
+  localStorage.setItem(Common.StoreName.Flags, flagsJSON);
 }
 
 /** Handles the user clicking the clear all flags item at the bottom of the
@@ -65,7 +66,7 @@ function clearFlagsClick(event) {
 
   PageData.Flags = [];
   const flagsJSON = JSON.stringify(PageData.Flags);
-  localStorage.setItem(StoreName.Flags, flagsJSON);
+  localStorage.setItem(Common.StoreName.Flags, flagsJSON);
 
   const links = document.getElementsByClassName('link-text');
   for (let index = 0; index < links.length; index += 1) {
@@ -81,7 +82,7 @@ function clearFlagsClick(event) {
 /** Sets the correct display properties and attaches the event listeners to
  * all flags. */
 function showFlags() {
-  const flagsJSON = localStorage.getItem(StoreName.Flags);
+  const flagsJSON = localStorage.getItem(Common.StoreName.Flags);
   if (flagsJSON) PageData.Flags = JSON.parse(flagsJSON);
 
   const links = document.getElementsByClassName('link-text');
@@ -93,7 +94,7 @@ function showFlags() {
 
     flagImage.addEventListener('click', flagClick);
 
-    const filename = link.hash.substring(1);
+    const filename = link.pathname.substring(1, link.pathname.length - 4);
 
     // TODO: Hover preview?
     // const preview = document.createElement('img');
@@ -126,7 +127,11 @@ function appOnline() {
 function pageLoad() {
   showFlags();
 
-  if (isIE) fixToMaxItemWidth('link-header', 8, false);
+  if (Common.isIE)
+    Common.fixToMaxItemWidth('link-header', 8, false);
+
+  document.getElementById('iewarning').style
+    .display = (Common.isIE ? 'block' : 'none');
 
   document.getElementById('offline').style
     .display = (navigator.onLine ? 'none' : 'block');
@@ -135,10 +140,4 @@ function pageLoad() {
   window.addEventListener('online', appOnline);
 }
 
-registerServiceWorker();
-
 window.addEventListener('load', pageLoad);
-
-loadSettings();
-setTheme(Settings.Theme);
-addThemeListener(themeChange);

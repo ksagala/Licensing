@@ -1,20 +1,20 @@
 /** Save click event to commit changes. */
 function saveClick() {
-  Settings.Highlight1 = document.getElementById('highlight1').value;
-  Settings.Highlight2 = document.getElementById('highlight2').value;
-  Settings.Highlight3 = document.getElementById('highlight3').value;
-  Settings.Menu = document.getElementById('menuState').value;
-  Settings.Theme = document.getElementById('theme').value;
-  Settings.Zoom = document.getElementById('zoom').value;
+  Common.Settings.Highlight1 = document.getElementById('highlight1').value;
+  Common.Settings.Highlight2 = document.getElementById('highlight2').value;
+  Common.Settings.Highlight3 = document.getElementById('highlight3').value;
+  Common.Settings.Menu = document.getElementById('menuState').value;
+  Common.Settings.Theme = document.getElementById('theme').value;
+  Common.Settings.Zoom = document.getElementById('zoom').value;
 
-  saveSettings();
+  Common.saveSettings();
 
   window.location.href = '/';
 }
 
 /** Event for when the user alters the theme selector. */
 function themeSelectChange(event) {
-  setTheme(event.target.value);
+  Common.setTheme(event.target.value);
 }
 
 /** Shows the App Offline indicator. */
@@ -42,19 +42,19 @@ function setOption(select, value) {
 
 /** Applies the Settings values to the controls on the page. */
 function setControlValues() {
-  document.getElementById('highlight1').value = Settings.Highlight1;
-  document.getElementById('highlight2').value = Settings.Highlight2;
-  document.getElementById('highlight3').value = Settings.Highlight3;
-  setOption(document.getElementById('menuState'), Settings.Menu);
-  setOption(document.getElementById('zoom'), Settings.Zoom);
-  setOption(document.getElementById('theme'), Settings.Theme);
+  document.getElementById('highlight1').value = Common.Settings.Highlight1;
+  document.getElementById('highlight2').value = Common.Settings.Highlight2;
+  document.getElementById('highlight3').value = Common.Settings.Highlight3;
+  setOption(document.getElementById('menuState'), Common.Settings.Menu);
+  setOption(document.getElementById('zoom'), Common.Settings.Zoom);
+  setOption(document.getElementById('theme'), Common.Settings.Theme);
 }
 
 /** Defaults click event to apply the default settings. */
 function defaultsClick() {
-  defaultSettings();
+  Common.defaultSettings();
   setControlValues();
-  setTheme(document.getElementById('theme').value);
+  Common.setTheme(document.getElementById('theme').value);
 }
 
 /** Navigates back to the home page. */
@@ -87,25 +87,32 @@ function unregisterServiceWorkers() {
   );
 }
 
-/** Page Load event handler. */
-function pageLoad() {
-  setControlValues();
-
+/** Check the URL for a hash instruction and execute. */
+function processHashInstruction() {
   switch (window.location.hash) {
     case '#nocache':
       deleteAllCaches();
+      Common.customAlert('Deleted all Caches');
       break;
 
     case '#unregister':
-      unregisterServiceWorker();
+      unregisterServiceWorkers();
+      Common.customAlert('Unregistered Service Workers');
       break;
 
     case '#deletestorage':
       localStorage.clear();
+      Common.customAlert('Deleted Storage');
       break;
   }
+}
 
-  if (isIE) fixToMaxItemWidth('settings-header', 16, false);
+/** Page Load event handler. */
+function pageLoad() {
+  setControlValues();
+  processHashInstruction();
+
+  if (Common.isIE) Common.fixToMaxItemWidth('settings-header', 16, false);
 
   document.getElementById('theme').addEventListener('change', themeSelectChange);
   document.getElementById('defaults').addEventListener('click', defaultsClick);
@@ -118,10 +125,4 @@ function pageLoad() {
   window.addEventListener('online', appOnline);
 }
 
-registerServiceWorker();
-
 window.addEventListener('load', pageLoad);
-
-loadSettings();
-setTheme(Settings.Theme);
-addThemeListener(themeChange);

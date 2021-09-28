@@ -2,7 +2,15 @@ a.changes {
   cursor: pointer;
   background: url(/media/changes.svg) center left no-repeat;
   background-size: 16px 16px;
-  padding-left: 20px;
+  padding-left: 22px;
+  margin: 0 2px;
+}
+
+a.downloads {
+  cursor: pointer;
+  background: url(/media/download.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
   margin: 0 2px;
 }
 
@@ -10,7 +18,15 @@ a.guide {
   cursor: pointer;
   background: url(/media/guide.svg) center left no-repeat;
   background-size: 16px 16px;
-  padding-left: 20px;
+  padding-left: 22px;
+  margin: 0 2px;
+}
+
+a.matrix {
+  cursor: pointer;
+  background: url(/media/matrix.svg) center left no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
   margin: 0 2px;
 }
 
@@ -18,7 +34,7 @@ a.settings {
   cursor: pointer;
   background: url(/media/cog.svg) center left no-repeat;
   background-size: 16px 16px;
-  padding-left: 20px;
+  padding-left: 22px;
   margin: 0 2px;
 }
 
@@ -26,19 +42,11 @@ a.saved {
   cursor: pointer;
   background: url(/media/save.svg) center left no-repeat;
   background-size: 16px 16px;
-  padding-left: 20px;
+  padding-left: 22px;
   margin: 0 2px;
 }
 
-a.home {
-  cursor: pointer;
-  background: url(/media/home.svg) center left no-repeat;
-  background-size: 16px 16px;
-  padding-left: 20px;
-  margin: 0 2px;
-}
-
-a#flagAll {
+#flagAll {
   cursor: pointer;
   background: url(/media/flagged.svg) center left no-repeat;
   background-size: 16px 16px;
@@ -46,7 +54,7 @@ a#flagAll {
   margin: 0 2px;
 }
 
-a#clearAll {
+#clearAll {
   cursor: pointer;
   background: url(/media/unflagged.svg) center left no-repeat;
   background-size: 16px 16px;
@@ -54,9 +62,18 @@ a#clearAll {
   margin: 0 2px;
 }
 
+#iewarning {
+  color: #F00;
+  border: 1px solid #CCC;
+  background-color: rgba(240, 192, 128, 0.25);
+  padding: 12px 12px 0 12px;
+  margin: 10px 0;
+}
+
 h1 {
+  padding-left: 0;
   font-size: 30px;
-  margin: 0 0 4px 0;
+  margin-bottom: 4px;
 }
 
 div.link-collection {
@@ -72,7 +89,7 @@ div.divider {
   grid-row: auto;
   grid-column: span 2;
   margin: 4px 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #CCC;
 }
 
 h2.link-header {
@@ -127,7 +144,7 @@ div.collection-footer {
 /* a.link-text img {
   position: absolute;
   display: none;
-  z-index: 99;
+  z-index: 6;
 }
 
 a.link-text:hover img {

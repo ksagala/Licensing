@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-title" content="M365 Maps" />
-    <meta name="description" content="M365 Maps user guide" />
+    <meta name="description" content="M365 Maps user guide describes the features and functions of the site and also references and contact details" />
     <meta name="author" content="Aaron Dinnage" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
@@ -21,7 +21,7 @@
     <meta property="article:author" content="Aaron Dinnage" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="User Guide" />
-    <meta property="og:description" content="M365 Maps user guide" />
+    <meta property="og:description" content="M365 Maps user guide describes the features and functions of the site and also references and contact details" />
     <meta property="og:site_name" content="M365 Maps" />
     <meta property="og:image" content="https://m365maps.com/media/summary_large_image.png" />
     <meta property="og:image:alt" content="M365 Maps user guide" />
@@ -57,9 +57,11 @@
       <li><a href="#home">Home page</a></li>
       <li><a href="#viewsvg">View diagram</a></li>
       <li><a href="#saved">Saved diagrams</a></li>
+      <li><a href="#matrix">Feature matrix</a></li>
       <li><a href="#settings">Settings</a></li>
       <li><a href="#browsers">Browser compatibility</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#privacy">Privacy policy</a></li>
       <li><a href="#references">References</a></li>
     </ol>
     <div class="divider spacer"></div>
@@ -67,10 +69,10 @@
 
     <h2 id="about">About m365maps.com<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
-    <p>This is my collection of <strong>Microsoft 365 Licensing Diagrams</strong>, regularly updated as product names, feature inclusions, and license types change.</p>
+    <p>m365maps.com is my personal collection of <strong>Microsoft 365 Licensing Diagrams</strong> and reference material, regularly updated as product names, feature inclusions, and license types change.</p>
     <p>Each diagram illustrates the key features and overlap between different license types. The diagrams load in your browser and you can click on the feature tiles to navigate to official online documentation. There are many more features to explore, described within this user guide.</p>
-    <p>You will also find the PDF, PNG, and SVG versions of the diagrams along with the Visio source files on <a href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a>. PDF, PNG, and SVG versions are also accessible from m365maps.com diagram view pages.</p>
-    <p>I work for Microsoft in Australia and create these diagrams in my free time, so it goes without saying that these are <strong>not official Microsoft material</strong>. They're a visual representation of the product licensing derived from the official online and partner-facing resources.</p>
+    <p>You will also find the PDF, PNG, and SVG versions of the diagrams along with the Visio source files on <a href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a> or the <a href="/downloads.htm">Downloads</a> page on this site. PDF, PNG, and SVG versions are also downloadable from their diagram view pages on this site.</p>
+    <p>I work for Microsoft Australia and I create these diagrams in my free time, so it goes without saying that this is <strong>not official Microsoft material</strong>. The site contains visual representations of the product licensing that I've derived from Microsoft's online and partner-facing resources. This site does not represent Microsoft, and no warranty is given or implied. You should always work with your Microsoft account team or authorised reseller before making a purchasing decision.</p>
     <p>I try to carefully balanced the level of detail to ensure all the important features and license types are accounted for, but not every feature is present in these diagrams. There are just too many to include! So my offer to you is that if you see something missing and believe it should be there please <a href="#contact">contact me</a> and I will do my best to build it in to a later release.</p>
     <p>There are feedback and bug report forms in the <a href="#contact">contact</a> section below. All feedback is greatly appreciated!</p>
     <p>Feel free to <a href="#contact">connect with me</a> on Twitter or LinkedIn if you'd like to follow update announcements or discuss the project or Microsoft 365 licensing with me.</p>
@@ -88,12 +90,11 @@
     <h2 id="home">Home page<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
     <p>The home page is the first page you reach when you navigate to <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a>.</p>
-
     <p>When the site loads for the first time, and after each update to GitHub, it reaches out and caches all the core web site components and the full collection of diagrams (SVG format). This happens as a background task in your browser so you don't have to wait. Within a matter of seconds you can go offline and still have full access to every page and every diaram. It only does this once until the next time either the web site files or the diagrams are updated. If the web site gets an update but the diagrams don't change then only the web site files are downloaded agian, and vice-versa.</p>
     <p>This all means that day-to-day there is very little traffic generated by the site and it remains fast to access and navigate. The entire offline cache to run the March 2021 release of web site (including diagrams) uses only 2.5 megabytes of storage. So the site is not only fast, but also very friendly to low bandwidth devices and networks as the compressed data sent over the internet is a fraction of that size.</p>
 
-    <img src="/media/page-home1-dark.png" class="dark-only screenshot" width="600" height="400" alt="Home page screenshot" />
-    <img src="/media/page-home1-light.png" class="light-only screenshot" width="600" height="400" alt="Home page screenshot" />
+    <img loading="lazy" src="/media/page-home1-dark.png" class="dark-only screenshot" width="600" height="400" alt="Home page screenshot" />
+    <img loading="lazy" src="/media/page-home1-light.png" class="light-only screenshot" width="600" height="400" alt="Home page screenshot" />
 
     <ul>
       <li>
@@ -124,13 +125,17 @@
 
     <div class="spacer"></div>
 
-    <img src="/media/page-home2-dark.png" class="dark-only screenshot" width="600" height="400" alt="Home page lower screenshot" />
-    <img src="/media/page-home2-light.png" class="light-only screenshot" width="600" height="400" alt="Home page lower screenshot" />
+    <img loading="lazy" src="/media/page-home2-dark.png" class="dark-only screenshot" width="600" height="400" alt="Home page lower screenshot" />
+    <img loading="lazy" src="/media/page-home2-light.png" class="light-only screenshot" width="600" height="400" alt="Home page lower screenshot" />
 
     <ul>
       <li>
         <h3>Saved diagrams</h3>
         <p>Navigates to the <a href="#saved">saved diagrams</a> list. When viewing a diagram it is possible to make highlights which can be saved and displayed at a later time. More information on <a href="#viewsvg-edit">Edit mode</a> is available in this guide.</p>
+      </li>
+      <li>
+        <h3>Feature matrix</h3>
+        <p>Navigates to the <a href="#matrix">feature matrix</a> page.</p>
       </li>
       <li>
         <h3>Change log</h3>
@@ -141,8 +146,12 @@
         <p>Navigates to this user guide.</p>
       </li>
       <li>
+        <h3>Downloads</h3>
+        <p>Navigates to a page of download links for every diagam, Visio source files, and supporting material.</p>
+      </li>
+      <li>
         <h3>Settings</h3>
-        <p>Navigates to the <a href="#settings">settings page</a> for the web site where various configurations can be made. More information is available in this guide.</p>
+        <p>Navigates to the <a href="#settings">settings page</a> for the web site where various configurations can be made.</p>
       </li>
     </ul>
 
@@ -155,8 +164,8 @@
 
     <h2 id="viewsvg">View diagram - Page features<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
-    <img src="/media/page-viewsvg-dark.png" class="dark-only screenshot" width="600" height="400" alt="View diagram page screenshot" />
-    <img src="/media/page-viewsvg-light.png" class="light-only screenshot" width="600" height="400" alt="View diagram page screenshot" />
+    <img loading="lazy" src="/media/page-viewsvg-dark.png" class="dark-only screenshot" width="600" height="400" alt="View diagram page screenshot" />
+    <img loading="lazy" src="/media/page-viewsvg-light.png" class="light-only screenshot" width="600" height="400" alt="View diagram page screenshot" />
 
     <ul>
       <li>
@@ -178,7 +187,7 @@
 
     <h2 id="viewsvg-menu">View diagram - Menu features<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
-    <img src="/media/viewsvg-menu.png" class="screenshot" width="576" height="48" style="border:0;background:none;" alt="View menu screenshot" />
+    <img loading="lazy" src="/media/viewsvg-menu.png" class="screenshot" width="600" height="46" style="border:0;background:none;" alt="View menu screenshot" />
 
     <p>The collapsable menu in the upper-right corner of the view diagram page gives you quick access to a number of navigation options and other features depending on your device and the viewing mode you are in.</p>
     <p>The standard menu arrangement, as pictured, appears when you first navigate to a diagram from the <a href="#home">Home page</a>. It is possible to set the menu to be automatically collapsed or open by default, this is detailed in the <a href="#settings">Settings</a> portion of this guide.</p>
@@ -213,6 +222,10 @@
       <div class="row-description">When edit mode is on this save icon will be present. Clicking Save will store your changes as a custom diagram copy which can be retrieved later from the <a href="#saved">Saved diagrams</a> page. Saved diagrams can be further edited or exported.</div>
       <div class="table-divider"></div>
 
+      <div class="row-icon"><img src="/media/controls.svg" width="20" height="20" class="inline-icon" alt="Controls" title="Image controls" /></div>
+      <div class="row-description">Opens and closes the image controls panel which allows for adjustments to the diagram brightness, contrast, hue, and saturation. There is more information on <a href="#controls">Image controls</a> later in this guide.</div>
+      <div class="table-divider"></div>
+
       <div class="row-icon"><img src="/media/download.svg" width="20" height="20" class="inline-icon" alt="Download" title="Download" /></div>
       <div class="row-description">When viewing a diagram outside of edit mode the PDF and PNG download links will be available. These links will download to your device the latest version of the diagram in either the PDF or PNG format directly from <a href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a>. Downloading is only available when you have an active internet connection.</div>
       <div class="table-divider"></div>
@@ -224,11 +237,26 @@
 
     <h2 id="viewsvg-edit">View diagram - Edit mode<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
-    <img src="/media/viewsvg-menu-edit.png" class="screenshot" width="576" height="48" style="border:0;background:none;" alt="Edit mode menu screenshot" />
+    <img loading="lazy" src="/media/viewsvg-menu-edit.png" class="screenshot" width="600" height="46" style="border:0;background:none;" alt="Edit mode menu screenshot" />
 
     <p>Edit mode is designed to help you build custom visualisations to communicate licensing details and opportunities to your colleagues or customers, or just for your own reference.</p>
     <p>With edit mode enabled your mouse clicks within the diagram will no longer open the tile links but instead will toggle highlighting elements within the page. Your first click will apply the highlight colour, click again on the same tile and it will cycle the highlight off. Press <strong>Shift + Click</strong> and your first alternate colour will be applied. Press <strong>Control + Click</strong> and your second alternate colour will be applied. You can customise your highlight colours in the <a href="#settings">Settings</a> page.</p>
+
+    <img loading="lazy" src="/media/diagram-highlight-dark.gif" class="dark-only screenshot" width="600" height="400" alt="Diagram highlighting screenshot" />
+    <img loading="lazy" src="/media/diagram-highlight-light.gif" class="light-only screenshot" width="600" height="400" alt="Diagram highlighting screenshot" />
+
     <p>Your edits can be stored by clicking the save icon <img src="/media/save.svg" width="20" height="20" class="inline-icon" alt="Save" title="Save a copy" /> and then providing a name for your diagram. Diagrams you've edited are stored and accessible from the <a href="#saved">Saved diagrams</a> page.</p>
+
+    <h2 id="controls">View diagram - Image controls<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+
+    <img loading="lazy" src="/media/image-controls-dark.gif" class="dark-only screenshot" width="600" height="400" alt="Image controls screenshot" />
+    <img loading="lazy" src="/media/image-controls-light.gif" class="light-only screenshot" width="600" height="400" alt="Image controls screenshot" />
+
+    <p>The image controls menu allows you to control the brightness, contrast, hue, and saturation of the diagram you are viewing.</p>
+    <p>The Reset button (<img src="/media/defaults.svg" width="20" height="20" class="inline-icon" alt="Reset button icon" />) reverts all image controls to their default values.</p>
+    <p>The Save button (<img src="/media/save.svg" width="20" height="20" class="inline-icon" alt="Save button icon" />) commits the current image control levels to memory and uses them on all diagrams from that point on.</p>
+
+    <p class="tip"><strong>Tip: </strong>If you've saved a set of image controls and would no longer like them to apply, click Reset and then Save.</p>
 
     <div class="section-links">
       <a href="#top" class="top-link">Page top</a>
@@ -237,13 +265,31 @@
     </div>
 
 
+    <h2 id="matrix">Feature matrix<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+
+    <img loading="lazy" src="/media/page-matrix-dark.gif" class="dark-only screenshot" width="600" height="400" alt="Feature matrix screenshot" />
+    <img loading="lazy" src="/media/page-matrix-light.gif" class="light-only screenshot" width="600" height="400" alt="Feature matrix screenshot" />
+
+    <p>The feature matrix page lists all the features from the license diagrams in a table layout, allowing you to compare a combination of license types side-by-side.</p>
+    <p>Select license types to compare with the checkboxes at the top of the page and filter the feature list by typing into the search box.</p>
+    <p>When selecting license types using the checkboxes the feature list automatically filters to show only the features relevant to your selection.</p>
+    <p>When searching for features using the search box, all features that match your text will be shown even if they are not part of any of your selected license types.</p>
+    <p class="tip"><strong>Tip: </strong>The page address is updated with each change of license type checkbox selection, allowing you to bookmark the selection in your browser.</p>
+    <p class="tip"><strong>Tip: </strong>An Excel version of the Feature Matrix is available on the <a href="/downloads.htm#other">Downloads</a> page.</p>
+
+    <div class="section-links">
+      <a href="#top" class="top-link">Page top</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="#matrix" class="section-link">Section top</a>
+    </div>
+
+
     <h2 id="saved">Saved diagrams<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
-    <img src="/media/page-saved-dark.png" class="dark-only screenshot" width="600" height="248" alt="Saved diagrams screenshot" />
-    <img src="/media/page-saved-light.png" class="light-only screenshot" width="600" height="248" alt="Saved diagrams screenshot" />
+    <img loading="lazy" src="/media/page-saved-dark.png" class="dark-only screenshot" width="600" height="248" alt="Saved diagrams screenshot" />
+    <img loading="lazy" src="/media/page-saved-light.png" class="light-only screenshot" width="600" height="248" alt="Saved diagrams screenshot" />
 
     <p>The Saved diagrams page provides a list of all the diagrams that you have saved from the <a href="#viewsvg">View diagram</a> page, sorted in the order you saved them.</p>
-
     <p>Clicking on the saved diagram name will take you to the <a href="#viewsvg">View diagram</a> page. From there you can review your edits, make new edits (including removing existing hightlights), and save over or create a new copy of the diagram.</p>
 
     <p>A number of actions are available against each saved diagram from this page as follows:</p>
@@ -281,10 +327,6 @@
     <p class="tip"><strong>Tip: </strong>Saved diagrams are stored by your browser and can be easily lost, so it's a good idea to export important diagrams every once in a while. That way you can import them back in if you need to.</p>
 
     <p>This page has a <a href="#home">Home page</a> link in the top-right corner.</p>
-
-    <img src="/media/page-viewsvg-saved-dark.png" class="dark-only screenshot" width="600" height="400" alt="Viewing a saved diagram screenshot" />
-    <img src="/media/page-viewsvg-saved-light.png" class="light-only screenshot" width="600" height="400" alt="Viewing a saved diagram screenshot" />
-
     <p>The menu actions available when viewing a saved diagram are slightly reduced from the normal <a href="#viewsvg">view diagram</a> experience. Diagram flagging is not available for saved diagrams.</p>
 
     <div class="section-links">
@@ -296,8 +338,8 @@
 
     <h2 id="settings">Settings<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
-    <img src="/media/page-settings-dark.png" class="dark-only screenshot" width="600" height="248" alt="Settings page screenshot" />
-    <img src="/media/page-settings-light.png" class="light-only screenshot" width="600" height="248" alt="Settings page screenshot" />
+    <img loading="lazy" src="/media/page-settings-dark.png" class="dark-only screenshot" width="600" height="248" alt="Settings page screenshot" />
+    <img loading="lazy" src="/media/page-settings-light.png" class="light-only screenshot" width="600" height="248" alt="Settings page screenshot" />
 
     <p>The settings page allows you to customise some of the web site features to your preference.</p>
 
@@ -359,7 +401,7 @@
     <h3>Known issues</h3>
     <ul>
       <li><strong>Apple iOS (iPhone / iPad)</strong>
-        <p>You cannot install a Progressive Web App ("Add to Home Screen") from a third party browser.</p>
+        <p>You can only install a Progressive Web App ("Add to Home Screen") from the Apple Safari browser and not from a third party browser like Edge or Chrome.</p>
         <p>Multiple file downloads ("Export all ...") are disabled on iOS for now.</p>
         <p>Edge on iOS has the Export SVG and Export PNG actions removed on the <a href="#viewsvg">View diagram</a> and <a href="#saved">Saved diagrams</a> pages. If you need this feature please use Safari for now.</p>
       </li>
@@ -398,6 +440,17 @@
     </div>
 
 
+    <h2 id="privacy">Privacy policy<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+
+    <p>m365maps.com <strong>does not</strong> request, collect, store, process, or manage <strong>any</strong> personal information.</p>
+
+    <div class="section-links">
+      <a href="#top" class="top-link">Page top</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="#privacy" class="section-link">Section top</a>
+    </div>
+
+
     <h2 id="references">References<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
 
     <p>The information contained within the diagrams on this site is sourced from a variety of references. If you'd like to see where this information comes from I've listed those sources below. Whilst a lot of the modern licensing resources are very good at a high level, it's often the case that some of the finer detail is in the deeper, longer form documentation. I try to capture <em>some</em> of that detail in my diagrams when I think it's particularly relevant.</p>
@@ -421,6 +474,7 @@
         <ul>
           <li><a href="https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-platform-service-description" target="_blank" rel="noopener"><strong>Plan feature inclusions</strong></a></li>
           <li><a href="https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance" target="_blank" rel="noopener"><strong>Security and Compliance Licensing Guidance</strong></a></li>
+          <li><a href="https://docs.microsoft.com/azure/active-directory/enterprise-users/licensing-service-plan-reference" target="_blank" rel="noopener"><strong>Product names and service plan identifiers</strong></a></li>
           <li><a href="https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/licensing-microsoft-365-in-smb" target="_blank" rel="noopener"><strong>Microsoft 365 Business</strong></a></li>
           <li><a href="https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-education" target="_blank" rel="noopener"><strong>Microsoft 365 Education</strong></a></li>
         </ul>

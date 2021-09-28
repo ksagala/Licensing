@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="origin" />
+    <meta name="theme-color" content="#002266" />
+    <meta name="application-name" content="M365 Maps" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="M365 Maps" />
+    <meta name="description" content="Microsoft 365 Apps for Business licensing diagram from the m365maps.com collection by Aaron Dinnage" />
+    <meta name="author" content="Aaron Dinnage" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
+    <meta name="twitter:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
+    <meta name="twitter:site" content="@AaronDinnage" />
+    <meta name="twitter:creator" content="@AaronDinnage" />
+    <meta property="article:author" content="Aaron Dinnage" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Microsoft 365 Apps for Business License Diagram" />
+    <meta property="og:description" content="Microsoft 365 Apps for Business licensing diagram from the m365maps.com collection by Aaron Dinnage" />
+    <meta property="og:site_name" content="M365 Maps" />
+    <meta property="og:image" content="https://m365maps.com/media/summary_wide.png" />
+    <meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
+    <meta property="og:url" content="https://m365maps.com/Microsoft%20365%20Apps%20for%20Business.htm" />
+    <link rel="canonical" href="https://m365maps.com/Microsoft%20365%20Apps%20for%20Business.htm" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/common.min.css" />
+    <link rel="stylesheet" href="/css/viewsvg.min.css" />
+    <script src="/js/common.min.js"></script>
+    <script src="/js/svg.min.js"></script>
+    <script src="/js/diagram.min.js"></script>
+    <title>Microsoft 365 Apps for Business | M365 Maps</title>
+  </head>
+  <body>
+    <noscript>
+      <p><strong>Error</strong></p>
+      <p style="color:#ff0000;">Javascript disabled. Please enable JavaScript.</p>
+      <p><a href="/">Home</a></p>
+    </noscript>
+
+    <div id="offline" style="display:none;">OFFLINE</div>
+
+    <div id="menu" style="display:none;right:-300px;">
+      <img id="menuGrip" src="/media/open.svg" width="16" height="16" alt="Menu" title="Open menu" tabindex="0" />
+      <a href="/" class="menu"><img id="menuHome" src="/media/home.svg" width="16" height="16" alt="Home" title="Go home" /></a>
+      <img id="menuFlag" src="/media/unflagged.svg" width="16" height="16" class="menu" alt="Flag" tabindex="0" />
+      <img id="menuPrint" src="/media/print.svg" width="16" height="16" class="menu" alt="Print" title="Print" tabindex="0" />
+      <img id="menuSave" src="/media/save.svg" width="16" height="16" class="menu" alt="Save" title="Save a copy" style="display:none;" tabindex="0" />
+      <img id="menuHighlight" src="/media/edit-off.svg" width="16" height="16" class="menu" alt="Edit" title="Turn on edit mode" tabindex="0" />
+      <img id="menuControls" src="/media/controls.svg" width="16" height="16" class="menu" alt="Controls" title="Image controls" tabindex="0" />
+      <a id="menuPdf" href="/Microsoft%20365%20Apps%20for%20Business.pdf" download="Microsoft 365 Apps for Business.pdf" class="menu download" title="Download PDF" style="display:block;">PDF</a>
+      <a id="menuPng" href="/Microsoft%20365%20Apps%20for%20Business.png" download="Microsoft 365 Apps for Business.png" class="menu download" title="Download PNG" style="display:block;">PNG</a>
+      <a id="menuExportSvg" href="#" class="menu export" title="Export SVG" style="display:none;">SVG</a>
+      <a id="menuExportPng" href="#" class="menu export" title="Export PNG" style="display:none;">PNG</a>
+    </div>
+
+    <div id="imageControls" style="display:none;top:-300px;">
+      <label for="brightness" class="slider">Brightness</label>
+      <input type="range" id="brightness" min="0" max="20" value="10" class="slider" />
+      <label for="contrast" class="slider">Contrast</label>
+      <input type="range" id="contrast" min="0" max="20" value="10" class="slider" />
+      <label for="hue" class="slider">Hue</label>
+      <input type="range" id="hue" min="0" max="360" value="0" step="10" class="slider" />
+      <label for="saturation" class="slider">Saturation</label>
+      <input type="range" id="saturation" min="0" max="20" value="10" class="slider" />
+      <button id="reset" title="Reset to defaults"><img src="/media/defaults.svg" width="18" height="18" alt="Reset" />Reset</button>
+      <button id="save" title="Save and apply to all diagrams"><img src="/media/save.svg" width="18" height="18" alt="Save" />Save</button>
+    </div>
+
+    <h1 style="display:none;">Microsoft 365 Apps for Business</h1>
+
+    <svg style="display:none;" xmlns="http://www.w3.org/2000/svg" width="416px" height="304px" viewBox="0 0 416 304" class="a"><style>
+.b {fill:#a5a5a5;fill-opacity:0.2;stroke:#a41500;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+.c {fill:#a41500;stroke:#a41500;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+.d {fill:#ffffff;font-family:Arial;font-size:1.66667em;font-weight:bold}
+.e {fill:#a41500;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+.f {fill:#ffffff;font-family:Arial;font-size:1.16666em;font-weight:bold}
+.g {font-size:1em}
+.a {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+</style><g><g transform="translate(16,-16)"><rect x="0" y="32" width="384" height="272" rx="8" ry="8" class="b"/></g><a target="_blank" href="https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-business" rel="noopener"><g transform="translate(16,-256)"><rect x="0" y="272" width="384" height="32" rx="8" ry="8" class="c"/><text x="36.41" y="294" class="d">Microsoft 365 Apps for Business</text></g></a><a target="_blank" href="https://products.office.com/mobile/office" rel="noopener"><g transform="translate(48,-48)"><rect x="0" y="224" width="96" height="80" rx="8" ry="8" class="e"/><text x="28.16" y="259.8" class="f">Office <tspan x="6.39" dy="1.2em" class="g">Mobile Apps</tspan></text></g></a><a target="_blank" href="https://docs.microsoft.com/office365/servicedescriptions/office-online-service-description/office-online-service-description" rel="noopener"><g transform="translate(272,-144)"><rect x="0" y="224" width="96" height="80" rx="8" ry="8" class="e"/><text x="28.16" y="259.8" class="f">Office <tspan x="9.5" dy="1.2em" class="g">for the Web</tspan></text></g></a><a target="_blank" href="https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-business" rel="noopener"><g transform="translate(160,-144)"><rect x="0" y="224" width="96" height="80" rx="8" ry="8" class="e"/><text x="28.16" y="251.4" class="f">Office <tspan x="6" dy="1.2em" class="g">Applications </tspan><tspan x="11.05" dy="1.2em" class="g">(PC &amp; Mac)</tspan></text></g></a><a target="_blank" href="https://support.office.com/sway" rel="noopener"><g transform="translate(272,-48)"><rect x="0" y="224" width="96" height="80" rx="8" ry="8" class="e"/><text x="30.1" y="268.2" class="f">Sway</text></g></a><a target="_blank" href="https://support.office.com/forms" rel="noopener"><g transform="translate(48,-144)"><rect x="0" y="224" width="96" height="80" rx="8" ry="8" class="e"/><text x="16.5" y="259.8" class="f">Microsoft <tspan x="26.61" dy="1.2em" class="g">Forms</tspan></text></g></a><a target="_blank" href="https://docs.microsoft.com/office365/servicedescriptions/onedrive-for-business-service-description" rel="noopener"><g transform="translate(160,-48)"><rect x="0" y="224" width="96" height="80" rx="8" ry="8" class="e"/><text x="5.6" y="251.4" class="f">OneDrive for <tspan x="16.88" dy="1.2em" class="g">Business </tspan><tspan x="27.38" dy="1.2em" class="g">Plan 1</tspan></text></g></a></g></svg>
+  </body>
+</html>
