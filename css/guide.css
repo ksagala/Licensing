@@ -1,21 +1,21 @@
 h1 {
   font-size: 24px;
   padding-left: 28px;
-  background: url(/media/guide.svg) center left no-repeat;
+  background: url(/media/sprites.svg#guide) center left no-repeat;
   background-size: 20px 20px;
 }
 
 h2 {
   font-size: 22px;
-  margin: 16px 0;
+  margin: 32px 0 16px 0;
 }
 
-div.divider {
+.divider {
   margin: 4px 0;
   border-bottom: 1px solid #CCC;
 }
 
-div.spacer {
+.spacer {
   height: 16px;
 }
 
@@ -23,7 +23,7 @@ div.spacer {
   font-weight: bold;
 }
 
-div.section-links {
+.section-links {
   text-align: center;
   margin: 8px 0;
   padding: 4px 0;
@@ -31,7 +31,7 @@ div.section-links {
   border-bottom: 1px solid #CCC;
 }
 
-div.table-icon-description {
+.table-icon-description {
   display: grid;
   grid-auto-rows: min-content;
   grid-auto-columns: max-content auto;
@@ -40,16 +40,14 @@ div.table-icon-description {
   margin-top: 16px;
 }
 
-div.table-divider {
+.table-divider {
   grid-row: auto;
   grid-column: span 2;
   margin: 4px 0;
   border-top: 1px solid #CCC;
-  /* IE11 hack */
-  clear: left;
 }
 
-div.row-icon {
+.row-icon {
   grid-row: auto;
   grid-column: 1;
   justify-self: center;
@@ -57,12 +55,9 @@ div.row-icon {
   font-size: 18px;
   text-align: center;
   padding: 4px;
-  /* IE11 Hack */
-  float: left;
-  height: 22px;
 }
 
-div.row-setting {
+.row-setting {
   grid-row: auto;
   grid-column: 1;
   justify-self: start;
@@ -71,66 +66,174 @@ div.row-setting {
   font-weight: bold;
 }
 
-div.row-description {
+.row-description {
   grid-row: auto;
   grid-column: 2;
   justify-self: start;
   align-self: center;
 }
 
-span.header-icon {
+.header-icon {
   font-weight: bold;
   text-align: center;
   align-self: center;
 }
 
-span.header-description {
+.header-description {
   font-weight: bold;
   text-align: left;
 }
 
-img.inline-icon {
-  vertical-align: middle;
+.icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: bottom;
+}
+
+.icon-flagged {
+  background: url(/media/sprites.svg#flagged) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-unflagged {
+  background: url(/media/sprites.svg#unflagged) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-back {
+  background: url(/media/sprites.svg#back) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-save {
+  background: url(/media/sprites.svg#save) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-edit-off {
+  background: url(/media/sprites.svg#edit-off) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-edit-on {
+  background: url(/media/sprites.svg#edit-on) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-controls {
+  background: url(/media/sprites.svg#controls) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-export {
+  background: url(/media/sprites.svg#export) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-import {
+  background: url(/media/sprites.svg#import) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-open {
+  background: url(/media/sprites.svg#open) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-close {
+  background: url(/media/sprites.svg#close) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-theme {
+  background: url(/media/sprites.svg#theme) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-zoom {
+  background: url(/media/sprites.svg#zoom) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-print {
+  background: url(/media/sprites.svg#print) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-defaults {
+  background: url(/media/sprites.svg#defaults) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-delete {
+  background: url(/media/sprites.svg#delete) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-download {
+  background: url(/media/sprites.svg#download) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-guide {
+  background: url(/media/sprites.svg#guide) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-settings {
+  background: url(/media/sprites.svg#cog) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-matrix {
+  background: url(/media/sprites.svg#matrix) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-changes {
+  background: url(/media/sprites.svg#changes) center right no-repeat;
+  background-size: 18px 18px;
+}
+
+.icon-compare {
+  background: url(/media/sprites.svg#compare) center right no-repeat;
+  background-size: 18px 18px;
 }
 
 a.top-link {
-  background: url(/media/top.svg) center left no-repeat;
+  background: url(/media/sprites.svg#top) center left no-repeat;
   background-size: 16px 16px;
   padding-left: 20px;
   margin: 0 2px;
 }
 
 a.section-link {
-  background: url(/media/section-top.svg) center left no-repeat;
+  background: url(/media/sprites.svg#section-top) center left no-repeat;
   background-size: 16px 16px;
   padding-left: 20px;
   margin: 0 2px;
 }
 
 a.header-link {
-  margin-left: 8px;
+  padding-right: 24px;
 }
 
-img.header-link {
-  vertical-align: middle;
+a.header-link:hover {
+  background: url(/media/sprites.svg#link) center right no-repeat;
+  background-size: 16px 16px;
 }
 
 ul {
-  margin: 16px 2px;
+  margin: 16px 0;
+  padding-inline-start: 16px;
 }
 
 li {
   margin: 8px 2px;
 }
 
-img.viewsvg-menu-screenshot {
-  margin: 4px auto 16px auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-img.screenshot {
+.screenshot {
   background-color: #CCC;
   border: 2px solid #CCC;
   margin: 4px auto 16px auto;
@@ -139,38 +242,81 @@ img.screenshot {
   height: auto;
 }
 
-a.link-list {
+.plain-image {
+  background-color: transparent;
+  border: none;
+}
+
+ul.no-bullet-list {
+  list-style: none;
+  padding-inline-start: 16px;
+}
+
+ul.link-list>li {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+ul.link-list>li>a {
   padding-left: 32px;
-  margin: 4px 16px;
+  margin: 0;
+}
+
+.menu-mockup {
+  background: #CCC;
+  padding: 8px;
+  border-bottom-left-radius: 16px;
+  line-height: 32px;
+  margin: 0 auto 12px auto;
+  width: fit-content;
+}
+
+.menu-mockup>.icon {
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  margin: 0 12px 0 0;
+}
+
+.menu-mockup>.icon-export, .menu-mockup>.icon-download {
+  margin: 0 4px 0 0;
+}
+
+.button-text {
+  color: #0070F7;
+  font-size: 24px;
+  vertical-align: middle;
+  width: 72px;
+  margin-right: 12px;
 }
 
 a.twitter {
-  background: url(/media/twitter.svg) no-repeat left center;
+  background: url(/media/sprites.svg#twitter) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.linkedin {
-  background: url(/media/linkedin.svg) no-repeat left center;
+  background: url(/media/sprites.svg#linkedin) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.github {
-  background: url(/media/github.svg) no-repeat left center;
+  background: url(/media/sprites.svg#github) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.paypal {
-  background: url(/media/paypal.svg) no-repeat left center;
+  background: url(/media/sprites.svg#paypal) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.feedback {
-  background: url(/media/feedback.svg) no-repeat left center;
+  background: url(/media/sprites.svg#feedback) no-repeat left center;
   background-size: 16px 16px;
 }
 
 a.bug {
-  background: url(/media/bug.svg) no-repeat left center;
+  background: url(/media/sprites.svg#bug) no-repeat left center;
   background-size: 16px 16px;
 }
 

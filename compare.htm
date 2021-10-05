@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-title" content="M365 Maps" />
-    <meta name="description" content="Compare two Microsoft 365 licensing diagrams from the m365maps.com collection by Aaron Dinnage" />
+    <meta name="description" content="Compare two diagrams from the M365 Maps collection by Aaron Dinnage" />
     <meta name="author" content="Aaron Dinnage" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="https://m365maps.com/media/summary.png" />
@@ -20,49 +20,145 @@
     <meta name="twitter:creator" content="@AaronDinnage" />
     <meta property="article:author" content="Aaron Dinnage" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Compare License Diagrams" />
-    <meta property="og:description" content="Compare two Microsoft 365 licensing diagrams from the m365maps.com collection by Aaron Dinnage" />
+    <meta property="og:title" content="Compare Diagrams" />
+    <meta property="og:description" content="Compare two diagrams from the M365 Maps collection by Aaron Dinnage" />
     <meta property="og:site_name" content="M365 Maps" />
     <meta property="og:image" content="https://m365maps.com/media/summary_wide.png" />
     <meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
-    <meta property="og:url" content="https://m365maps.com/viewsvg.htm" />
-    <link rel="canonical" href="https://m365maps.com/viewsvg.htm" />
+    <meta property="og:url" content="https://m365maps.com/compare.htm" />
+    <link rel="canonical" href="https://m365maps.com/compare.htm" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/css/common.min.css" />
     <link rel="stylesheet" href="/css/compare.min.css" />
     <script src="/js/common.min.js"></script>
     <script src="/js/compare.min.js"></script>
-    <title>Compare License Diagrams | M365 Maps</title>
+    <title>Compare Diagrams | M365 Maps</title>
   </head>
   <body>
-    <noscript>
-      <p><strong>Error</strong></p>
-      <p style="color:red;">Javascript disabled. Please enable JavaScript.</p>
-      <p><a href="/">Home</a></p>
-    </noscript>
+    <a class="skip-link" href="#diagrams">Skip to main content</a>
+    <h1>Compare Diagrams</h1>
 
-    <div id="errorDiv" style="display:none;">
-      <p><strong>Error</strong></p>
-      <p id="errorMessage"></p>
-      <p><a href="/">Home</a></p>
-    </div>
-
-    <div id="offline" style="display:none;">OFFLINE</div>
+    <div id="offline">OFFLINE</div>
     <div id="menu"><a href="/" class="home-link">Home</a></div>
 
-    <h1 style="display:none;">Compare License Diagrams</h1>
-
-    <div class="compare" style="width:100%;">
-      <iframe id="compare1" src="" scrolling="no" title="Diagram 1" class="compareFrame"></iframe>
+    <div id="diagrams">
+      <div class="divider"></div>
+      <span class="diagram-header">Enterprise Mobility + Security (EMS)</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="EMS Enterprise" />Full</label>
+        <label><input type="checkbox" value="EMS Enterprise - Simple" />Simple</label>
+        <label><input type="checkbox" value="EMS-Enterprise-E3" />E3</label>
+        <label><input type="checkbox" value="EMS-Enterprise-E5" />E5</label>
+        <label><input type="checkbox" value="Azure-AD-Premium" />Azure AD</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Apps</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Apps" />Full</label>
+        <label><input type="checkbox" value="Microsoft 365 Apps for Business" />Business</label>
+        <label><input type="checkbox" value="Microsoft 365 Apps for Enterprise" />Enterprise</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Business</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Business" />Full</label>
+        <label><input type="checkbox" value="Microsoft 365 Business Basic" />Basic</label>
+        <label><input type="checkbox" value="Microsoft 365 Business Premium" />Premium</label>
+        <label><input type="checkbox" value="Microsoft 365 Business Standard" />Standard</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Consumer</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Consumer" />Full</label>
+        <label><input type="checkbox" value="Microsoft 365 Personal and Family" />Family</label>
+        <label><input type="checkbox" value="Office Consumer" />Office</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Education</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Education" />Full</label>
+        <label><input type="checkbox" value="Microsoft-365-Education-A1-(Legacy)" />A1 (Legacy)</label>
+        <label><input type="checkbox" value="Microsoft-365-Education-A1-for-Devices" />A1 for Devices</label>
+        <label><input type="checkbox" value="Microsoft-365-Education-A3" />A3</label>
+        <label><input type="checkbox" value="Microsoft-365-Education-A5" />A5</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Student Use Benefit</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Education Student Use Benefits" />Venn</label>
+        <label><input type="checkbox" value="Microsoft 365 Education Student Use Benefits - Simple" />Simple</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Enterprise</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Enterprise" />Simple</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - Venn" />Venn</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - Landscape" />Landscape</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - E3" />E3</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - E5" />E5</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft 365 Frontline</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - Frontline" />Full</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - F1" />F1</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - F3" />F3</label>
+        <label><input type="checkbox" value="Microsoft 365 Enterprise - F5" />F5</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft Defender</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft-Defender-for-Endpoint" />Endpoint</label>
+        <label><input type="checkbox" value="Microsoft-Defender-for-Office-365" />Office 365</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft Project</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft Project" />Full</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Microsoft Teams Rooms</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Microsoft Teams Rooms" />Full</label>
+        <label><input type="checkbox" value="Microsoft Teams Rooms - Premium" />Premium</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Office 365 Education</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Office 365 Education" />Full</label>
+        <label><input type="checkbox" value="Office 365 Education - Simple" />Simple</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Office 365 Enterprise</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Office 365 Enterprise" />Full</label>
+        <label><input type="checkbox" value="Office 365 Enterprise - Simple" />Simple</label>
+        <label><input type="checkbox" value="Office 365 Enterprise - E1" />E1</label>
+        <label><input type="checkbox" value="Office 365 Enterprise - F3" />F3</label>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Windows 10</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Windows 10 - Enterprise" />Enterprise</label>
+        <label><input type="checkbox" value="Windows 10 - Pro" />Pro</label>
+        <label><input type="checkbox" value="Windows 10 - VL" />VL</label>
+      </div>
+      <!-- <div class="divider"></div>
+      <span class="diagram-header">Office 365 US Government</span>
+      <div class="diagram-set">
+        <label><input type="checkbox" value="Office 365 US Government" />Full</label>
+        <label><input type="checkbox" value="Office 365 US Government - G1" />G1</label>
+        <label><input type="checkbox" value="Office 365 US Government - F3" />F3</label>
+      </div> -->
+      <div class="divider"></div>
+      <span class="diagram-header">Saved Diagrams</span>
+      <div id="saved-diagrams" class="diagram-set"></div>
+      <div class="divider"></div>
+      <button id="button-compare" title="Compare diagrams">Compare</button>
     </div>
-    <div id="compareOverlay" class="compare" style="width:50%;">
-      <iframe id="compare2" src="" scrolling="no" title="Diagram 2" class="compareFrame"></iframe>
-    </div>
-    <input id="compareSlider" type="range" min="0" max="100" value="50" />
   </body>
 </html>

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.9",
+  "id": "60259ced-2770-4902-8c81-20d28fe649c0",
+  "packageName": "com.m365maps",
+  "localizationInfo": {
+    "defaultLanguageTag": "en-au"
+  },
+  "name": {
+    "short": "M365 Maps",
+    "full": ""
+  },
+  "developer": {
+    "name": "Aaron Dinnage",
+    "mpnId": "",
+    "websiteUrl": "https://m365maps.com",
+    "privacyUrl": "https://m365maps.com/guide.htm#privacy",
+    "termsOfUseUrl": "https://m365maps.com/guide.htm#terms"
+  },
+  "description": {
+    "short": "m365maps.com - Microsoft 365 Licensing",
+    "full": "A collection of Microsoft 365 licensing diagrams to view in Teams or download as PDF, PNG, SVG, and Visio files. Covers Microsoft 365 Enterprise, Business, Education, and Frontline and also Office 365, Enterprise Mobility + Security, and Windows licensing."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#002266",
+  "staticTabs": [
+    {
+      "entityId": "m365maps.diagrams",
+      "name": "Diagrams",
+      "contentUrl": "https://m365maps.com",
+      "websiteUrl": "https://m365maps.com",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.compare",
+      "name": "Compare",
+      "contentUrl": "https://m365maps.com/compare.htm",
+      "websiteUrl": "https://m365maps.com/compare.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.saved",
+      "name": "Saved",
+      "contentUrl": "https://m365maps.com/saved.htm",
+      "websiteUrl": "https://m365maps.com/saved.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.matrix",
+      "name": "Matrix",
+      "contentUrl": "https://m365maps.com/matrix.htm",
+      "websiteUrl": "https://m365maps.com/matrix.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.changes",
+      "name": "Change Log",
+      "contentUrl": "https://m365maps.com/changes.htm",
+      "websiteUrl": "https://m365maps.com/changes.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.guide",
+      "name": "User Guide",
+      "contentUrl": "https://m365maps.com/guide.htm",
+      "websiteUrl": "https://m365maps.com/guide.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.downloads",
+      "name": "Downloads",
+      "contentUrl": "https://m365maps.com/downloads.htm",
+      "websiteUrl": "https://m365maps.com/downloads.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "m365maps.settings",
+      "name": "Settings",
+      "contentUrl": "https://m365maps.com/settings.htm",
+      "websiteUrl": "https://m365maps.com/settings.htm",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "about",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ]
+}

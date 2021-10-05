@@ -1,8 +1,8 @@
 @media print {
-  th:first-of-type, td:first-of-type, tr.stickyRow1>th, tr.stickyRow2>th, tr.stickyRow3>th {
+  th:first-of-type, td:first-of-type, tr.sticky-row-1>th, tr.sticky-row-2>th, tr.sticky-row-3>th {
     position: inherit!important;
   }
-  #featureSearch {
+  #feature-search {
     display: none;
   }
   #comparisons {
@@ -13,19 +13,17 @@
 body {
   margin: 8px 0 32px 0;
   -webkit-user-select: none;
-  /* IE11 */
-  -ms-user-select: none;
   user-select: none;
 }
 
 h1 {
   font-size: 24px;
   padding-left: 28px;
-  background: url(/media/matrix.svg) center left no-repeat;
+  background: url(/media/sprites.svg#matrix) center left no-repeat;
   background-size: 20px 20px;
 }
 
-#selectAll, #selectNone {
+#select-all, #select-none {
   font-weight: bold;
 }
 
@@ -41,6 +39,10 @@ h1, #comparisons {
   width: max-content;
 }
 
+#menu {
+  right: 0;
+}
+
 #comparisons {
   border-color: #CCC;
   border-radius: 4px;
@@ -48,42 +50,30 @@ h1, #comparisons {
   border-style: solid;
   padding: 8px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto repeat(6, auto);
   grid-auto-flow: row;
-  /* Removed for IE11 layout hack */
-  /* gap: 6px 12px; */
+  gap: 4px 10px;
 }
 
-#menu {
-  right: 0;
-}
-
-label.licenseType {
+label.license-type {
   grid-column: 1;
   font-weight: bold;
-  /* IE11 layout hack */
-  float: left;
-  clear: left;
-  margin: 2px 12px 2px 0;
+  margin: 0;
 }
 
-label.checkLabel {
-  grid-column-start: 2;
+label.check-label {
   grid-column: auto;
-  /* IE11 layout hack */
-  float: left;
-  margin: 2px 0 2px 12px;
+  margin: 0;
 }
 
 #comparisons p {
-  margin: 0;
-  /* IE11 layout hack */
-  clear: left;
-  margin-top: 2px;
+  grid-column: 1;
+  grid-column: span 6;
+  margin: 2px 0 0 0;
 }
 
-#featureSearch {
-  background-image: url(/media/search.svg);
+#feature-search {
+  background-image: url(/media/sprites.svg#search);
   background-position-x: 2px;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -96,11 +86,7 @@ label.checkLabel {
   height: 18px;
 }
 
-.nowrap {
-  white-space: nowrap;
-}
-
-#featuresTable {
+#features-table {
   margin-top: 8px;
   border-spacing: 0;
   border-collapse: separate;
@@ -130,7 +116,7 @@ td.group {
 }
 
 td.indent1 {
-  background-image: url(/media/close.svg);
+  background-image: url(/media/sprites.svg#close);
   background-position-x: 6px;
   background-position-x: calc(env(safe-area-inset-left, 0) + 6px);
   background-position-y: center;
@@ -141,7 +127,7 @@ td.indent1 {
 }
 
 td.indent2 {
-  background-image: url(/media/close.svg);
+  background-image: url(/media/sprites.svg#close);
   background-position-x: 22px;
   background-position-x: calc(env(safe-area-inset-left, 0) + 22px);
   background-position-y: center;
@@ -181,31 +167,31 @@ tr.suite>th {
   color: #FFF!important;
 }
 
-tr.stickyRow1>th:first-of-type {
+tr.sticky-row-1>th:first-of-type {
   z-index: 5!important;
 }
 
-tr.stickyRow2>th:first-of-type {
+tr.sticky-row-2>th:first-of-type {
   z-index: 6!important;
 }
 
-tr.stickyRow3>th:first-of-type {
+tr.sticky-row-3>th:first-of-type {
   z-index: 7!important;
 }
 
-tr.stickyRow1>th {
+tr.sticky-row-1>th {
   top: 0;
   position: sticky;
   z-index: 1;
 }
 
-tr.stickyRow2>th {
+tr.sticky-row-2>th {
   top: 27px;
   position: sticky;
   z-index: 2;
 }
 
-tr.stickyRow3>th {
+tr.sticky-row-3>th {
   top: 54px;
   position: sticky;
   z-index: 3;
@@ -214,7 +200,7 @@ tr.stickyRow3>th {
 
 /* Light Theme */
 
-.theme-light #featuresTable {
+.theme-light #features-table {
   background-color: #FFF;
   color: #000;
 }
@@ -231,11 +217,11 @@ tr.stickyRow3>th {
   background-color: #FFF;
 }
 
-.theme-light .groupA {
+.theme-light .group-a {
   background-color: #ECECEC;
 }
 
-.theme-light .groupB {
+.theme-light .group-b {
   background-color: #FFF;
 }
 
@@ -249,12 +235,12 @@ tr.stickyRow3>th {
 
 /* Dark Theme */
 
-.theme-dark #featuresTable {
+.theme-dark #features-table {
   background-color: #202020;
   color: #DDD;
 }
 
-.theme-dark #featuresTable a {
+.theme-dark #features-table a {
   color: #FFF;
 }
 
@@ -270,11 +256,11 @@ tr.stickyRow3>th {
   background-color: #202020;
 }
 
-.theme-dark .groupA {
+.theme-dark .group-a {
   background-color: #646464;
 }
 
-.theme-dark .groupB {
+.theme-dark .group-b {
   background-color: #202020;
 }
 

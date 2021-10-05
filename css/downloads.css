@@ -1,7 +1,7 @@
 h1 {
   font-size: 24px;
   padding-left: 28px;
-  background: url(/media/download.svg) center left no-repeat;
+  background: url(/media/sprites.svg#download) center left no-repeat;
   background-size: 20px 20px;
 }
 
@@ -10,13 +10,9 @@ h2 {
   margin: 16px 0;
 }
 
-div.divider {
+.divider {
   margin: 4px 0;
   border-bottom: 1px solid #ccc;
-}
-
-div.spacer {
-  height: 16px;
 }
 
 #menu {
@@ -31,22 +27,27 @@ tr:nth-child(2n) {
   background-color: rgba(127, 127, 255, .15);
 }
 
-td>a>img {
-  padding-top: 2px;
-}
-
 .diagram {
   text-align: left;
   padding: 4px 16px 4px 8px;
 }
 
-th.download {
+.download {
   text-align: center;
-  padding: 0 8px;
 }
 
-td.download {
-  text-align: center;
+.download>a {
+  content: "";
+  background: url(/media/sprites.svg#download) center right no-repeat;
+  background-size: 16px 16px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+th.download {
+  padding: 0 8px;
 }
 
 li {

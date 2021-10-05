@@ -30,7 +30,6 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/css/common.min.css" />
@@ -41,17 +40,13 @@
   </head>
   <body>
     <a class="skip-link" href="#toc">Skip to main content</a>
-    <h1><a href="/guide.htm">User Guide</a></h1>
+    <h1>User Guide</h1>
     <div class="divider"></div>
 
-    <noscript>
-      <p><strong style="color:#ff0000;">WARNING: Javascript disabled. Please enable JavaScript.</strong></p>
-    </noscript>
-
-    <div id="offline" style="display:none;">OFFLINE</div>
+    <div id="offline">OFFLINE</div>
     <div id="menu"><a href="/" class="home-link">Home</a></div>
 
-    <h2 id="toc">Table of Contents<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="toc"><a href="#toc" class="header-link">Table of Contents</a></h2>
     <ol class="toc">
       <li><a href="#about">About m365maps.com</a></li>
       <li><a href="#home">Home page</a></li>
@@ -59,15 +54,17 @@
       <li><a href="#saved">Saved diagrams</a></li>
       <li><a href="#matrix">Feature matrix</a></li>
       <li><a href="#settings">Settings</a></li>
+      <li><a href="#teams">M365 Maps for Teams</a></li>
       <li><a href="#browsers">Browser compatibility</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#privacy">Privacy policy</a></li>
+      <li><a href="#terms">Terms of use</a></li>
       <li><a href="#references">References</a></li>
     </ol>
     <div class="divider spacer"></div>
 
 
-    <h2 id="about">About m365maps.com<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="about"><a href="#about" class="header-link">About m365maps.com</a></h2>
 
     <p>m365maps.com is my personal collection of <strong>Microsoft 365 Licensing Diagrams</strong> and reference material, regularly updated as product names, feature inclusions, and license types change.</p>
     <p>Each diagram illustrates the key features and overlap between different license types. The diagrams load in your browser and you can click on the feature tiles to navigate to official online documentation. There are many more features to explore, described within this user guide.</p>
@@ -76,7 +73,8 @@
     <p>I try to carefully balanced the level of detail to ensure all the important features and license types are accounted for, but not every feature is present in these diagrams. There are just too many to include! So my offer to you is that if you see something missing and believe it should be there please <a href="#contact">contact me</a> and I will do my best to build it in to a later release.</p>
     <p>There are feedback and bug report forms in the <a href="#contact">contact</a> section below. All feedback is greatly appreciated!</p>
     <p>Feel free to <a href="#contact">connect with me</a> on Twitter or LinkedIn if you'd like to follow update announcements or discuss the project or Microsoft 365 licensing with me.</p>
-    <p>I first started publishing these diagams on Twitter for free back in 2017. All along the way people have asked about how they could pay me back for the work I’ve done on them. I’ve put countless hours of my own time into maintaining and developing this collection and I know many professionals get daily use from these diagrams in their work. I use them myself every day too. In response to that regular request I’ve set up a page on PayPal where <a href="https://paypal.me/pools/c/8ww03FCFcP" target="_blank" rel="noopener">you can donate</a> any amount you wish, if you feel that way inclined. If I can cover my domain registration and associated costs then I'll be really pleased! So if you’ve found these diagrams useful and you’d like to give something back then you are welcome to make a donation, but please understand that you’re not paying me for future work. I can’t promise I’ll always be able to keep these up to date, but I will for as long as I can. And I've made it open source on GitHub in the meantime!</p>
+    <p>The m365maps.com web site is an enjoyable project as it allows me to have fun coding which I no longer do as my day job. I decided I would maintain the site with very simple HTML, CSS, and JavaScript. Everything is hand crafted without frameworks, libraries, or external dependencies of any kind.</p>
+    <p>I first started publishing these diagams on Twitter for free back in 2017. All along the way people have asked about how they could pay me back for the work I’ve done on them. I’ve put countless hours of my own time into maintaining and developing this collection and I know many professionals get daily use from these diagrams in their work. I use them myself every day too. In response to that regular request I’ve set up a page on PayPal where <a href="https://paypal.me/aarondinnage" target="_blank" rel="noopener">you can donate</a> any amount you wish, if you feel that way inclined. If I can cover my domain registration and associated costs then I'll be really pleased! So if you’ve found these diagrams useful and you’d like to give something back then you are welcome to make a donation, but please understand that you’re not paying me for future work. I can’t promise I’ll always be able to keep these up to date, but I will for as long as I can. And I've made it open source on GitHub in the meantime!</p>
     <p>Cheers,</p>
     <p> &ndash; <a href="#contact">Aaron</a>.</p>
 
@@ -87,11 +85,11 @@
     </div>
 
 
-    <h2 id="home">Home page<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="home"><a href="#home" class="header-link">Home page</a></h2>
 
     <p>The home page is the first page you reach when you navigate to <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a>.</p>
-    <p>When the site loads for the first time, and after each update to GitHub, it reaches out and caches all the core web site components and the full collection of diagrams (SVG format). This happens as a background task in your browser so you don't have to wait. Within a matter of seconds you can go offline and still have full access to every page and every diaram. It only does this once until the next time either the web site files or the diagrams are updated. If the web site gets an update but the diagrams don't change then only the web site files are downloaded agian, and vice-versa.</p>
-    <p>This all means that day-to-day there is very little traffic generated by the site and it remains fast to access and navigate. The entire offline cache to run the March 2021 release of web site (including diagrams) uses only 2.5 megabytes of storage. So the site is not only fast, but also very friendly to low bandwidth devices and networks as the compressed data sent over the internet is a fraction of that size.</p>
+    <p>When the site loads for the first time, and after each update to GitHub, it reaches out and caches all the core web site components and the full collection of diagrams (SVG format). This happens as a background task in your browser so you don't have to wait. Within a matter of seconds you can go offline and still have full access to every page and every diaram. It only does this once until the next time either the web site files or the diagrams are updated.</p>
+    <p>This all means that day-to-day there is very little traffic generated by the site and it remains fast to access and navigate. The entire offline cache to run the October, 2021 release of the web site (including diagrams) uses less than 5 megabytes of storage. So the site is not only fast, but also friendly to low bandwidth devices and networks.</p>
 
     <img loading="lazy" src="/media/page-home1-dark.png" class="dark-only screenshot" width="600" height="400" alt="Home page screenshot" />
     <img loading="lazy" src="/media/page-home1-light.png" class="light-only screenshot" width="600" height="400" alt="Home page screenshot" />
@@ -99,7 +97,7 @@
     <ul>
       <li>
         <h3>Diagram date</h3>
-        <p>The month and year of the last diagram update is posted directly under the web site name heading. In the screenshot above you can see the diagrams were last updated in Feburary, 2021. This is independent of any updates to the <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a> website itself.</p>
+        <p>The month and year of the last diagram update is posted directly under the web site name heading. In the screenshot above you can see the diagrams were last updated in October, 2021. This is independent of any updates to the <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a> website itself.</p>
       </li>
       <li>
         <h3>Groups</h3>
@@ -111,11 +109,11 @@
       </li>
       <li>
         <h3>Flagging</h3>
-        <p>You can flag your most commonly accessed or preferred diagrams to make them visually stand out and be easier to find in the list. This icon <img src="/media/flagged.svg" width="20" height="20" class="inline-icon" alt="Flagged" style="vertical-align:bottom;" /> means the diagram is flagged, and this icon <img src="/media/unflagged.svg" width="20" height="20" class="inline-icon" alt="Unflagged" style="vertical-align:bottom;" /> means the diagram is not flagged. Clicking on the icon next to the diagram name will toggle the flag on or off. Flags are stored and persist between sessions.</p>
+        <p>You can flag your most commonly accessed or preferred diagrams to make them visually stand out and be easier to find in the list. This icon <span class="icon icon-flagged"></span> means the diagram is flagged, and this icon <span class="icon icon-unflagged"></span> means the diagram is not flagged. Clicking on the icon next to the diagram name will toggle the flag on or off. Flags are stored and persist between sessions.</p>
       </li>
       <li>
-        <h3>New diagrams indicator</h3>
-        <p>Any diagram groups that have been added in the most recent update will have the following red start indicator next to them: <img src="/media/new.svg" width="16" height="16" class="inline-icon" alt="New" style="vertical-align:text-top;" />. At the next update the new diagrams indicator will be removed.</p>
+        <h3>New content indicator</h3>
+        <p>Any diagram groups that have been added, or added to, in the most recent update will have the following red asterisk indicator next to them:<span class="new"></span>. At the following update the new content indicator will be removed.</p>
       </li>
       <li>
         <h3>Draft diagrams</h3>
@@ -128,29 +126,33 @@
     <img loading="lazy" src="/media/page-home2-dark.png" class="dark-only screenshot" width="600" height="400" alt="Home page lower screenshot" />
     <img loading="lazy" src="/media/page-home2-light.png" class="light-only screenshot" width="600" height="400" alt="Home page lower screenshot" />
 
-    <ul>
+    <ul class="no-bullet-list">
       <li>
-        <h3>Saved diagrams</h3>
+        <h3 class="new"><span class="icon icon-compare"></span> Compare diagrams</h3>
+        <p>Navigates to the <a href="#compare">compare diagrams</a> page.</p>
+      </li>
+      <li>
+        <h3><span class="icon icon-save"></span> Saved diagrams</h3>
         <p>Navigates to the <a href="#saved">saved diagrams</a> list. When viewing a diagram it is possible to make highlights which can be saved and displayed at a later time. More information on <a href="#viewsvg-edit">Edit mode</a> is available in this guide.</p>
       </li>
       <li>
-        <h3>Feature matrix</h3>
+        <h3><span class="icon icon-matrix"></span> Feature matrix</h3>
         <p>Navigates to the <a href="#matrix">feature matrix</a> page.</p>
       </li>
       <li>
-        <h3>Change log</h3>
+        <h3><span class="icon icon-changes"></span> Change log</h3>
         <p>Navigates to the change log which details the change history with each update to <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a>, the diagrams and licensing they represent.</p>
       </li>
       <li>
-        <h3>User guide</h3>
+        <h3><span class="icon icon-guide"></span> User guide</h3>
         <p>Navigates to this user guide.</p>
       </li>
       <li>
-        <h3>Downloads</h3>
-        <p>Navigates to a page of download links for every diagam, Visio source files, and supporting material.</p>
+        <h3><span class="icon icon-download"></span> Downloads</h3>
+        <p>Navigates to a page of download links for every diagam, in PDF, PNG, and SVG format. The download page also includes Visio source files, a PowerPoint slide deck, and the m365maps.com Teams app.</p>
       </li>
       <li>
-        <h3>Settings</h3>
+        <h3><span class="icon icon-settings"></span> Settings</h3>
         <p>Navigates to the <a href="#settings">settings page</a> for the web site where various configurations can be made.</p>
       </li>
     </ul>
@@ -162,7 +164,7 @@
     </div>
 
 
-    <h2 id="viewsvg">View diagram - Page features<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="viewsvg"><a href="#viewsvg" class="header-link">View diagram - Page features</a></h2>
 
     <img loading="lazy" src="/media/page-viewsvg-dark.png" class="dark-only screenshot" width="600" height="400" alt="View diagram page screenshot" />
     <img loading="lazy" src="/media/page-viewsvg-light.png" class="light-only screenshot" width="600" height="400" alt="View diagram page screenshot" />
@@ -175,6 +177,7 @@
       <li>
         <h3>Zoom</h3>
         <p>The mouse scroll wheel is used to zoom in and out when viewing a diagram. This operates in much the same way as a street map website would. When you zoom with the mouse wheel the page will be scrolled to keep the point under the mouse cursor from being zoomed out of view.</p>
+        <p>Zooming in and out can also be achieved with the + and - keys, and = resets the zoom level.</p>
         <p>Pinch to zoom remains available on touch screen and touch pad equiped devices.</p>
         <p>Clicking the zoom wheel button / middle mouse button on th diagram will reset the zoom level to the default. The default zoom level is also applied when you first open the view diagram page. The default zoom level can be configured on the <a href="#settings">Settings</a> page.</p>
       </li>
@@ -185,9 +188,19 @@
       </li>
     </ul>
 
-    <h2 id="viewsvg-menu">View diagram - Menu features<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="viewsvg-menu"><a href="#viewsvg-menu" class="header-link">View diagram - Menu features</a></h2>
 
-    <img loading="lazy" src="/media/viewsvg-menu.png" class="screenshot" width="600" height="46" style="border:0;background:none;" alt="View menu screenshot" />
+    <div class="menu-mockup">
+      <span class="icon icon-close" title="Close menu"></span>
+      <span class="icon icon-back" title="Back"></span>
+      <span class="icon icon-unflagged" title="Flag this diagram"></span>
+      <span class="icon icon-print" title="Print"></span>
+      <span class="icon icon-controls" title="Control"></span>
+      <span class="icon icon-edit-off" title="Turn on edit mode"></span>
+      <span class="icon icon-save" title="Save a copy"></span>
+      <span class="icon icon-download" title="Download PDF"></span><span class="button-text">PDF</span>
+      <span class="icon icon-download" title="Download PNG"></span><span class="button-text">PNG</span>
+    </div>
 
     <p>The collapsable menu in the upper-right corner of the view diagram page gives you quick access to a number of navigation options and other features depending on your device and the viewing mode you are in.</p>
     <p>The standard menu arrangement, as pictured, appears when you first navigate to a diagram from the <a href="#home">Home page</a>. It is possible to set the menu to be automatically collapsed or open by default, this is detailed in the <a href="#settings">Settings</a> portion of this guide.</p>
@@ -198,46 +211,56 @@
       <span class="header-description">Description</span>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/open.svg" width="20" height="20" class="inline-icon" alt="Open" title="Open menu" /> / <img src="/media/close.svg" width="20" height="20" class="inline-icon" alt="Close" title="Close menu" /></div>
+      <div class="row-icon"><span class="icon icon-open"></span> / <span class="icon icon-close"></span></div>
       <div class="row-description">In all modes it is possible to expand or collapse the menu by clicking on the chevron at the start (left-most) of the menu.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/home.svg" width="20" height="20" class="inline-icon" alt="Home" title="Go home" /></div>
-      <div class="row-description">All modes include the home link which returns you to the <a href="#home">Home page</a>.</div>
+      <div class="row-icon"><span class="icon icon-back"></span></div>
+      <div class="row-description">All modes include the back button which returns you to the previous page.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/unflagged.svg" width="20" height="20" class="inline-icon" alt="Unflagged" title="Unflagged" /> / <img src="/media/flagged.svg" width="20" height="20" class="inline-icon" alt="Flagged" title="Flagged" /></div>
+      <div class="row-icon"><span class="icon icon-unflagged"></span> / <span class="icon icon-flagged"></span></div>
       <div class="row-description">These icons indicate whether the diagram is flagged or not and can be clicked to toggle the flag on the current diagram.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/print.svg" width="20" height="20" class="inline-icon" alt="Print" title="Print" /></div>
+      <div class="row-icon"><span class="icon icon-print"></span></div>
       <div class="row-description">On devices that support printing this icon will be present and clicking it will launch the print dialog. The menu and offline/online indicators will be hidden in print outs, leaving only the diagram to print.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/edit-off.svg" width="20" height="20" class="inline-icon" alt="Edit (off)" title="Edit mode is off" /> / <img src="/media/edit-on.svg" width="20" height="20" class="inline-icon" alt="Edit (on)" title="Edit mode is on" /></div>
-      <div class="row-description">These icons toggle the page in and out of edit mode. Edit mode allows you to click on any tile within a diagram to highlight that tile with one of three configurable highlighting colours. There is more information on <a href="#viewsvg-edit">Edit mode</a> later in this guide.</div>
-      <div class="table-divider"></div>
-
-      <div class="row-icon"><img src="/media/save.svg" width="20" height="20" class="inline-icon" alt="Save" title="Save a copy" /></div>
-      <div class="row-description">When edit mode is on this save icon will be present. Clicking Save will store your changes as a custom diagram copy which can be retrieved later from the <a href="#saved">Saved diagrams</a> page. Saved diagrams can be further edited or exported.</div>
-      <div class="table-divider"></div>
-
-      <div class="row-icon"><img src="/media/controls.svg" width="20" height="20" class="inline-icon" alt="Controls" title="Image controls" /></div>
+      <div class="row-icon"><span class="icon icon-controls"></span></div>
       <div class="row-description">Opens and closes the image controls panel which allows for adjustments to the diagram brightness, contrast, hue, and saturation. There is more information on <a href="#controls">Image controls</a> later in this guide.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/download.svg" width="20" height="20" class="inline-icon" alt="Download" title="Download" /></div>
+      <div class="row-icon"><span class="icon icon-edit-off"></span> / <span class="icon icon-edit-on"></span></div>
+      <div class="row-description">These icons toggle the page in and out of edit mode. Edit mode allows you to click on any tile within a diagram to highlight that tile with one of three configurable highlighting colours. There is more information on <a href="#viewsvg-edit">Edit mode</a> later in this guide.</div>
+      <div class="table-divider"></div>
+
+      <div class="row-icon"><span class="icon icon-save"></span></div>
+      <div class="row-description">Clicking Save will store a copy of the current diagram which can be retrieved later from the <a href="#saved">Saved diagrams</a> page. Saved diagrams can be further edited or exported.</div>
+      <div class="table-divider"></div>
+
+      <div class="row-icon"><span class="icon icon-download"></span></div>
       <div class="row-description">When viewing a diagram outside of edit mode the PDF and PNG download links will be available. These links will download to your device the latest version of the diagram in either the PDF or PNG format directly from <a href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a>. Downloading is only available when you have an active internet connection.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/export.svg" width="20" height="20" class="inline-icon" alt="Export" title="Export" /></div>
+      <div class="row-icon"><span class="icon icon-export"></span></div>
       <div class="row-description">When working in edit mode SVG and PNG export links will be available (varies by browser compatibility). These links export the version of the diagram you are working on, with your changes included, and download it to your device. The PNG export includes your current theme background colour. Exporting can be performed while offline.</div>
       <div class="table-divider"></div>
     </div>
 
-    <h2 id="viewsvg-edit">View diagram - Edit mode<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="viewsvg-edit"><a href="#viewsvg-edit" class="header-link">View diagram - Edit mode</a></h2>
 
-    <img loading="lazy" src="/media/viewsvg-menu-edit.png" class="screenshot" width="600" height="46" style="border:0;background:none;" alt="Edit mode menu screenshot" />
+    <div class="menu-mockup">
+      <span class="icon icon-close" title="Close menu"></span>
+      <span class="icon icon-back" title="Back"></span>
+      <span class="icon icon-unflagged" title="Flag this diagram"></span>
+      <span class="icon icon-print" title="Print"></span>
+      <span class="icon icon-controls" title="Control"></span>
+      <span class="icon icon-edit-on" title="Turn off edit mode"></span>
+      <span class="icon icon-save" title="Save a copy"></span>
+      <span class="icon icon-export" title="Export as SVG"></span><span class="button-text">SVG</span>
+      <span class="icon icon-export" title="Export as PNG"></span><span class="button-text">PNG</span>
+    </div>
 
     <p>Edit mode is designed to help you build custom visualisations to communicate licensing details and opportunities to your colleagues or customers, or just for your own reference.</p>
     <p>With edit mode enabled your mouse clicks within the diagram will no longer open the tile links but instead will toggle highlighting elements within the page. Your first click will apply the highlight colour, click again on the same tile and it will cycle the highlight off. Press <strong>Shift + Click</strong> and your first alternate colour will be applied. Press <strong>Control + Click</strong> and your second alternate colour will be applied. You can customise your highlight colours in the <a href="#settings">Settings</a> page.</p>
@@ -245,16 +268,16 @@
     <img loading="lazy" src="/media/diagram-highlight-dark.gif" class="dark-only screenshot" width="600" height="400" alt="Diagram highlighting screenshot" />
     <img loading="lazy" src="/media/diagram-highlight-light.gif" class="light-only screenshot" width="600" height="400" alt="Diagram highlighting screenshot" />
 
-    <p>Your edits can be stored by clicking the save icon <img src="/media/save.svg" width="20" height="20" class="inline-icon" alt="Save" title="Save a copy" /> and then providing a name for your diagram. Diagrams you've edited are stored and accessible from the <a href="#saved">Saved diagrams</a> page.</p>
+    <p>Your edits can be stored by clicking the save icon (<span class="icon icon-save"></span>) and then providing a name for your diagram. Diagrams you've saved are accessible from the <a href="#saved">Saved diagrams</a> page.</p>
 
-    <h2 id="controls">View diagram - Image controls<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="controls"><a href="#controls" class="header-link">View diagram - Image controls</a></h2>
 
     <img loading="lazy" src="/media/image-controls-dark.gif" class="dark-only screenshot" width="600" height="400" alt="Image controls screenshot" />
     <img loading="lazy" src="/media/image-controls-light.gif" class="light-only screenshot" width="600" height="400" alt="Image controls screenshot" />
 
     <p>The image controls menu allows you to control the brightness, contrast, hue, and saturation of the diagram you are viewing.</p>
-    <p>The Reset button (<img src="/media/defaults.svg" width="20" height="20" class="inline-icon" alt="Reset button icon" />) reverts all image controls to their default values.</p>
-    <p>The Save button (<img src="/media/save.svg" width="20" height="20" class="inline-icon" alt="Save button icon" />) commits the current image control levels to memory and uses them on all diagrams from that point on.</p>
+    <p>The Reset button (<span class="icon icon-defaults"></span>) reverts all image controls to their default values.</p>
+    <p>The Save button (<span class="icon icon-save"></span>) commits the current image control levels to memory and uses them on all diagrams from that point on.</p>
 
     <p class="tip"><strong>Tip: </strong>If you've saved a set of image controls and would no longer like them to apply, click Reset and then Save.</p>
 
@@ -265,7 +288,21 @@
     </div>
 
 
-    <h2 id="matrix">Feature matrix<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="compare"><a href="#compare" class="header-link">Compare diagrams</a></h2>
+
+    <img loading="lazy" src="/media/page-compare-dark.png" class="dark-only screenshot" width="600" height="400" alt="Compare diagrams screenshot" />
+    <img loading="lazy" src="/media/page-compare-light.png" class="light-only screenshot" width="600" height="400" alt="Compare diagrams screenshot" />
+
+    <p>The compare diagrams page lists all the included diagrams and saved diagrams, allowing you to compare a combination of two diagrams side-by-side.</p>
+
+    <div class="section-links">
+      <a href="#top" class="top-link">Page top</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="#compare" class="section-link">Section top</a>
+    </div>
+
+
+    <h2 id="matrix"><a href="#matrix" class="header-link">Feature matrix</a></h2>
 
     <img loading="lazy" src="/media/page-matrix-dark.gif" class="dark-only screenshot" width="600" height="400" alt="Feature matrix screenshot" />
     <img loading="lazy" src="/media/page-matrix-light.gif" class="light-only screenshot" width="600" height="400" alt="Feature matrix screenshot" />
@@ -284,7 +321,7 @@
     </div>
 
 
-    <h2 id="saved">Saved diagrams<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="saved"><a href="#saved" class="header-link">Saved diagrams</a></h2>
 
     <img loading="lazy" src="/media/page-saved-dark.png" class="dark-only screenshot" width="600" height="248" alt="Saved diagrams screenshot" />
     <img loading="lazy" src="/media/page-saved-light.png" class="light-only screenshot" width="600" height="248" alt="Saved diagrams screenshot" />
@@ -298,15 +335,15 @@
       <span class="header-description">Description</span>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/edit-off.svg" width="20" height="20" class="inline-icon" alt="Rename" title="Rename" /></div>
+      <div class="row-icon"><span class="icon icon-edit-off"></span></div>
       <div class="row-description">Clicking this icon allows you to rename a saved diagram. When clicked a dialog will appear prompting you for a new name.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/delete.svg" width="20" height="20" class="inline-icon" alt="Delete" title="Delete" /></div>
+      <div class="row-icon"><span class="icon icon-delete"></span></div>
       <div class="row-description">Clicking this icon will delete the saved diagram.</div>
       <div class="table-divider"></div>
 
-      <div class="row-icon"><img src="/media/export.svg" width="20" height="20" class="inline-icon" alt="Export" title="Export" /></div>
+      <div class="row-icon"><span class="icon icon-export"></span></div>
       <div class="row-description">These links export your saved diagrams to SVG or PNG files for download to your device (availability varies by browser compatibility). The PNG export includes your current theme background colour. Exporting can be performed while offline.</div>
       <div class="table-divider"></div>
     </div>
@@ -316,10 +353,10 @@
     <p class="tip"><strong>Tip: </strong>PDF exporting is not available on <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a> but many devices now support "Print to PDF". The menu and offline/online indicators will be hidden in print outs, printing only the diagram.</p>
 
     <p>There are three buttons at the bottom of the saved diagrams page:</p>
-    <ul>
-      <li><strong>Export all (PNG)</strong> - Downloads all the saved diagrams as PNG files.</li>
-      <li><strong>Export all (SVG)</strong> - Downloads all the saved diagrams as SVG files.</li>
-      <li><strong>Import (SVG)</strong> - Imports an SVG file from your device and adds it to the saved diagrams list so that you can display and edit it within <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a>.</li>
+    <ul class="no-bullet-list">
+      <li><span class="icon icon-export"></span> <strong>Export all (PNG)</strong> - Downloads all the saved diagrams as PNG files.</li>
+      <li><span class="icon icon-export"></span> <strong>Export all (SVG)</strong> - Downloads all the saved diagrams as SVG files.</li>
+      <li><span class="icon icon-import"></span> <strong>Import SVG</strong> - Imports an SVG file from your device and adds it to the saved diagrams list so that you can display and edit it within <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a>.</li>
     </ul>
 
     <div class="spacer"></div>
@@ -336,7 +373,7 @@
     </div>
 
 
-    <h2 id="settings">Settings<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="settings"><a href="#settings" class="header-link">Settings</a></h2>
 
     <img loading="lazy" src="/media/page-settings-dark.png" class="dark-only screenshot" width="600" height="248" alt="Settings page screenshot" />
     <img loading="lazy" src="/media/page-settings-light.png" class="light-only screenshot" width="600" height="248" alt="Settings page screenshot" />
@@ -348,19 +385,19 @@
       <span class="header-description">Description</span>
       <div class="table-divider"></div>
 
-      <div class="row-setting"><img src="/media/edit-off.svg" width="20" height="20" class="inline-icon" alt="Highlights" /> Highlights</div>
+      <div class="row-setting"><span class="icon icon-edit-on"></span> Highlights</div>
       <div class="row-description">Customise your highlight colours for use in edit mode on the <a href="#viewsvg">View diagram</a> page. A standard <strong>Left-Click</strong> will use the first colour, <strong>Shift + Click</strong> uses the second colour, and <strong>Control + Click</strong> will use the third colour from this setting. Default colours are pictured in the screenshot above.</div>
       <div class="table-divider"></div>
 
-      <div class="row-setting"><img src="/media/close.svg" width="20" height="20" class="inline-icon" alt="Menu" /> Menu</div>
+      <div class="row-setting"><span class="icon icon-close"></span> Menu</div>
       <div class="row-description">This setting controls the default position of the menu on the <a href="#viewsvg">View diagram</a> page. The options are "Open" (default) or "Closed".</div>
       <div class="table-divider"></div>
 
-      <div class="row-setting"><img src="/media/theme.svg" width="20" height="20" class="inline-icon" alt="Theme" /> Theme</div>
+      <div class="row-setting"><span class="icon icon-theme"></span> Theme</div>
       <div class="row-description">Set the site theme from here. Options include "Light" (default), "Dark", and "System". The "System" setting will dynamically change the site theme based on the browser or operating system theme settings on your device. All pages and diagrams inherit the theme throughout <a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a>.</div>
       <div class="table-divider"></div>
 
-      <div class="row-setting"><img src="/media/zoom.svg" width="20" height="20" class="inline-icon" alt="Zoom" /> Zoom</div>
+      <div class="row-setting"><span class="icon icon-zoom"></span> Zoom</div>
       <div class="row-description">Configure the default image zoom level for the <a href="#viewsvg">View diagram</a> page here. The options are:
         <ul>
           <li><strong>Fit</strong> (default) - Ensures the diagram fits entirely inside the browser window/screen.</li>
@@ -376,10 +413,10 @@
     <div class="spacer"></div>
 
     <p>There are three buttons at the bottom of the settings page:</p>
-    <ul>
-      <li><strong>Default</strong> - Resets all settings to the site defaults, but doesn't commit the settings reset until you click Save.</li>
-      <li><strong>Save</strong> - Saves your changes and returns to the <a href="#home">Home page</a>.</li>
-      <li><strong>Cancel</strong> - Cancels any changes you may have mdae and returns to the <a href="#home">Home page</a>.</li>
+    <ul class="no-bullet-list">
+      <li><span class="icon icon-defaults"></span> <strong>Default</strong> - Resets all settings to the site defaults, but doesn't commit the settings reset until you click Save.</li>
+      <li><span class="icon icon-save"></span> <strong>Save</strong> - Saves your changes and returns to the <a href="#home">Home page</a>.</li>
+      <li><span class="icon icon-delete"></span> <strong>Cancel</strong> - Cancels any changes you may have mdae and returns to the <a href="#home">Home page</a>.</li>
     </ul>
 
     <p>This page has a <a href="#home">Home page</a> link in the top-right corner.</p>
@@ -390,12 +427,43 @@
       <a href="#settings" class="section-link">Section top</a>
     </div>
 
+    
+    <h2 id="teams"><a href="#teams" class="header-link">M365 Maps for Teams</a></h2>
 
-    <h2 id="browsers">Browser compatibility<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <img loading="lazy" src="/media/teams-app-dark.png" class="dark-only screenshot" width="600" height="400" alt="Teams app screenshot" />
+    <img loading="lazy" src="/media/teams-app-light.png" class="light-only screenshot" width="600" height="400" alt="Teams app screenshot" />
+
+    <p>The Microsoft Teams app brings m365maps.com directly into your Teams client as a personal tab app. All the site functions are available directly inside Teams, with some user interface streamlining to make the experience more suited to the Teams interface.</p>
+    <p>M365 Maps for Teams does not connect with the Teams SDK, so there is no exchange of personal information or user tracking of any kind. I've deliberately kept the app simple to make it easier for organisations to choose to allow the app to run in their environment.</p>
+    <p>Users can self-install the app using the instructions below, or have an organisation administrator load the app for all users within the Teams tenant to access. Microsoft publishes generic administrator installation instructions are here: <a href="https://docs.microsoft.com/microsoftteams/upload-custom-apps#upload" target="_blank" rel="noopener">Link</a></p>
+
+    <img loading="lazy" src="/media/teams-upload-dark.png" class="dark-only screenshot plain-image" width="496" height="208" alt="Teams app upload screenshot" />
+    <img loading="lazy" src="/media/teams-upload-light.png" class="light-only screenshot plain-image" width="496" height="208" alt="Teams app upload screenshot" />
+
+    <p>To upload a custom Teams app select "Upload a customised app" from the "Apps" tab inside Microsoft Teams.</p>
+    <p>After selecting the <a href="/teams/M365-Maps-for-Teams.zip" download="M365 Maps for Teams.zip">M365 Maps for Teams.zip</a> you will be presented with further information on the app and be able to add it to Teams.</p>
+
+    <img loading="lazy" src="/media/teams-add-dark.png" class="dark-only screenshot" width="600" height="400" alt="Add a Teams app screenshot" />
+    <img loading="lazy" src="/media/teams-add-light.png" class="light-only screenshot" width="600" height="400" alt="Add a Teams app screenshot" />
+
+    <p>The Add App process will provide app and publisher details, as well as required app permissions. Please note: Whilst Teams will advise that the app has access to receive messages and data you provide it, M365 Maps will not ask for data or interact with messages. Also, the permissions set will advise that M365 Maps will have access to your profile information, M365 Maps will not access this information as the app does not utilise the Teams SDK or APIs. This can all be verified by examining the open source code for m365maps.com and M365 Maps for Teams on <a href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a>.</p>
+
+    <img loading="lazy" src="/media/teams-pin-dark.png" class="dark-only screenshot" width="512" height="446" alt="Pin a Teams app screenshot" />
+    <img loading="lazy" src="/media/teams-pin-light.png" class="light-only screenshot" width="512" height="446" alt="Pin a Teams app screenshot" />
+
+    <p>After loading the M365 Maps for Teams app you can find it under the more/ellipsis/three dots menu on the left navigation area within Teams. If you want to keep quick access to M365 Maps you can pin the app by opening the left-click context menu and selecting "Pin".</p>
+
+    <div class="section-links">
+      <a href="#top" class="top-link">Page top</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="#teams" class="section-link">Section top</a>
+    </div>
+
+
+    <h2 id="browsers"><a href="#browsers" class="header-link">Browser compatibility</a></h2>
 
     <p><a href="https://m365maps.com/" target="_blank" rel="noopener">m365maps.com</a> targets the same mainstream web browsers that Microsoft 365 supports: Edge, Firefox, Safari, and Chrome.</p>
-    <p>Older versions of Internet Explorer, out of date builds of mainstream browsers, and any other niche browsers are not targetted for compatibilty or tested. Your experience may vary.</p>
-    <p>There is presently 'best-efforts' support for Internet Explorer 11. Though I will remove the additional code required to support it after Microsoft 365 stops supporting it in August, 2021 because it creates a lot of work keeping the site working in this browser.</p>
+    <p>Internet Explorer, out of date builds of mainstream browsers, and any other niche browsers are not targetted for compatibilty or tested. Your experience may vary.</p>
     <p>If you have a particular device or browser scenario you'd like me to try to support then please <a href="#contact">contact me</a> to discuss.</p>
 
     <h3>Known issues</h3>
@@ -405,14 +473,8 @@
         <p>Multiple file downloads ("Export all ...") are disabled on iOS for now.</p>
         <p>Edge on iOS has the Export SVG and Export PNG actions removed on the <a href="#viewsvg">View diagram</a> and <a href="#saved">Saved diagrams</a> pages. If you need this feature please use Safari for now.</p>
       </li>
-      <li><strong>Internet Explorer 11</strong>
-        <p>Internet Explorer 11 works with most site features with the following exceptions:</p>
-        <ul>
-          <li>Offline caching of diagrams</li>
-          <li>Export PNG from the <a href="#viewsvg">View diagram</a> page is disabled</li>
-          <li>Some layout differences in comparison with other browsers</li>
-        </ul>
-        <p>However, it takes additional work to make the site function in Internet Explorer 11 that would be better spent elsewhere, so once it is no longer supported by Microsoft 365 (August, 2021) I will drop support here and simplify the maintenance of this site considerably. If Internet Explorer 11 support is critical to your use of this site then please do <a href="#contact">contact me</a> and we can try to figure something out.</p>
+      <li><strong>M365 Maps for Teams</strong>
+        <p>The M365 Maps for Teams app follows the operating system theme when in the Teams desktop app and the browser theme when in the web browser.</p>
       </li>
     </ul>
 
@@ -423,15 +485,19 @@
     </div>
 
 
-    <h2 id="contact">Contact<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="contact"><a href="#contact" class="header-link">Contact</a></h2>
 
     <p><strong>Aaron Dinnage</strong></p>
-    <p><a class="link-list twitter" href="https://twitter.com/AaronDinnage" target="_blank" rel="noopener">Twitter</a></p>
-    <p><a class="link-list linkedin" href="https://www.linkedin.com/in/aarondinnage/" target="_blank" rel="noopener">LinkedIn</a></p>
-    <p><a class="link-list github" href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a></p>
-    <p><a class="link-list feedback" href="https://forms.office.com/r/pfAScmippP" target="_blank" rel="noopener">Feedback</a></p>
-    <p><a class="link-list bug" href="https://forms.office.com/r/eWkeEz7gns" target="_blank" rel="noopener">Report an issue</a></p>
-    <p><a class="link-list paypal" href="https://paypal.me/pools/c/8ww03FCFcP" target="_blank" rel="noopener">Make a donation</a></p>
+    <ul class="link-list">
+      <li><a class="twitter" href="https://twitter.com/AaronDinnage" target="_blank" rel="noopener">Twitter</a></li>
+      <li><a class="linkedin" href="https://www.linkedin.com/in/aarondinnage/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="github" href="https://github.com/AaronDinnage/Licensing/" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a class="feedback" href="https://forms.office.com/r/pfAScmippP" target="_blank" rel="noopener">Feedback</a></li>
+      <li><a class="bug" href="https://forms.office.com/r/eWkeEz7gns" target="_blank" rel="noopener">Report an issue</a></li>
+      <li><a class="paypal" href="https://paypal.me/aarondinnage" target="_blank" rel="noopener">Make a donation</a></li>
+    </ul>
+
+    <p>The Feedback and Issue forms above are anonymous and don't collect any personal information from you. Therefore, I can't directly answer questions or seek further clarification on your feedback through that mechanism. If you'd like to ask a question, or discuss an idea or piece of complicated feedback, then please use <a href="https://www.linkedin.com/in/aarondinnage/" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://twitter.com/AaronDinnage" target="_blank" rel="noopener">Twitter</a> to connect.</p>
 
     <div class="section-links">
       <a href="#top" class="top-link">Page top</a>
@@ -440,7 +506,7 @@
     </div>
 
 
-    <h2 id="privacy">Privacy policy<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="privacy"><a href="#privacy" class="header-link">Privacy policy</a></h2>
 
     <p>m365maps.com <strong>does not</strong> request, collect, store, process, or manage <strong>any</strong> personal information.</p>
 
@@ -451,7 +517,26 @@
     </div>
 
 
-    <h2 id="references">References<a href="#" class="header-link" style="display:none;"><img src="/media/link.svg" width="16" height="16" class="header-link" alt="Link" /></a></h2>
+    <h2 id="terms"><a href="#terms" class="header-link">Terms of use</a></h2>
+
+    <p>Your use of m365maps.com depends on your acceptance of the following terms:</p>
+    <ul>
+      <li><a href="https://m365maps.com/" target="_blank" property="dct:title" rel="cc:attributionURL noopener">m365maps.com</a> by <a href="https://twitter.com/AaronDinnage" target="_blank" rel="noopener" property="cc:attributionName">Aaron Dinnage</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons BY 4.0</a></li>
+      <li>m365maps.com is for informational purposes only</li>
+      <li>m365maps.com does not guarantee accuracy</li>
+      <li>You accept the m365maps.com <a href="#privacy">privacy policy</a></li>
+      <li>Microsoft is the only authoritative source of all Microsoft licensing terms and conditions</li>
+      <li>You must validate all licensing decisions with Microsoft or a Microsoft licensing partner</li>
+    </ul>
+
+    <div class="section-links">
+      <a href="#top" class="top-link">Page top</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="#terms" class="section-link">Section top</a>
+    </div>
+
+
+    <h2 id="references"><a href="#references" class="header-link">References</a></h2>
 
     <p>The information contained within the diagrams on this site is sourced from a variety of references. If you'd like to see where this information comes from I've listed those sources below. Whilst a lot of the modern licensing resources are very good at a high level, it's often the case that some of the finer detail is in the deeper, longer form documentation. I try to capture <em>some</em> of that detail in my diagrams when I think it's particularly relevant.</p>
 
@@ -462,6 +547,7 @@
         <strong><a href="https://www.microsoft.com/licensing/terms/productoffering" target="_blank" rel="noopener">Product Licensing Terms</a></strong>
         <p>Allows you to find product licensing terms by program and product family for Software and Online Services. Knowledge of Microsoft licensing programs is required to navigate the complexity, but answers to questions around feature inclusions can often be found here. These links I've found particularly useful:</p>
         <ul>
+          <li><a href="https://www.microsoft.com/licensing/docs" target="_blank" rel="noopener" class="new"><strong>Licensing Resources and Documents</strong></a></li>
           <li><a href="https://www.microsoft.com/licensing/terms/product/SubscriptionLicenseSuites/all" target="_blank" rel="noopener"><strong>Subscription License Suites</strong></a></li>
           <li><a href="https://www.microsoft.com/licensing/terms/product/StudentUseBenefitsandAcademicPrograms/all" target="_blank" rel="noopener"><strong>Student Use Benefits and Academic Programs</strong></a></li>
           <li><a href="https://www.microsoft.com/licensing/terms/product/CALandMLEquivalencyLicenses/all" target="_blank" rel="noopener"><strong>CAL and ML Equivalency</strong></a></li>
@@ -536,8 +622,5 @@
       <a href="#references" class="section-link">Section top</a>
     </div>
 
-
-    <div class="spacer"></div>
-    <p xmlns:cc="https://creativecommons.org/ns#" xmlns:dct="https://dublincore.org/specifications/dublin-core/dcmi-terms/#" style="text-align:right;"><a href="https://m365maps.com/" target="_blank" property="dct:title" rel="cc:attributionURL noopener">m365maps.com</a> by <a href="https://twitter.com/AaronDinnage" target="_blank" rel="noopener" property="cc:attributionName">Aaron Dinnage</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC BY 4.0<img src="/media/cc.svg" width="18" height="18" style="margin-left:4px;" alt="CC" /><img src="/media/by.svg" width="18" height="18" style="margin-left:4px;" alt="BY" /></a></p>
   </body>
 </html>

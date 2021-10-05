@@ -1,159 +1,134 @@
+/// <reference path="common.js" />
+/* global modalPrompt, setupOfflineIndicator, modalConfirm, getModalInputText,
+   isEmbedded, isIOSEdge, exportSvg, exportPng, StoreName, isIOS, setupModal */
+
 /** Creates a visual divider for the item list. */
 function newDivider() {
-  const divider = document.createElement('div');
-  divider.className = 'divider';
-  return divider;
+  const element = document.createElement('div');
+  element.className = 'divider';
+  return element;
 }
 
-/** Creates a container div to put the action icons in. */
+/** Creates a container div to put the action buttons in. */
 function newActions() {
-  const actions = document.createElement('div');
-  actions.className = 'actions';
-  return actions;
-}
-
-/** Creates a header to put the diagram name link in. */
-function newHeader() {
-  const header = document.createElement('h2');
-  return header;
+  const element = document.createElement('div');
+  element.className = 'actions';
+  return element;
 }
 
 /** Creates a diagram name link. */
 function newDiagramLink(text, href) {
-  const diagramLink = document.createElement('a');
-  diagramLink.className = 'diagram';
-  diagramLink.text = text;
-  diagramLink.href = href;
-  return diagramLink;
+  const element = document.createElement('a');
+  element.className = 'diagram';
+  element.textContent = text;
+  element.href = href;
+  return element;
 }
 
-/** Creates an 'Export PNG' link. */
-function newPngLink() {
-  const pngLink = document.createElement('a');
-  pngLink.href = '#';
+/** Creates an 'Export PNG' button. */
+function newPngButton() {
+  const pngLink = document.createElement('button');
   pngLink.className = 'export';
   pngLink.title = 'Export PNG';
-  pngLink.text = 'PNG';
+  pngLink.textContent = 'PNG';
   return pngLink;
 }
 
-/** Creates an 'Export SVG' link. */
-function newSvgLink() {
-  const svgLink = document.createElement('a');
-  svgLink.href = '#';
+/** Creates an 'Export SVG' button. */
+function newSvgButton() {
+  const svgLink = document.createElement('button');
   svgLink.className = 'export';
   svgLink.title = 'Export SVG';
-  svgLink.text = 'SVG';
+  svgLink.textContent = 'SVG';
   return svgLink;
 }
 
-/** Creates a 'Delete item' image. */
-function newDeleteImage() {
-  const deleteImage = document.createElement('img');
-  deleteImage.src = '/media/delete.svg';
-  deleteImage.width = 16;
-  deleteImage.height = 16;
-  deleteImage.alt = 'Delete';
-  deleteImage.title = 'Delete';
+/** Creates a 'Delete' button. */
+function newDeleteButton() {
+  const deleteImage = document.createElement('button');
   deleteImage.className = 'delete';
+  deleteImage.title = 'Delete';
   return deleteImage;
 }
 
-/** Creates a 'Rename item' image. */
-function newRenameImage() {
-  const renameImage = document.createElement('img');
-  renameImage.src = '/media/edit-off.svg';
-  renameImage.width = 16;
-  renameImage.height = 16;
-  renameImage.alt = 'Rename';
-  renameImage.title = 'Rename';
+/** Creates a 'Rename' button. */
+function newRenameButton() {
+  const renameImage = document.createElement('button');
   renameImage.className = 'rename';
+  renameImage.title = 'Rename';
   return renameImage;
 }
 
 /** Adds the message ot show there are no saved diagrams. */
 function addEmptyMessage(container) {
-  const emptyHeader = document.createElement('h2');
-  emptyHeader.innerText = 'There are no saved diagrams.';
-  container.appendChild(emptyHeader);
+  const message = document.createElement('p');
+  message.innerText = 'There are no saved diagrams.';
+  container.appendChild(message);
 }
 
 /** Adds a new row to the saved diagrams list. */
-/* eslint no-param-reassign:
- ["error", { "props":true,
- "ignorePropertyModificationsFor":["container", "entry"] }] */
 function addNewRow(container, key, entry) {
-  const entryHeader = newHeader();
   const entryLink = newDiagramLink(entry.Title, '/viewsvg.htm#*' + key);
-  entryHeader.appendChild(entryLink);
-  container.appendChild(entryHeader);
+  container.appendChild(entryLink);
 
   const entryActions = newActions();
-
-  const entryRename = newRenameImage();
-  entryActions.appendChild(entryRename);
-
   const thisDivider = newDivider();
 
+  const entryRename = newRenameButton();
+  entryActions.appendChild(entryRename);
   entryRename.addEventListener('click', function renameClick() {
-    const newName = Common.customPrompt('Rename saved diagram:', entryLink.textContent);
+    modalPrompt('Rename saved diagram:', entryLink.textContent,
+      function renameOK() {
+        const newName = getModalInputText();
+        if (!newName) return;
 
-    if (newName) {
-      entry.Title = newName;
-      const entryJSON = JSON.stringify(entry);
-      localStorage.setItem(key, entryJSON);
-      entryLink.textContent = newName;
-
-      if (Common.isIE) {
-        Common.fixToMaxItemWidth('diagram', 20, true);
-      }
-    }
+        entry.Title = newName;
+        const entryJSON = JSON.stringify(entry);
+        localStorage.setItem(key, entryJSON);
+        entryLink.textContent = newName;
+      });
   });
 
-  const entryDelete = newDeleteImage();
+  const entryDelete = newDeleteButton();
   entryActions.appendChild(entryDelete);
-
   entryDelete.addEventListener('click', function deleteClick() {
-    const message = 'Are you sure you want to delete "'
-      + entryLink.textContent + '"?';
+    const message =
+      `Are you sure you want to delete "${entryLink.textContent}"?`;
 
-    if (Common.customConfirm(message)) {
-      localStorage.removeItem(key);
+    modalConfirm(message,
+      function deleteYes() {
+        localStorage.removeItem(key);
 
-      container.removeChild(entryHeader);
-      container.removeChild(entryActions);
-      container.removeChild(thisDivider);
+        container.removeChild(entryLink);
+        container.removeChild(entryActions);
+        container.removeChild(thisDivider);
 
-      if (container.getElementsByTagName('h2').length === 0) {
-        container.innerHTML = '';
-        container.appendChild(newDivider());
-        addEmptyMessage(container);
-        container.appendChild(newDivider());
-      }
-    }
+        if (container.getElementsByClassName('diagram').length === 0) {
+          container.innerHTML = '';
+          container.appendChild(newDivider());
+          addEmptyMessage(container);
+          container.appendChild(newDivider());
+        }
+      });
   });
 
-  if (!Common.isIOSEdge) {
-    const entrySvgLink = newSvgLink();
-    entryActions.appendChild(entrySvgLink);
-
-    entrySvgLink.addEventListener('click',
+  if (!isIOSEdge) {
+    const entrySvgButton = newSvgButton();
+    entryActions.appendChild(entrySvgButton);
+    entrySvgButton.addEventListener('click',
       function svgLinkClick(event) {
         event.preventDefault();
-        Common.exportSvg(entry.Title + '.svg', entry.SvgXml);
+        exportSvg(entry.Title + '.svg', entry.SvgXml);
       }
     );
-  }
 
-  if (!Common.isIOSEdge && !Common.isIE) {
-    const entryPngLink = newPngLink();
-    entryActions.appendChild(entryPngLink);
-
-    entryPngLink.addEventListener('click',
-      function pngLinkClick(event) {
-        event.preventDefault();
-        const background = window.getComputedStyle(document.body).backgroundColor;
-        Common.exportPng(entry.Title + '.png', entry.SvgXml, background);
+    const entryPngButton = newPngButton();
+    entryActions.appendChild(entryPngButton);
+    entryPngButton.addEventListener('click',
+      function pngLinkClick() {
+        const background = window.getComputedStyle(document.body)
+          .backgroundColor;
+        exportPng(entry.Title + '.png', entry.SvgXml, background);
       }
     );
   }
@@ -172,7 +147,7 @@ function populateList() {
   let keys = [];
   for (let index = 0; index < localStorage.length; index += 1) {
     const key = localStorage.key(index);
-    if (key !== Common.StoreName.Flags && key !== Common.StoreName.Settings) {
+    if (key !== StoreName.Flags && key !== StoreName.Settings) {
       keys.push(key);
     }
   }
@@ -198,8 +173,6 @@ function populateList() {
   if (keys.length === 0) {
     addEmptyMessage(container);
     container.appendChild(newDivider());
-  } else if (Common.isIE) {
-    Common.fixToMaxItemWidth('diagram', 20, false);
   }
 }
 
@@ -213,26 +186,30 @@ function filesSelected(event) {
 
     reader.addEventListener('load',
       function fileLoaded(event) {
-        let diagramTitle = file.name;
-        diagramTitle = Common.customPrompt('Import diagram as:', diagramTitle);
-        if (diagramTitle) {
-          const storageKey = Date.now().toString();
-          const svgObject = { Title: diagramTitle, SvgXml: event.target.result };
+        modalPrompt('Import diagram as:', file.name,
+          function importOK() {
+            const diagramTitle = getModalInputText();
+            if (!diagramTitle) return;
 
-          const jsonData = JSON.stringify(svgObject);
-          localStorage.setItem(storageKey, jsonData);
+            const storageKey = Date.now().toString();
+            const svgObject = {
+              Title: diagramTitle,
+              SvgXml: event.target.result
+            };
 
-          const container = document.getElementById('collection');
-          addNewRow(container, storageKey, svgObject);
-        }
+            const jsonData = JSON.stringify(svgObject);
+            localStorage.setItem(storageKey, jsonData);
+
+            const container = document.getElementById('collection');
+            addNewRow(container, storageKey, svgObject);
+          });
       }
     );
 
     reader.readAsText(file);
   }
 
-  const fileSelector = document.getElementById('fileSelector');
-  fileSelector.value = '';
+  event.target.value = '';
 }
 
 /** Clicks the export link corresponding with the supplied exportType for
@@ -242,67 +219,40 @@ function exportAllDiagrams(exportType) {
   for (let i = 0; i < exportLinks.length; i++) {
     const exportLink = exportLinks[i];
     if (exportLink.textContent === exportType) {
-      Common.simulateClick(exportLink);
-      // exportLink.click();
+      exportLink.click();
     }
   }
 }
 
-/** Exports all saved diagrams as SVG files. */
-function exportAllDiagramsSvg() {
-  exportAllDiagrams('SVG');
-}
+/** DOM Content Loaded event handler. */
+function DOMContentLoaded() {
+  if (isEmbedded()) {
+    document.getElementById('menu').style.display = 'none';
+  }
 
-/** Exports all saved diagrams as PNG files. */
-function exportAllDiagramsPng() {
-  exportAllDiagrams('PNG');
-}
-
-/** Triggers the file upload process. */
-function importDiagram() {
-  const fileSelector = document.getElementById('fileSelector');
-  Common.simulateClick(fileSelector);
-  // fileSelector.click();
-}
-
-/** Shows the App Offline indicator. */
-function appOffline() {
-  document.getElementById('offline').style.display = 'block';
-}
-
-/** Hides the App Offline indicator. */
-function appOnline() {
-  document.getElementById('offline').style.display = 'none';
-}
-
-/** Page Load event handler. */
-function pageLoad() {
+  setupOfflineIndicator();
+  setupModal();
   populateList();
 
-  const exportAllPng = document.getElementById('exportAllPng');
-  if (Common.isIE || Common.isIOS) {
-    exportAllPng.style.display = 'none';
+  if (isIOS) {
+    document.getElementById('export-all-png').style.display = 'none';
   } else {
-    exportAllPng.addEventListener('click', exportAllDiagramsPng);
+    document.getElementById('export-all-png').addEventListener('click', () =>
+      exportAllDiagrams('PNG'));
   }
 
-  const exportAllSvg = document.getElementById('exportAllSvg');
-  if (Common.isIOS) {
-    exportAllSvg.style.display = 'none';
+  if (isIOS) {
+    document.getElementById('export-all-svg').style.display = 'none';
   } else {
-    exportAllSvg.addEventListener('click', exportAllDiagramsSvg);
+    document.getElementById('export-all-svg').addEventListener('click', () =>
+      exportAllDiagrams('SVG'));
   }
 
-  document.getElementById('import')
-    .addEventListener('click', importDiagram);
+  document.getElementById('import').addEventListener('click', () =>
+    document.getElementById('file-selector').click());
 
-  document.getElementById('fileSelector')
+  document.getElementById('file-selector')
     .addEventListener('change', filesSelected);
-
-  document.getElementById('offline').style
-    .display = (navigator.onLine ? 'none' : 'block');
-  window.addEventListener('offline', appOffline);
-  window.addEventListener('online', appOnline);
 }
 
-window.addEventListener('load', pageLoad);
+document.addEventListener('DOMContentLoaded', DOMContentLoaded);
