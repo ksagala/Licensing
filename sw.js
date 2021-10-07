@@ -1,4 +1,4 @@
-const Version = '20211006';
+const Version = '20211007';
 
 const CacheContent = [
   // Pages
