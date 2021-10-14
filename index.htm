@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="apple-mobile-web-app-title" content="M365 Maps" />
-    <meta name="description" content="A collection of Microsoft 365 licensing diagrams to view in browser or download as PDF, PNG, SVG, and Visio files. Covers Microsoft 365 Enterprise, Business, Education, and Frontline and also Office 365, Enterprise Mobility + Security, and Windows 10." />
+    <meta name="description" content="A collection of Microsoft 365 licensing diagrams to view in browser or download as PDF, PNG, SVG, and Visio files." />
     <meta name="author" content="Aaron Dinnage" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@AaronDinnage" />
@@ -19,7 +19,7 @@
     <meta property="article:author" content="Aaron Dinnage" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Microsoft 365 Licensing" />
-    <meta property="og:description" content="A collection of Microsoft 365 licensing diagrams to view in browser or download as PDF, PNG, SVG, and Visio files. Covers Microsoft 365 Enterprise, Business, Education, and Frontline and also Office 365, Enterprise Mobility + Security, and Windows 10." />
+    <meta property="og:description" content="A collection of Microsoft 365 licensing diagrams to view in browser or download as PDF, PNG, SVG, and Visio files." />
     <meta property="og:site_name" content="M365 Maps" />
     <meta property="og:image" content="https://m365maps.com/media/summary_large_image.png" />
     <meta property="og:image:alt" content="Microsoft 365 Licensing Diagrams by Aaron Dinnage https://m365maps.com/" />
@@ -28,7 +28,6 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/media/favicon.svg" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/media/apple-touch-icon-precomposed.png" />
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/css/common.min.css" />
@@ -38,259 +37,228 @@
     <title>Home | M365 Maps</title>
   </head>
   <body>
-    <a class="skip-link" href="#links">Skip to main content</a>
-    <h1><a href="/">Microsoft 365 Licensing</a></h1>
-    <p>By Aaron Dinnage &nbsp;&mdash;&nbsp; <strong>June, 2021</strong></p>
+    <a class="skip-link" href="#diagrams">Skip to main content</a>
+    <h1>Microsoft 365 Licensing</h1>
+    <h2>By Aaron Dinnage &nbsp;&mdash;&nbsp; <strong>October, 2021</strong></h2>
 
-    <noscript>
-      <p><strong style="color:red;">WARNING: Javascript disabled. Please enable JavaScript.</strong></p>
-    </noscript>
+    <noscript>WARNING: Javascript disabled. m365maps.com will not work without JavaScript enabled.</noscript>
 
-    <div id="iewarning" style="display:none;">
-      <p>WARNING: Internet Explorer 11 is reaching end of support and will no longer work with Microsoft 365 and many other services from August 17, 2021.</p>
-      <p>m365maps.com will no longer support Internet Explorer some time after August, 2021.</p>
-      <p>You can find more information on Internet Explorer end of support here: <a href="https://docs.microsoft.com/lifecycle/announcements/internet-explorer-11-support-end-dates" target="_blank" rel="noopener">Link</a></p>
+    <div id="ie-warning">
+      <p>WARNING: Since August 17, 2021 Internet Explorer 11 is no longer supported with Microsoft 365 and many other Microsoft services.</p>
+      <p><strong>m365maps.com no longer works in Internet Explorer.</strong></p>
+      <p>You can find more information on Internet Explorer end of support here: <a href="https://docs.microsoft.com/lifecycle/announcements/internet-explorer-11-support-end-dates" target="_blank" rel="noreferrer noopener">Link</a></p>
     </div>
 
-    <div id="offline" style="display:none;">OFFLINE</div>
+    <div id="offline">OFFLINE</div>
 
-    <div id="links" class="link-collection">
+    <div id="diagrams">
       <div class="divider"></div>
-      <h2 class="link-header">
-        Enterprise Mobility + Security (EMS)
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Enterprise Mobility + Security (EMS)</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/EMS%20Enterprise.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/EMS%20Enterprise.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/EMS%20Enterprise%20-%20Simple.htm" class="link-text">Simple</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/EMS%20Enterprise%20-%20Simple.htm" class="link-text">Simple</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/EMS-Enterprise-E3.htm" class="link-text new">E3</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/EMS-Enterprise-E5.htm" class="link-text new">E5</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Azure-AD-Premium.htm" class="link-text new">Azure AD</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Apps
-        <!-- <img src="/media/new.svg" width="9" height="9" alt="New" title="New" /> -->
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft 365 Apps</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Apps.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Apps.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Apps%20for%20Business.htm" class="link-text">Business</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Apps%20for%20Business.htm" class="link-text">Business</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Apps%20for%20Enterprise.htm" class="link-text">Enterprise</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Apps%20for%20Enterprise.htm" class="link-text">Enterprise</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Business
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft 365 Business</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Business.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Business.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Business%20Basic.htm" class="link-text">Basic</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Business%20Basic.htm" class="link-text">Basic</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Business%20Standard.htm" class="link-text">Standard</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Business%20Standard.htm" class="link-text">Standard</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Business%20Premium.htm" class="link-text">Premium</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Business%20Premium.htm" class="link-text">Premium</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Consumer
-        <!-- <img src="/media/new.svg" width="9" height="9" alt="New" title="New" /> -->
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft 365 Consumer</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Consumer.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Consumer.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Personal%20and%20Family.htm" class="link-text">Family</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Personal%20and%20Family.htm" class="link-text">Family</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20Consumer.htm" class="link-text">Office</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20Consumer.htm" class="link-text">Office</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Education
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header new">Microsoft 365 Education</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Education.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Education.htm" class="link-text">Full</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft-365-Education-A1-(Legacy).htm" class="link-text">A1 (Legacy)</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft-365-Education-A1-for-Devices.htm" class="link-text">A1 for Devices</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft-365-Education-A3.htm" class="link-text">A3</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft-365-Education-A5.htm" class="link-text">A5</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Student Use Benefit
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft 365 Student Use Benefit</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Education%20Student%20Use%20Benefits.htm" class="link-text">Venn</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Education%20Student%20Use%20Benefits.htm" class="link-text">Venn</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Education%20Student%20Use%20Benefits%20-%20Simple.htm" class="link-text">Simple</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Education%20Student%20Use%20Benefits%20-%20Simple.htm" class="link-text">Simple</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Enterprise
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft 365 Enterprise</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise.htm" class="link-text">Simple</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise.htm" class="link-text">Simple</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20Venn.htm" class="link-text">Venn</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20Venn.htm" class="link-text">Venn</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20Landscape.htm" class="link-text">Landscape</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20Landscape.htm" class="link-text">Landscape</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20E3.htm" class="link-text">E3</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20E3.htm" class="link-text">E3</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20E5.htm" class="link-text">E5</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20E5.htm" class="link-text">E5</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft 365 Frontline
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft 365 Frontline</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20Frontline.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20Frontline.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20F1.htm" class="link-text">F1</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20F1.htm" class="link-text">F1</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20F3.htm" class="link-text">F3</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20F3.htm" class="link-text">F3</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20365%20Enterprise%20-%20F5.htm" class="link-text">F5</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20365%20Enterprise%20-%20F5.htm" class="link-text">F5</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft Project
-        <img src="/media/new.svg" width="9" height="9" alt="New" title="New" />
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header new">Microsoft Defender</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20Project.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft-Defender-for-Endpoint.htm" class="link-text">Endpoint</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft-Defender-for-Office-365.htm" class="link-text">Office 365</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Microsoft Teams Rooms
-        <!-- <img src="/media/new.svg" width="9" height="9" alt="New" title="New" /> -->
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft Project</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20Teams%20Rooms.htm" class="link-text">Full</a>
-        </div>
-        <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Microsoft%20Teams%20Rooms%20-%20Premium.htm" class="link-text">Premium</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20Project.htm" class="link-text">Full</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Office 365 Education
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Microsoft Teams Rooms</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20365%20Education.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20Teams%20Rooms.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20365%20Education%20-%20Simple.htm" class="link-text">Simple</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Microsoft%20Teams%20Rooms%20-%20Premium.htm" class="link-text">Premium</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Office 365 Enterprise
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Office 365 Education</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20365%20Enterprise.htm" class="link-text">Full</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20365%20Education.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20365%20Enterprise%20-%20Simple.htm" class="link-text">Simple</a>
-        </div>
-        <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20365%20Enterprise%20-%20E1.htm" class="link-text">E1</a>
-        </div>
-        <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Office%20365%20Enterprise%20-%20F3.htm" class="link-text">F3</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20365%20Education%20-%20Simple.htm" class="link-text">Simple</a>
         </div>
       </div>
       <div class="divider"></div>
-      <h2 class="link-header">
-        Windows 10
-      </h2>
-      <div class="link-set">
+      <span class="diagram-header">Office 365 Enterprise</span>
+      <div class="diagram-set">
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Windows%2010%20-%20Enterprise.htm" class="link-text">Enterprise</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20365%20Enterprise.htm" class="link-text">Full</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Windows%2010%20-%20Pro.htm" class="link-text">Pro</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20365%20Enterprise%20-%20Simple.htm" class="link-text">Simple</a>
         </div>
         <div class="link-pair">
-          <img src="/media/unflagged.svg" class="link-flag" width="16" height="16" alt="Flag" />
-          <a href="/Windows%2010%20-%20VL.htm" class="link-text">VL</a>
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20365%20Enterprise%20-%20E1.htm" class="link-text">E1</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Office%20365%20Enterprise%20-%20F3.htm" class="link-text">F3</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <span class="diagram-header">Windows 10</span>
+      <div class="diagram-set">
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Windows%2010%20-%20Enterprise.htm" class="link-text">Enterprise</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Windows%2010%20-%20Pro.htm" class="link-text">Pro</a>
+        </div>
+        <div class="link-pair">
+          <button class="flag-button unflagged" title="Flag"></button><a href="/Windows%2010%20-%20VL.htm" class="link-text">VL</a>
         </div>
       </div>
       <div class="divider"></div>
       <div class="collection-footer">
-        <a href="#" id="flagAll" title="Flag all diagrams">All</a> / <a href="#" id="clearAll" title="Remove all flags">All</a>
+        <a href="#" id="flag-all" title="Flag all diagrams">All</a> &nbsp;/&nbsp; <a href="#" id="clear-all" title="Remove all flags">All</a>
       </div>
     </div>
-    <p><a href="/saved.htm" class="saved">Saved diagrams</a></p>
-    <p><a href="/matrix.htm" class="matrix">Feature matrix</a><img src="/media/new.svg" width="9" height="9" alt="New" title="New" /></p>
-    <p><a href="/changes.htm" class="changes">Change log</a></p>
-    <p><a href="/guide.htm" class="guide">User guide</a></p>
-    <p><a href="/downloads.htm" class="downloads">Downloads</a></p>
-    <p><a href="/settings.htm" class="settings">Settings</a></p>
+
+    <ul id="footer">
+      <li><a href="/compare.htm" class="compare new">Compare diagrams</a></li>
+      <li><a href="/saved.htm" class="saved">Saved diagrams</a></li>
+      <li><a href="/matrix.htm" class="matrix">Feature matrix</a></li>
+      <li><a href="/changes.htm" class="changes">Change log</a></li>
+      <li><a href="/guide.htm" class="guide">User guide</a></li>
+      <li><a href="/downloads.htm" class="downloads">Downloads</a></li>
+      <li><a href="/settings.htm" class="settings">Settings</a></li>
+      <li><div class="divider"></div></li>
+      <li>Using Microsoft Teams? Try the <a href="/guide.htm#teams">M365 Maps for Teams app</a>!</li>
+    </ul>
   </body>
 </html>

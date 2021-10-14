@@ -10,9 +10,12 @@
   color: #333;
 }
 
-.theme-light #errorDiv {
+.theme-light #modal {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.theme-light #modal-content {
   background-color: #FFF;
-  color: #333;
 }
 
 .theme-light .dark-only {
@@ -31,9 +34,12 @@
   color: #D5D5D5;
 }
 
-.theme-dark #errorDiv {
+.theme-dark #modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.theme-dark #modal-content {
   background-color: #202020;
-  color: #D5D5D5;
 }
 
 .theme-dark .light-only {
@@ -57,6 +63,42 @@
   }
 }
 
+/* Modal Styles */
+
+#modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 10;
+}
+
+#modal-content {
+  border: 1px solid #888;
+  border-radius: 8px;
+  margin: 10% auto;
+  padding: 20px;
+  text-align: right;
+  width: fit-content;
+}
+
+#modal-content>button {
+  float: unset;
+}
+
+#modal-input {
+  width: 90%;
+  margin: 2px 8px 12px 8px;
+}
+
+#modal-text {
+  width: 100%;
+  text-align: center;
+}
+
 /* Common Styles */
 
 a {
@@ -69,10 +111,12 @@ a:link, a:visited, a:hover, a:active {
 
 body {
   font-family: sans-serif;
+  font-size: 16px;
   margin: 8px 8px 32px 8px;
 }
 
 #offline {
+  display: none;
   background: #000;
   padding: 4px 12px;
   bottom: 0;
@@ -86,6 +130,7 @@ body {
 h1 {
   margin-top: 0;
   margin-bottom: 8px;
+  color: #0070F7;
 }
 
 h2 {
@@ -101,6 +146,7 @@ h3 {
 img {
   border: 0;
   margin: 0;
+  padding: 0;
   vertical-align: text-top;
 }
 
@@ -110,7 +156,7 @@ p {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 4px;
   border-color: #CCC;
   border-width: 1px;
   margin: 2px 8px;
@@ -118,6 +164,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   float: left;
+  min-width: 64px;
 }
 
 button>img {
@@ -151,8 +198,53 @@ button>img {
 }
 
 a.home-link {
-  background: url(/media/home.svg) center left no-repeat;
+  background: url(/media/sprites.svg#home) center left no-repeat;
   background-size: 16px 16px;
   padding-left: 20px;
   margin: 0 2px;
+}
+
+.new::after {
+  content: "";
+  background: url(/media/sprites.svg#new) center right no-repeat;
+  background-size: 9px 9px;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  vertical-align: top;
+  padding-left: 4px;
+}
+
+input[type=range] {
+  /* Not a universally supported style, don't care */
+  accent-color: #0070F7;
+}
+
+/* Checkboxes */
+
+input[type=checkbox] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin: 3px 5px 2px 1px;
+  padding: 0;
+  background: none;
+  border: 1pt solid #0070F7;
+  border-radius: 2pt;
+  vertical-align: text-bottom;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked {
+  background-color: #E60000;
+  border: 1pt solid #0070F7;
+  border-radius: 2pt;
+}
+
+input[type='checkbox']:disabled {
+  background-color: #888;
+  border: 1pt solid transparent;
+  border-radius: 2pt;
+  /* cursor: not-allowed; */
+  cursor: default;
 }

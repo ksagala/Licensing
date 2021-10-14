@@ -1,71 +1,134 @@
-/** Move the slider between diagrams. */
-function moveSlider() {
-  document.getElementById('compareOverlay').style.width =
-    document.getElementById('compareSlider').value + '%';
+/// <reference path="common.js" />
+/* global modalAlert, StoreName, isEmbedded, setupOfflineIndicator
+   setupModal */
+
+/** Get the values of the selected checkboxes. */
+function getSelectedCheckboxes() {
+  const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+  let values = [];
+  checked.forEach(function getCheckboxValue(element) {
+    values.push(element.value);
+  });
+
+  return values;
 }
 
-/** Displays the given error message. */
-function showError(error) {
-  // console.log('showError', error);
-
-  if (overlay) overlay.style.display = 'none';
-  if (slider) slider.style.display = 'none';
-
-  document.title = 'Error | M365 Maps';
-
-  document.getElementById('errorMessage').innerText = error;
-  document.getElementById('errorDiv').style.display = 'block';
-}
-
-/** Shows the App Offline indicator. */
-function appOffline() {
-  document.getElementById('offline').style.display = 'block';
-}
-
-/** Hides the App Offline indicator. */
-function appOnline() {
-  document.getElementById('offline').style.display = 'none';
-}
-
-/** Page Load event handler. */
-function pageLoad() {
-
-  moveSlider();
-
-  if (Common.isIE) {
-    document.getElementById('compareSlider')
-      .addEventListener('change', moveSlider);
-  } 
-  else {
-    document.getElementById('compareSlider')
-      .addEventListener('input', moveSlider);
-  }
-
-  const elements = window.location.search.substring(1).split('&');
-  if (elements.length !== 2) {
-    showError('Comparison diagrams missing');
-    return;
-  }
-
-  const compare1 = document.getElementById('compare1');
-  if (elements[1].startsWith('*')) {
-    compare1.src = '/viewsvg.htm#' + elements[1] + '-blank';
+/** Click event handler for Compare button. */
+function compareClick() {
+  const checkboxes = getSelectedCheckboxes();
+  if (checkboxes.length === 2) {
+    window.location.href = '/comparing.htm#' + checkboxes.join('/');
   } else {
-    compare1.src = '/' + elements[1] + '.htm#blank';
+    modalAlert('You must select two diagrams to compare.');
   }
-
-  const compare2 = document.getElementById('compare2');
-  if (elements[0].startsWith('*')) {
-    compare2.src = '/viewsvg.htm#' + elements[0] + '-blank';
-  } else {
-    compare2.src = '/' + elements[0] + '.htm#blank';
-  }
-
-  document.getElementById('offline').style
-    .display = (navigator.onLine ? 'none' : 'block');
-
-  window.addEventListener('offline', appOffline);
-  window.addEventListener('online', appOnline);
 }
 
-window.addEventListener('load', pageLoad);
+/** Disable all the checkboxes that are not currently checked. */
+function disableUncheckedBoxes() {
+  const checkboxes = document
+    .querySelectorAll('input[type="checkbox"]:not(:checked):not(:disabled)');
+
+  checkboxes.forEach(function disableEachCheckbox(checkbox) {
+    checkbox.disabled = true;
+    checkbox.parentElement.classList.add("disabled");
+  });
+}
+
+/** Enable all the checkboxes that are not currently checked. */
+function enableUncheckedBoxes() {
+  const checkboxes = document
+    .querySelectorAll('input[type="checkbox"]:not(:checked):disabled');
+
+  checkboxes.forEach(function enableEachCheckbox(checkbox) {
+    checkbox.disabled = false;
+    checkbox.parentElement.classList.remove("disabled");
+  });
+}
+
+/** Event handled for checkbox state changes. */
+function checkboxChanged() {
+  const checkboxes = getSelectedCheckboxes();
+
+  if (checkboxes.length === 2) {
+    disableUncheckedBoxes();
+  } else {
+    enableUncheckedBoxes();
+  }
+}
+
+/** Add a saved diagram to the list. */
+function addDiagram(container, key, entry) {
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.value = '*' + key;
+
+  const label = document.createElement('label');
+  label.appendChild(checkbox);
+  label.append(entry.Title);
+
+  container.appendChild(label);
+  // container.insertAdjacentElement('afterend', label);
+}
+
+/** Adds the saved diagrams to the bottom of the diagram list. */
+function addSavedDiagrams() {
+  const container = document.getElementById('saved-diagrams');
+
+  let keys = [];
+  for (let index = 0; index < localStorage.length; index += 1) {
+    const key = localStorage.key(index);
+    if (key !== StoreName.Flags && key !== StoreName.Settings) {
+      keys.push(key);
+    }
+  }
+
+  if (keys.length === 0) {
+    container.append('There are no saved diagrams.');
+    // const message = document.createElement('label');
+    // message.append('None');
+    // container.insertAdjacentElement('afterend', message);
+  } else {
+    keys = keys.sort(
+      function keysSort(a, b) {
+        return parseInt(a) - parseInt(b);
+      }
+    );
+
+    for (const key of keys) {
+      const entryJSON = localStorage.getItem(key);
+      if (entryJSON) {
+        const entry = JSON.parse(entryJSON);
+        if (entry) {
+          addDiagram(container, key, entry);
+        }
+      }
+    }
+  }
+}
+
+/** Attaches event listeners to all checkboxes. */
+function setupCheckboxes() {
+  const checkboxes = document
+    .querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach(function setupEachCheckbox(checkbox) {
+    checkbox.addEventListener('change', checkboxChanged);
+  });
+}
+
+/** DOM Content Loaded event handler. */
+function DOMContentLoaded() {
+  if (isEmbedded()) {
+    document.getElementById('menu').style.display = 'none';
+  }
+
+  setupOfflineIndicator();
+  setupModal();
+  addSavedDiagrams();
+  setupCheckboxes();
+
+  document.getElementById('button-compare')
+    .addEventListener('click', compareClick);
+}
+
+document.addEventListener('DOMContentLoaded', DOMContentLoaded);

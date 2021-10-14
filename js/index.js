@@ -1,38 +1,48 @@
-/** Page Data. */
-const PageData = {
-  Flags: [],
-};
+/// <reference path="common.js" />
+/* global isEmbedded, StoreName, setupOfflineIndicator */
 
-/** Updates the visual appearance of a flagImage to match state. */
+/** Page Data. */
+const PageData = { Flags: [] };
+
+/** Updates the visual appearance of a button to match state. */
 /* eslint no-param-reassign:
- ["error", { "props":true, "ignorePropertyModificationsFor":["flagImage"] }] */
-function updateFlag(flagImage, state) {
+ ["error", { "props":true, "ignorePropertyModificationsFor":["button"] }] */
+function updateFlag(button, state) {
   if (state) {
-    flagImage.src = '/media/flagged.svg';
-    flagImage.title = 'Remove flag';
+    if (button.classList.contains('unflagged')) {
+      button.classList.remove("unflagged");
+    }
+    if (!button.classList.contains('flagged')) {
+      button.classList.add('flagged');
+    }
+    button.title = 'Remove flag';
   } else {
-    flagImage.src = '/media/unflagged.svg';
-    flagImage.title = 'Flag this diagram';
+    if (button.classList.contains('flagged')) {
+      button.classList.remove("flagged");
+    }
+    if (!button.classList.contains('unflagged')) {
+      button.classList.add('unflagged');
+    }
+    button.title = 'Flag this diagram';
   }
 }
 
 /** Handles the user clicking the Flag item beside a diagram link. */
 function flagClick(event) {
-  const flagImage = event.target;
-  const flagLink = flagImage.parentElement
-    .getElementsByClassName('link-text').item(0);
-  const filename = flagLink.pathname.substring(1, flagLink.pathname.length - 4);
+  const button = event.target;
+  const link = button.nextSibling;
+  const filename = link.pathname.slice(1, -4);
 
   const flagIndex = PageData.Flags.indexOf(filename);
   if (flagIndex === -1) {
     PageData.Flags.push(filename);
-    updateFlag(flagImage, true);
+    updateFlag(button, true);
   } else {
     PageData.Flags.splice(flagIndex, 1);
-    updateFlag(flagImage, false);
+    updateFlag(button, false);
   }
 
-  localStorage.setItem(Common.StoreName.Flags, JSON.stringify(PageData.Flags));
+  localStorage.setItem(StoreName.Flags, JSON.stringify(PageData.Flags));
 }
 
 /** Handles the user clicking the Flag all item at the bottom of the links. */
@@ -42,21 +52,16 @@ function flagAllClick(event) {
   PageData.Flags = [];
 
   const links = document.getElementsByClassName('link-text');
-  for (let index = 0; index < links.length; index += 1) {
-    const link = links[index];
-
-    const filename = link.pathname.substring(1, link.pathname.length - 4);
-
+  for (const link of links) {
+    const filename = link.pathname.slice(1, -4);
     PageData.Flags.push(filename);
 
-    const flagImage = link.parentElement
-      .getElementsByClassName('link-flag').item(0);
-
-    updateFlag(flagImage, true);
+    const button = link.previousSibling;
+    updateFlag(button, true);
   }
 
   const flagsJSON = JSON.stringify(PageData.Flags);
-  localStorage.setItem(Common.StoreName.Flags, flagsJSON);
+  localStorage.setItem(StoreName.Flags, flagsJSON);
 }
 
 /** Handles the user clicking the clear all flags item at the bottom of the
@@ -66,35 +71,26 @@ function clearFlagsClick(event) {
 
   PageData.Flags = [];
   const flagsJSON = JSON.stringify(PageData.Flags);
-  localStorage.setItem(Common.StoreName.Flags, flagsJSON);
+  localStorage.setItem(StoreName.Flags, flagsJSON);
 
   const links = document.getElementsByClassName('link-text');
-  for (let index = 0; index < links.length; index += 1) {
-    const link = links[index];
-
-    const flagImage = link.parentElement
-      .getElementsByClassName('link-flag').item(0);
-
-    updateFlag(flagImage, false);
+  for (const link of links) {
+    const button = link.previousSibling;
+    updateFlag(button, false);
   }
 }
 
-/** Sets the correct display properties and attaches the event listeners to
- * all flags. */
-function showFlags() {
-  const flagsJSON = localStorage.getItem(Common.StoreName.Flags);
+/** Sets the display properties and attaches event listeners to flags. */
+function setupFlags() {
+  const flagsJSON = localStorage.getItem(StoreName.Flags);
   if (flagsJSON) PageData.Flags = JSON.parse(flagsJSON);
 
-  const links = document.getElementsByClassName('link-text');
-  for (let index = 0; index < links.length; index += 1) {
-    const link = links[index];
+  const buttons = document.getElementsByClassName('flag-button');
+  for (const button of buttons) {
+    button.addEventListener('click', flagClick);
 
-    const flagImage = link.parentElement
-      .getElementsByClassName('link-flag').item(0);
-
-    flagImage.addEventListener('click', flagClick);
-
-    const filename = link.pathname.substring(1, link.pathname.length - 4);
+    const link = button.nextSibling;
+    const filename = link.pathname.slice(1, -4);
 
     // TODO: Hover preview?
     // const preview = document.createElement('img');
@@ -103,41 +99,29 @@ function showFlags() {
     // link.appendChild(preview);
 
     const flagged = (PageData.Flags.indexOf(filename) !== -1);
-    updateFlag(flagImage, flagged);
+    updateFlag(button, flagged);
   }
 
-  document.getElementById('clearAll')
+  document.getElementById('clear-all')
     .addEventListener('click', clearFlagsClick);
 
-  document.getElementById('flagAll')
+  document.getElementById('flag-all')
     .addEventListener('click', flagAllClick);
 }
 
-/** Shows the App Offline indicator. */
-function appOffline() {
-  document.getElementById('offline').style.display = 'block';
+/** DOM Content Loaded event handler. */
+function DOMContentLoaded() {
+  if (isEmbedded()) {
+    document.getElementById('footer').style.display = 'none';
+  }
+
+  setupOfflineIndicator();
+  setupFlags();
+
+  // Is this running in Internet Explorer?
+  if (navigator.userAgent.indexOf('Trident/') !== -1) {
+    document.getElementById('ie-warning').style.display = 'block';
+  }
 }
 
-/** Hides the App Offline indicator. */
-function appOnline() {
-  document.getElementById('offline').style.display = 'none';
-}
-
-/** Page Load event handler. */
-function pageLoad() {
-  showFlags();
-
-  if (Common.isIE)
-    Common.fixToMaxItemWidth('link-header', 8, false);
-
-  document.getElementById('iewarning').style
-    .display = (Common.isIE ? 'block' : 'none');
-
-  document.getElementById('offline').style
-    .display = (navigator.onLine ? 'none' : 'block');
-
-  window.addEventListener('offline', appOffline);
-  window.addEventListener('online', appOnline);
-}
-
-window.addEventListener('load', pageLoad);
+document.addEventListener('DOMContentLoaded', DOMContentLoaded);

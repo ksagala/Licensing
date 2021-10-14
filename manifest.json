@@ -25,16 +25,22 @@
       "icons": [ { "src": "/media/shortcut-home.png", "type": "image/png", "sizes": "192x192" } ]
     },
     {
+      "name": "Compare",
+      "description": "Compare diagrams",
+      "url": "/compare.htm",
+      "icons": [ { "src": "/media/shortcut-compare.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
+      "name": "Saved",
+      "description": "Saved diagrams",
+      "url": "/saved.htm",
+      "icons": [ { "src": "/media/shortcut-save.png", "type": "image/png", "sizes": "192x192" } ]
+    },
+    {
       "name": "Matrix",
       "description": "Feature matrix",
       "url": "/matrix.htm",
       "icons": [ { "src": "/media/shortcut-matrix.png", "type": "image/png", "sizes": "192x192" } ]
-    },
-    {
-      "name": "Downloads",
-      "description": "Diagram downloads",
-      "url": "/downloads.htm",
-      "icons": [ { "src": "/media/shortcut-downloads.png", "type": "image/png", "sizes": "192x192" } ]
     },
     {
       "name": "Changes",
@@ -49,10 +55,10 @@
       "icons": [ { "src": "/media/shortcut-guide.png", "type": "image/png", "sizes": "192x192" } ]
     },
     {
-      "name": "Saved",
-      "description": "Saved diagrams",
-      "url": "/saved.htm",
-      "icons": [ { "src": "/media/shortcut-save.png", "type": "image/png", "sizes": "192x192" } ]
+      "name": "Downloads",
+      "description": "Diagram downloads",
+      "url": "/downloads.htm",
+      "icons": [ { "src": "/media/shortcut-downloads.png", "type": "image/png", "sizes": "192x192" } ]
     },
     {
       "name": "Settings",

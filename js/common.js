@@ -1,407 +1,411 @@
-"use strict";
-
-/** Helper function for backwards compatibility with IE11. */
-if (typeof Array.prototype.contains !== 'function') {
-  Array.prototype.contains = function contains(item) {
-    if (this === null) throw new TypeError();
-    return (this.indexOf(item) !== -1);
-  };
-}
-
-/** Helper function for backwards compatibility with IE11. */
-if (typeof Array.prototype.remove !== 'function') {
-  Array.prototype.remove = function remove(item) {
-    if (this === null) throw new TypeError();
-    const index = this.indexOf(item);
-    if (index !== -1) this.splice(index, 1);
-  };
-}
-
-/** Helper function for backwards compatibility with IE11. */
-if (typeof Array.prototype.fill !== 'function') {
-  Array.prototype.fill = function fill(value) {
-    if (this === null) throw new TypeError();
-    for (let index = 0; index < this.length; index += 1) {
-      this[index] = value;
-    }
-  };
-}
-
-/** Helper function for backwards compatibility with IE11. */
-if (typeof String.prototype.startsWith !== 'function') {
-  String.prototype.startsWith = function startsWith(item) {
-    if (this === null) throw new TypeError();
-    return this.indexOf(item) === 0;
-  };
-}
-
-/** Helper function for backwards compatibility with IE11. */
-if (typeof String.prototype.endsWith !== 'function') {
-  String.prototype.endsWith = function endsWith(item) {
-    if (this === null) throw new TypeError();
-    return this.indexOf(item, this.length - item.length) !== -1;
-  };
-}
-
-/** Common functions and data. */
-const Common = {
-  /** The service worker JS file to use, handy for switching between the
-    * minified and non-minified versions. */
-  ServiceWorkerJS: 'sw.min.js',
-  // ServiceWorkerJS: 'sw.js',
-
-  /** Storage name constants. */
-  StoreName: {
-    Flags: 'flags',
-    Settings: 'settings',
-  },
-
-  /** Mouse button constants. */
-  Mouse: {
-    Button: {
-      Left: 0,
-      Middle: 1,
-      Right: 2,
-      Back: 3,
-      Forward: 4,
-    },
-    Buttons: {
-      Left: 1,
-      Right: 2,
-      Middle: 4,
-      Back: 8,
-      Forward: 16,
-    },
-    Which: {
-      Left: 1,
-      Middle: 2,
-      Right: 3,
-    },
-  },
-
-  /** User settings. */
-  Settings: {
-    Filters: {
-      Brightness: 10,
-      Contrast: 10,
-      Hue: 0,
-      Saturation: 10,
-    },
-    Highlight1: '',
-    Highlight2: '',
-    Highlight3: '',
-    Menu: '',
-    Theme: '',
-    Zoom: '',
-  },
-
-  /** Is this running in Internet Explorer? */
-  isIE: (navigator.userAgent.indexOf('MSIE') !== -1 ||
-    navigator.userAgent.indexOf('Trident') !== -1),
-
-  /** Is this running in Chrome on iOS? */
-  isIOSChrome: (navigator.userAgent.indexOf('CriOS') !== -1),
-
-  /** Is this running in Edge on iOS? */
-  isIOSEdge: (navigator.userAgent.indexOf('EdgiOS') !== -1),
-
-  /** Is this running on an iOS device? */
-  isIOS: (window.navigator.userAgent.indexOf('iPad') !== -1 ||
-    window.navigator.userAgent.indexOf('iPhone') !== -1),
-
-  /** Is the page refreshing for an update? */
-  updateRefresh: false,
-
-  /** Controller Change event listener to refresh the page. */
-  controllerChanged: function () {
-    // console.log('controllerChanged');
-
-    if (this.updateRefresh) return;
-    this.updateRefresh = true;
-
-    window.location.reload();
-  },
-
-  /** Registers the Service Worker. */
-  registerServiceWorker: function () {
-    // console.log('registerServiceWorker');
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register(this.ServiceWorkerJS, { scope: '/' });
-      navigator.serviceWorker.addEventListener('controllerchange', this.controllerChanged);
-    }
-  },
-
-  /** Loads the default settings. */
-  defaultSettings: function () {
-    this.Settings.Highlight1 = '#CCCC00';
-    this.Settings.Highlight2 = '#AA00CC';
-    this.Settings.Highlight3 = '#00CCBB';
-    this.Settings.Menu = 'Open';
-    this.Settings.Theme = 'Light';
-    this.Settings.Zoom = 'Fit';
-  },
-
-  /** Loads the settings from local storage. */
-  loadSettings: function () {
-    // console.log('loadSettings');
-
-    this.defaultSettings();
-
-    const settingsJSON = localStorage.getItem(this.StoreName.Settings);
-    if (settingsJSON) {
-      const newSettings = JSON.parse(settingsJSON);
-      if (newSettings) {
-        if (newSettings.Filters) {
-          if (newSettings.Filters.Contrast) {
-            this.Settings.Filters.Contrast = newSettings.Filters.Contrast;
-          }
-
-          if (newSettings.Filters.Hue) {
-            this.Settings.Filters.Hue = newSettings.Filters.Hue;
-          }
-
-          if (newSettings.Filters.Saturation) {
-            this.Settings.Filters.Saturation = newSettings.Filters.Saturation;
-          }
-        }
-
-        if (newSettings.Highlight1) {
-          this.Settings.Highlight1 = newSettings.Highlight1;
-        }
-
-        if (newSettings.Highlight2) {
-          this.Settings.Highlight2 = newSettings.Highlight2;
-        }
-
-        if (newSettings.Highlight3) {
-          this.Settings.Highlight3 = newSettings.Highlight3;
-        }
-
-        if (newSettings.Menu) {
-          this.Settings.Menu = newSettings.Menu;
-        }
-
-        if (newSettings.Theme) {
-          this.Settings.Theme = newSettings.Theme;
-        }
-
-        if (newSettings.Zoom) {
-          this.Settings.Zoom = newSettings.Zoom;
-        }
-      }
-    }
-  },
-
-  /** Saves the settings to local storage. */
-  saveSettings: function () {
-    // console.log('saveSettings');
-
-    const settingsJSON = JSON.stringify(this.Settings);
-    localStorage.setItem(this.StoreName.Settings, settingsJSON);
-  },
-
-  /** Sets the theme to Light, Dark, or follows the System. */
-  setTheme: function (theme) {
-    // console.log('setTheme', theme);
-
-    const htmlElement = document.getElementsByTagName('html')[0];
-
-    switch (theme) {
-      case 'Light': htmlElement.className = 'theme-light'; break;
-      case 'Dark': htmlElement.className = 'theme-dark'; break;
-      case 'System':
-      default:
-        htmlElement.className = window.matchMedia('(prefers-color-scheme: dark)')
-          .matches ? 'theme-dark' : 'theme-light';
-        break;
-    }
-  },
-
-  /** Theme Change event to track the System theme. */
-  themeChange: function (event) {
-    // console.log('themeChange');
-
-    if (Common.Settings.Theme === 'System') {
-      const htmlElement = document.getElementsByTagName('html')[0];
-      htmlElement.className = (event.matches ? 'theme-dark' : 'theme-light');
-    }
-  },
-
-  /** Adds the specified theme change listener. */
-  addThemeListener: function (listener) {
-    const matchMediaDark = window.matchMedia('(prefers-color-scheme: dark)');
-    if ('addEventListener' in matchMediaDark) {
-      matchMediaDark.addEventListener('change', listener);
-    }
-  },
-
-  /** Exports an SVG XML as a PNG file download. */
-  exportPng: function (filename, svgXml, background) {
-    // console.log('exportPng', filename);
-
-    const canvas = document.createElement('canvas');
-    const canvasContext = canvas.getContext('2d');
-
-    const image = new Image();
-    image.onload = function onload() {
-      canvas.width = image.width;
-      canvas.height = image.height;
-
-      if (background) {
-        canvasContext.fillStyle = background;
-        canvasContext.rect(0, 0, canvas.width, canvas.height);
-        canvasContext.fill();
-      }
-
-      if ('imageSmoothingQuality' in canvasContext) {
-        canvasContext.imageSmoothingQuality = 'high';
-      }
-
-      canvasContext.drawImage(image, 0, 0);
-
-      canvas.toBlob(
-        function canvasBlob(blob) {
-          Common.downloadBlob(filename, blob);
-        }
-      );
-    };
-
-    image.src = 'data:image/svg+xml;base64,' + btoa(svgXml);
-  },
-
-  /** Exports an SVG XML as an SVG file download. */
-  exportSvg: function (filename, svgXml) {
-    // console.log('exportSvg', filename);
-
-    const blob = new Blob([svgXml], { type: 'image/svg+xml' });
-    Common.downloadBlob(filename, blob);
-  },
-
-  /** Simulates a click event on a given element. */
-  simulateClick: function (element) {
-    element.click();
-  },
-
-  /** Downloads a given blob using the anchor tag click method. */
-  downloadBlob: function (filename, blob) {
-    // msSaveBlob for IE11
-    if ('msSaveBlob' in navigator) {
-      navigator.msSaveBlob(blob, filename);
-    } else {
-      const anchor = document.createElement('a');
-      anchor.rel = 'noopener';
-      anchor.download = filename;
-
-      anchor.href = URL.createObjectURL(blob);
-      setTimeout(function timeoutClick() { URL.revokeObjectURL(anchor.href); }, 45000);
-      setTimeout(function timeoutClick() { Common.simulateClick(anchor); }, 0);
-    }
-  },
-
-  /** Returns a new HTML Element created from the provided HTML. */
-  createElementFromHtml: function (innerHtml) {
-    const newElementParent = document.createElement('div');
-    newElementParent.innerHTML = innerHtml;
-    return newElementParent.firstChild;
-  },
-
-  /** Find the string between two other strings. */
-  getStringBetween: function (source, from, open, close) {
-    if (!source) return undefined;
-    if (from === -1) return undefined;
-
-    const start = source.indexOf(open, from);
-    if (start === -1) return undefined;
-
-    const end = source.indexOf(close, start);
-    if (end === -1) return undefined;
-
-    return source.substring(start + 1, end);
-  },
-
-  /** Get the filter CSS for the specified filter values. */
-  getFiltersCss: function (brightness, contrast, hue, saturation) {
-    // console.log('getFiltersCss');
-
-    return 'brightness(' + (brightness / 10.0).toPrecision(2) + ') ' +
-      'contrast(' + (contrast / 10.0).toPrecision(2) + ') ' +
-      'hue-rotate(' + hue + 'deg) ' +
-      'saturate(' + (saturation / 10.0).toPrecision(2) + ')';
-  },
-
-  /** Finds all elements of className and fixes them
-   *  to a consistent maximum width + padding.
-   *  Used to fix formatting for IE11. */
-  fixToMaxItemWidth: function (className, padding, resetFirst) {
-    let maxWidth = 0;
-
-    const elements = document.getElementsByClassName(className);
-    for (let index = 0; index < elements.length; index += 1) {
-      const element = elements[index];
-      if (resetFirst && element.style.width !== '') element.style.width = '';
-      if (element.clientWidth > maxWidth) maxWidth = element.clientWidth;
-    }
-
-    maxWidth += padding;
-
-    for (let index = 0; index < elements.length; index += 1) {
-      const element = elements[index];
-      element.style.width = maxWidth + 'px';
-    }
-  },
-
-  /** Mouse enters the header, turns on the link. */
-  headerEnter: function (event) {
-    let link = event.target.getElementsByTagName('a');
-    if (link.length === 0) return;
-    link = link.item(0);
-    link.style.display = 'inline';
-  },
-
-  /** Mouse leaves the header, turns off the link. */
-  headerLeave: function (event) {
-    let link = event.target.getElementsByTagName('a');
-    if (link.length === 0) return;
-    link = link.item(0);
-    link.style.display = 'none';
-  },
-
-  /** Sets up for showing the anchor link on header hover. */
-  setupHeaders: function (tagName) {
-    const headers = document.getElementsByTagName(tagName);
-    for (let index = 0; index < headers.length; index += 1) {
-      const header = headers[index];
-
-      header.addEventListener('mouseenter', this.headerEnter);
-      header.addEventListener('mouseleave', this.headerLeave);
-
-      let link = header.getElementsByTagName('a');
-      if (link.length !== 0) {
-        link = link.item(0);
-        link.href = '#' + header.id;
-      }
-    }
-  },
-
-  /** TODO: Implement alternative to native alert function. */
-  customAlert: function (message) {
-    window.alert(message);
-  },
-
-  /** TODO: Implement alternative to native confirm function. */
-  customConfirm: function (message) {
-    return window.confirm(message);
-  },
-
-  /** TODO: Implement alternative to native prompt function. */
-  customPrompt: function (message, defaultValue) {
-    return window.prompt(message, defaultValue);
-  },
-
+/* eslint-disable no-unused-vars */
+
+/** Storage name constants. */
+const StoreName = {
+  Flags: 'flags',
+  Settings: 'settings',
 };
 
-Common.registerServiceWorker();
-Common.loadSettings();
-Common.setTheme(Common.Settings.Theme);
-Common.addThemeListener(Common.themeChange);
+/** Mouse button constants. */
+const Mouse = {
+  Button: {
+    Left: 0,
+    Middle: 1,
+    Right: 2,
+    Back: 3,
+    Forward: 4,
+  },
+  Buttons: {
+    Left: 1,
+    Right: 2,
+    Middle: 4,
+    Back: 8,
+    Forward: 16,
+  },
+  Which: {
+    Left: 1,
+    Middle: 2,
+    Right: 3,
+  },
+};
+
+/** User settings. */
+const Settings = {
+  Filters: {
+    Brightness: 10,
+    Contrast: 10,
+    Hue: 0,
+    Saturation: 10,
+  },
+  Highlight1: '',
+  Highlight2: '',
+  Highlight3: '',
+  Menu: '',
+  Theme: '',
+  Zoom: '',
+};
+
+/** Is this running in Chrome on iOS? */
+// const isIOSChrome = (navigator.userAgent.indexOf('CriOS') !== -1);
+
+/** Is this running in Edge on iOS? */
+const isIOSEdge = (navigator.userAgent.indexOf('EdgiOS') !== -1);
+
+/** Is this running on an iOS device? */
+const isIOS = (window.navigator.userAgent.indexOf('iPad') !== -1 ||
+  window.navigator.userAgent.indexOf('iPhone') !== -1);
+
+/** Callback to execute after Modal OK / Yes button press. */
+let modalOkCallback = undefined;
+
+/** Callback to execute after Modal Cancel / No button press. */
+let modalCancelCallback = undefined;
+
+/** Handle the modal OK / Yes button click.  */
+function modalOkClick(event) {
+  document.getElementById('modal').style.display = 'none';
+  if (modalOkCallback) modalOkCallback(event);
+}
+
+/** Handle the modal Cancel / No button click.  */
+function modalCancelClick(event) {
+  document.getElementById('modal').style.display = 'none';
+  if (modalCancelCallback) modalCancelCallback(event);
+}
+
+/** Handles pressing Enter inside the modal prompt text box. */
+function modalInputKeyUpEvent(event) {
+  if (event.key === 'Enter') {
+    const okButton = document.getElementById('modal-ok');
+    if (!okButton) return;
+
+    event.preventDefault();
+
+    okButton.click();
+  }
+}
+
+/** Set up the modal popup box. */
+function setupModal() {
+  const modal = document.createElement('div');
+  modal.id = 'modal';
+  document.body.appendChild(modal);
+
+  const modalContent = document.createElement('div');
+  modalContent.id = 'modal-content';
+  modal.appendChild(modalContent);
+
+  const modalText = document.createElement('p');
+  modalText.id = 'modal-text';
+  modalContent.appendChild(modalText);
+
+  const modalInput = document.createElement('input');
+  modalInput.id = 'modal-input';
+  modalInput.type = 'text';
+  modalContent.appendChild(modalInput);
+  modalInput.addEventListener('keyup', modalInputKeyUpEvent);
+
+  const modalOk = document.createElement('button');
+  modalOk.id = 'modal-ok';
+  modalOk.addEventListener('click', modalOkClick);
+  modalContent.appendChild(modalOk);
+
+  const modalCancel = document.createElement('button');
+  modalCancel.id = 'modal-cancel';
+  modalCancel.addEventListener('click', modalCancelClick);
+  modalContent.appendChild(modalCancel);
+}
+
+/** Registers the service worker. */
+function registerServiceWorker() {
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.addEventListener('controllerchange', () =>
+      window.location.reload());
+
+    navigator.serviceWorker.register('sw.min.js');
+  }
+}
+
+/** Loads the default settings. */
+function defaultSettings() {
+  Settings.Highlight1 = '#CCCC00';
+  Settings.Highlight2 = '#AA00CC';
+  Settings.Highlight3 = '#00CCBB';
+  Settings.Menu = 'Open';
+  Settings.Theme = 'Light';
+  Settings.Zoom = 'Fit';
+}
+
+/** Loads the settings from local storage. */
+function loadSettings() {
+  defaultSettings();
+
+  const settingsJSON = localStorage.getItem(StoreName.Settings);
+  if (settingsJSON) {
+    const newSettings = JSON.parse(settingsJSON);
+    if (newSettings) {
+      if (newSettings.Filters) {
+        if (newSettings.Filters.Brightness) {
+          Settings.Filters.Brightness = newSettings.Filters.Brightness;
+        }
+
+        if (newSettings.Filters.Contrast) {
+          Settings.Filters.Contrast = newSettings.Filters.Contrast;
+        }
+
+        if (newSettings.Filters.Hue) {
+          Settings.Filters.Hue = newSettings.Filters.Hue;
+        }
+
+        if (newSettings.Filters.Saturation) {
+          Settings.Filters.Saturation = newSettings.Filters.Saturation;
+        }
+      }
+
+      if (newSettings.Highlight1) {
+        Settings.Highlight1 = newSettings.Highlight1;
+      }
+
+      if (newSettings.Highlight2) {
+        Settings.Highlight2 = newSettings.Highlight2;
+      }
+
+      if (newSettings.Highlight3) {
+        Settings.Highlight3 = newSettings.Highlight3;
+      }
+
+      if (newSettings.Menu) {
+        Settings.Menu = newSettings.Menu;
+      }
+
+      if (newSettings.Theme) {
+        Settings.Theme = newSettings.Theme;
+      }
+
+      if (newSettings.Zoom) {
+        Settings.Zoom = newSettings.Zoom;
+      }
+    }
+  }
+}
+
+/** Saves the settings to local storage. */
+function saveSettings() {
+  const settingsJSON = JSON.stringify(Settings);
+  localStorage.setItem(StoreName.Settings, settingsJSON);
+}
+
+/** Sets the theme to Light, Dark, or follows the System. */
+function setTheme(theme) {
+  const htmlElement = document.getElementsByTagName('html')[0];
+
+  switch (theme) {
+    case 'Light': htmlElement.className = 'theme-light'; break;
+    case 'Dark': htmlElement.className = 'theme-dark'; break;
+    case 'System':
+    default:
+      htmlElement.className = window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .matches ? 'theme-dark' : 'theme-light';
+      break;
+  }
+}
+
+/** Theme Change event to track the System theme. */
+function themeChange(event) {
+  if (Settings.Theme === 'System') {
+    const htmlElement = document.getElementsByTagName('html')[0];
+    htmlElement.className = (event.matches ? 'theme-dark' : 'theme-light');
+  }
+}
+
+/** Adds the specified theme change listener. */
+function addThemeListener(listener) {
+  const matchMediaDark = window.matchMedia('(prefers-color-scheme: dark)');
+  if ('addEventListener' in matchMediaDark) {
+    matchMediaDark.addEventListener('change', listener);
+  }
+}
+
+/** Downloads a given blob using the anchor tag click method. */
+function downloadBlob(filename, blob) {
+  const anchor = document.createElement('a');
+  anchor.rel = 'noopener';
+  anchor.download = filename;
+
+  anchor.href = URL.createObjectURL(blob);
+  setTimeout(() => URL.revokeObjectURL(anchor.href), 45000);
+  setTimeout(() => anchor.click(), 0);
+}
+
+/** Exports an SVG XML as a PNG file download. */
+function exportPng(filename, svgXml, background) {
+  const canvas = document.createElement('canvas');
+  const canvasContext = canvas.getContext('2d');
+
+  const image = new Image();
+  image.onload = function onload() {
+    canvas.width = image.width;
+    canvas.height = image.height;
+
+    if (background) {
+      canvasContext.fillStyle = background;
+      canvasContext.rect(0, 0, canvas.width, canvas.height);
+      canvasContext.fill();
+    }
+
+    if ('imageSmoothingQuality' in canvasContext) {
+      canvasContext.imageSmoothingQuality = 'high';
+    }
+
+    canvasContext.drawImage(image, 0, 0);
+
+    canvas.toBlob(
+      function canvasBlob(blob) {
+        downloadBlob(filename, blob);
+      }
+    );
+  };
+
+  image.src = 'data:image/svg+xml;base64,' + btoa(svgXml);
+}
+
+/** Exports an SVG XML as an SVG file download. */
+function exportSvg(filename, svgXml) {
+  const blob = new Blob([svgXml], { type: 'image/svg+xml' });
+  downloadBlob(filename, blob);
+}
+
+/** Returns a new HTML Element created from the provided HTML. */
+function createElementFromHtml(innerHtml) {
+  const newElementParent = document.createElement('div');
+  newElementParent.innerHTML = innerHtml;
+  return newElementParent.firstChild;
+}
+
+/** Find the string between two other strings. */
+function getStringBetween(source, from, open, close) {
+  if (!source) return undefined;
+  if (from === -1) return undefined;
+
+  const start = source.indexOf(open, from);
+  if (start === -1) return undefined;
+
+  const end = source.indexOf(close, start);
+  if (end === -1) return undefined;
+
+  return source.substring(start + 1, end);
+}
+
+/** Get the filter CSS for the specified filter values. */
+function getFiltersCss(brightness, contrast, hue, saturation) {
+  return `brightness(${(brightness / 10.0).toPrecision(2)}) ` +
+    `contrast(${(contrast / 10.0).toPrecision(2)}) ` +
+    `hue-rotate(${hue}deg) ` +
+    `saturate(${(saturation / 10.0).toPrecision(2)})`;
+}
+
+/** Shows the App Offline indicator. */
+function appOffline() {
+  document.getElementById('offline').style.display = 'block';
+}
+
+/** Hides the App Offline indicator. */
+function appOnline() {
+  document.getElementById('offline').style.display = 'none';
+}
+
+/** Sets up the offline indicator. */
+function setupOfflineIndicator() {
+  document.getElementById('offline').style
+    .display = (navigator.onLine ? 'none' : 'block');
+
+  window.addEventListener('offline', appOffline);
+  window.addEventListener('online', appOnline);
+}
+
+/** Alternative to native alert function. */
+function modalAlert(message, okCallback) {
+  modalOkCallback = okCallback;
+
+  document.getElementById('modal-text').textContent = message;
+  document.getElementById('modal-input').style.display = 'none';
+
+  const modalOk = document.getElementById('modal-ok');
+  modalOk.textContent = 'OK';
+  modalOk.accessKey = 'o';
+  modalOk.style.display = 'inline-block';
+
+  document.getElementById('modal-cancel').style.display = 'none';
+
+  document.getElementById('modal').style.display = 'block';
+
+  modalOk.focus();
+}
+
+/** Alternative to native confirm function. */
+function modalConfirm(message, yesCallback, noCallback) {
+  modalOkCallback = yesCallback;
+  modalCancelCallback = noCallback;
+
+  document.getElementById('modal-text').textContent = message;
+  document.getElementById('modal-input').style.display = 'none';
+
+  const modalOk = document.getElementById('modal-ok');
+  modalOk.textContent = 'Yes';
+  modalOk.accessKey = 'y';
+  modalOk.style.display = 'inline-block';
+
+  const modalCancel = document.getElementById('modal-cancel');
+  modalCancel.textContent = 'No';
+  modalCancel.accessKey = 'n';
+  modalCancel.style.display = 'inline-block';
+
+  document.getElementById('modal').style.display = 'block';
+}
+
+/** Alternative to native prompt function. */
+function modalPrompt(message, inputValue, okCallback, cancelCallback) {
+  modalOkCallback = okCallback;
+  modalCancelCallback = cancelCallback;
+
+  document.getElementById('modal-text').textContent = message;
+
+  const modalInput = document.getElementById('modal-input');
+  modalInput.value = inputValue ? inputValue : '';
+  modalInput.style.display = 'inline-block';
+
+  const modalOk = document.getElementById('modal-ok');
+  modalOk.textContent = 'OK';
+  modalOk.accessKey = 'o';
+  modalOk.style.display = 'inline-block';
+
+  const modalCancel = document.getElementById('modal-cancel');
+  modalCancel.textContent = 'Cancel';
+  modalCancel.accessKey = 'c';
+  modalCancel.style.display = 'inline-block';
+
+  document.getElementById('modal').style.display = 'block';
+
+  modalInput.focus();
+}
+
+/** Get the Modal dialog boxes input field text. */
+function getModalInputText() {
+  return document.getElementById('modal-input').value;
+}
+
+/** Detect if the site is embedded in a frame. */
+function isEmbedded() {
+  try {
+    return (window.self !== window.top);
+  } catch (error) {
+    return true;
+  }
+}
+
+/** Common initialisation actions for every page of the site. */
+registerServiceWorker();
+loadSettings();
+setTheme(Settings.Theme);
+addThemeListener(themeChange);

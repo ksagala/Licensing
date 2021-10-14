@@ -1,8 +1,12 @@
 h1 {
   font-size: 24px;
   padding-left: 28px;
-  background: url(/media/cog.svg) center left no-repeat;
+  background: url(/media/sprites.svg#cog) center left no-repeat;
   background-size: 20px 20px;
+}
+
+#menu {
+  right: 0;
 }
 
 div.settings-collection {
@@ -21,11 +25,6 @@ div.divider {
   border-top: 1px solid #CCC;
 }
 
-h2 {
-  /* IE11 Hack */
-  float: left;
-}
-
 h2.settings-header {
   grid-row: auto;
   grid-column: 1;
@@ -35,37 +34,40 @@ h2.settings-header {
 }
 
 h2.highlight {
-  background: url(/media/edit-off.svg) center left no-repeat;
+  background: url(/media/sprites.svg#edit-on) center left no-repeat;
   background-size: 18px 18px;
   padding-left: 24px;
 }
 
 h2.menu {
-  background: url(/media/close.svg) center left no-repeat;
+  background: url(/media/sprites.svg#close) center left no-repeat;
   background-size: 18px 18px;
   padding-left: 24px;
 }
 
 h2.theme {
-  background: url(/media/theme.svg) center left no-repeat;
+  background: url(/media/sprites.svg#theme) center left no-repeat;
   background-size: 18px 18px;
   padding-left: 24px;
 }
 
 h2.zoom {
-  background: url(/media/zoom.svg) center left no-repeat;
+  background: url(/media/sprites.svg#zoom) center left no-repeat;
   background-size: 18px 18px;
   padding-left: 24px;
 }
 
-input.highlight {
-  height: 20px;
-  width: 114px;
+input[type=color] {
+  height: 24px;
+  width: 64px;
+  padding: 0;
+  border-radius: 2px;
 }
 
 select {
   height: 24px;
   width: 120px;
+  border-radius: 2px;
 }
 
 div.settings-values {
@@ -75,6 +77,26 @@ div.settings-values {
   padding: 0;
 }
 
-#menu {
-  right: 0;
+#defaults {
+  padding: 6px 8px 6px 34px;
+  background-image: url(/media/sprites.svg#defaults);
+  background-position: center left 8px;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+}
+
+#save {
+  padding: 6px 8px 6px 34px;
+  background-image: url(/media/sprites.svg#save);
+  background-position: center left 8px;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+}
+
+#cancel {
+  padding: 6px 8px 6px 34px;
+  background-image: url(/media/sprites.svg#delete);
+  background-position: center left 8px;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
 }
